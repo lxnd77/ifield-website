@@ -12,7 +12,7 @@ export default function Home() {
     let calcY = (x - box.x - box.width / 2) / constrain
 
     return `perspective(100px) rotateX(${calcX * 0.5}deg) rotateY(${calcY * -0.7}deg) 
-    translate(${calcY * 30}px, ${calcX * 20}px)`
+    translate(${calcY * 30}px, ${calcX * -20}px)`
   }
 
   function transformElement(el, xyEl) {
@@ -38,7 +38,7 @@ export default function Home() {
     <>
       {/* ------------------------------------ HERO ----------------------------- */}
       <div
-        className="relative z-20 h-[90vh] w-full bg-black"
+        className="relative z-20 h-[90vh] w-full bg-white"
         onMouseMove={mouse_position}
         data-scroll-section
       >
@@ -67,7 +67,7 @@ export default function Home() {
           id="i3"
         />
 
-        <div className="playfair pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-5xl text-white">
+        <div className="playfair pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-5xl text-black">
           FF&E Manufacturing <br />
           Turnkey Solutions
         </div>

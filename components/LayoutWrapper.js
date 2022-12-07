@@ -1,7 +1,8 @@
 import Footer from './Footer'
 import Image from 'next/image'
 import logo from 'public/assets/logoblack.png'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const LayoutWrapper = ({ children }) => {
   const [menuActive, SetMenuActive] = useState(false)
@@ -10,6 +11,19 @@ const LayoutWrapper = ({ children }) => {
     let ma = menuActive
     SetMenuActive(!ma)
   }
+
+  useEffect(() => {
+    window.addEventListener('click', function (e) {
+      if (
+        !document.getElementById('main-nav').contains(e.target) &&
+        !document.getElementById('navbar-burger').contains(e.target)
+      ) {
+        if (menuActive) {
+          SetMenuActive(false)
+        }
+      }
+    })
+  }, [menuActive, SetMenuActive])
 
   return (
     <div>
@@ -39,8 +53,10 @@ const LayoutWrapper = ({ children }) => {
               </svg>
             </div>
             <div>
-              <div className="place-self-center text-white">
-                <Image width="100px" alt="logo" src={logo} objectFit="contain" />
+              <div className="cursor-pointer place-self-center text-white">
+                <Link href={'/'}>
+                  <Image width="100px" alt="logo" src={logo} objectFit="contain" />
+                </Link>
               </div>
             </div>
             <div>
@@ -48,6 +64,7 @@ const LayoutWrapper = ({ children }) => {
                 {/* ------------------------- Menu Toggle button ---------------------------- */}
                 <button
                   className="navbar-burger group z-60 relative"
+                  id="navbar-burger"
                   type="button"
                   onClick={toggleMenu}
                 >
@@ -85,15 +102,15 @@ const LayoutWrapper = ({ children }) => {
       <aside
         id="main-nav"
         className="absolute top-[100px] right-0 z-50 ml-auto h-[84vh] w-[400px] max-w-0 overflow-hidden bg-white/50 text-black transition-all duration-700"
-        style={menuActive ? { maxWidth: 400 } : {}}
+        style={menuActive ? { maxWidth: 400 } : { maxWidth: 0 }}
       >
         <div className="h-full px-16 py-16">
           <div className="playfair flex h-full flex-col justify-around text-3xl">
-            <a href="/">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/services.html">Services</a>
-            <a href="/projects.html">Projects</a>
-            <a>Contact</a>
+            <Link href={'/'}>Home</Link>
+            <Link href={'/about'}>About</Link>
+            <Link href={'/services'}>Services</Link>
+            <Link href={'/projects'}>Projects</Link>
+            <Link href={'/contact'}>Contact</Link>
           </div>
         </div>
       </aside>
