@@ -3,8 +3,12 @@ import '@/css/prism.css'
 import 'katex/dist/katex.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
 import '@/css/styles.css'
 import '@fontsource/inter/variable-full.css'
+import '@/css/vision.css'
+import '@/css/locomotive-scroll.css'
 
 import Head from 'next/head'
 

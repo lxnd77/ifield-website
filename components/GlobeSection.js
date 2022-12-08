@@ -88,7 +88,7 @@ export default function GlobeSection() {
           />
         </div>
 
-        <div className="text-center">
+        <div className="text-center" data-scroll-section>
           CHINA | HONGKONG (SAR) | INDIA | USA | UAE | NIGERIA | SPAIN
         </div>
       </div>
