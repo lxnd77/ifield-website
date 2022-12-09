@@ -31,13 +31,13 @@ const LayoutWrapper = ({ children }) => {
         el: ScrollContainer.current,
         smooth: true,
         smoothMobile: false,
-        resetNativeScroll: true,
       })
       scroll.destroy()
       if (document.readyState === 'loading') {
         // Loading hasn't finished yet
         document.addEventListener('DOMContentLoaded', function (e) {
           scroll.init()
+          scroll.update()
         })
       } else {
         // `DOMContentLoaded` has already fired
@@ -67,13 +67,13 @@ const LayoutWrapper = ({ children }) => {
     <div ref={ScrollContainer} key={router.asPath}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@400;700;900&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <div className="w-full bg-white" x-data="{location:''}" data-scroll-section>
+      <div className="w-full bg-white" data-scroll-section>
         <div className="mx-14 flex flex-row items-center justify-between py-7">
           <div className="hidden md:flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className="mx-2 h-7 w-7">
