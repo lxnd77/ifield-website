@@ -5,7 +5,20 @@
 .list .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 20px;
+}
+
+.list h2::before {
+  content: ' ';
+  background-color: #981c20;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .list h2 {
@@ -29,13 +42,13 @@
 }
 
 .list img {
-  height: 300px;
+  height: 200px;
   aspect-ratio: 3/2;
 }
 
 .list ul {
   list-style-type: none;
-
+  word-wrap: break-word;
   column-count: 1;
   width: 400px;
 }
