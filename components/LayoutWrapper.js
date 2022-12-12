@@ -31,13 +31,13 @@ const LayoutWrapper = ({ children }) => {
         el: ScrollContainer.current,
         smooth: true,
         smoothMobile: false,
-        resetNativeScroll: true,
       })
       scroll.destroy()
       if (document.readyState === 'loading') {
         // Loading hasn't finished yet
         document.addEventListener('DOMContentLoaded', function (e) {
           scroll.init()
+          scroll.update()
         })
       } else {
         // `DOMContentLoaded` has already fired
@@ -73,6 +73,7 @@ const LayoutWrapper = ({ children }) => {
           rel="stylesheet"
         />
       </Head>
+
       {/* ------------------------------ Navbar -------------------------------- */}
       <div className="w-full bg-white">
         <div className="mx-14 flex flex-row items-center justify-between py-7">

@@ -1,4 +1,3 @@
-// import LocomotiveScroll from 'locomotive-scroll'
 import { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
