@@ -146,14 +146,14 @@ export default function About() {
       </div>
 
       <div className="mx-auto mt-16 flex w-[70vw] flex-wrap justify-around" data-scroll-section>
-        <img src="assets/profile.png" className="mb-16 h-80 w-80" />
-        <img src="assets/profile.png" className="mb-16 h-80 w-80" />
-        <img src="assets/profile.png" className="mb-16 h-80 w-80" />
-        <img src="assets/profile.png" className="h-80 w-80" />
-        <img src="assets/profile.png" className="h-80 w-80" />
-        <img src="assets/profile.png" className="h-80 w-80" />
+        <img src="assets/profile.png" alt="" className="mb-16 h-80 w-80" />
+        <img src="assets/profile.png" alt="" className="mb-16 h-80 w-80" />
+        <img src="assets/profile.png" alt="" className="mb-16 h-80 w-80" />
+        <img src="assets/profile.png" alt="" className="h-80 w-80" />
+        <img src="assets/profile.png" alt="" className="h-80 w-80" />
+        <img src="assets/profile.png" alt="" className="h-80 w-80" />
       </div>
-
+      {/* -------------------------- Timeline --------------------------------- */}
       <div className="bg-[#191919] text-white" data-scroll-section>
         <h1 className="playfair mt-16 ml-16 text-6xl leading-normal">Timeline</h1>
         <Swiper

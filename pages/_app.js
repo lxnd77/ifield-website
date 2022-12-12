@@ -8,6 +8,7 @@ import 'swiper/css/scrollbar'
 import '@/css/styles.css'
 import '@fontsource/inter/variable-full.css'
 import '@/css/vision.css'
+import '@/css/timeline.css'
 import '@/css/locomotive-scroll.css'
 
 import Head from 'next/head'

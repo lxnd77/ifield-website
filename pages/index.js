@@ -78,36 +78,47 @@ export default function Home() {
 
       {/* <!------------------------------ The I-Field Advantage --------------------------------------> */}
 
-      {/*<!-------------------Mobile Only--------------------------------------------------------->*/}
-      <div className="static bg-black md:hidden" data-scroll-section>
-        <div className="grid grid-cols-2 grid-rows-1">
-          <div className="playfair col-span-1 mb-8 text-center font-serif text-5xl text-white">
+      <div className="relative" data-scroll-section>
+        {/*<!-------------------Mobile title------------------->*/}
+        <div className="flex bg-black align-middle md:hidden">
+          <div className="playfair mb-8 py-6 pl-[10%] font-serif text-6xl text-white ">
             Our Distinction
           </div>
-          <div className="col-span-1 mt-8 h-1 w-full bg-red-900"></div>
+          <div className="my-auto h-1 w-full bg-red-900"></div>
         </div>
-        <img className="h-[100vh] object-cover" src="/assets/7.jpg" alt="hotel lobby" />
-        <div className="mx-14 mt-14 w-[80%] items-center text-xl text-white">
-          <div>
-            We are a team of industry experts offering deluxe turnkey solutions for FF&E
-            manufacture, supply, and installation. Established and operated by hotel owners and
-            industry experts, our end-to-end services ensure high client satisfaction around the
-            globe.
+
+        <div className="flex w-full flex-col bg-black md:w-[90vw]  md:flex-row md:pt-[10%] lg:pt-8">
+          <img
+            className=" relative h-[100vh] object-cover md:top-[12vh] md:w-[50vw]"
+            src="/assets/7.jpg"
+            alt="hotel lobby"
+          />
+          <div className="mx-14  mt-[20%] w-[80%] items-center text-xl text-white">
+            {/* --------------Desktop title------------- */}
+            <div className="align-items-center absolute top-[10vw] right-[6vw] hidden w-[50%] align-middle md:flex">
+              <div className="playfair mb-4 font-serif text-6xl text-white ">Our Distinction</div>
+              <div className="my-auto h-1 w-[28%] bg-red-900"></div>
+            </div>
+            <div className=" bg-black">
+              <div>
+                We are a team of industry experts offering deluxe turnkey solutions for FF&E
+                manufacture, supply, and installation. Established and operated by hotel owners and
+                industry experts, our end-to-end services ensure high client satisfaction around the
+                globe.
+              </div>
+              <div className="mt-8 text-xl">
+                Our core principle is to provide the best in products, prices, efficiency, and
+                customer service, and that’s the I-Field advantage.
+              </div>
+              <button className="mt-8 mb-8 h-12 w-48 bg-yellow-400 text-center text-black">
+                Get In Touch
+              </button>
+            </div>
           </div>
-          <div className="mt-8 text-xl">
-            Our core principle is to provide the best in products, prices, efficiency, and customer
-            service, and that’s the I-Field advantage.
-          </div>
-          <button className="mt-8 mb-8 h-12 w-48 bg-yellow-400 text-center text-black">
-            Get In Touch
-          </button>
         </div>
       </div>
 
-      <div
-        className="static hidden min-h-[100vh] w-[100%] overflow-hidden md:block"
-        data-scroll-section
-      >
+      {/* <div className="static hidden min-h-[100vh] w-[100%] md:block" data-scroll-section>
         <div className="relative h-[95vh] bg-black md:w-[90vw]">
           <img
             className="absolute top-40 h-[100vh] object-cover object-right md:w-2/5"
@@ -132,11 +143,11 @@ export default function Home() {
             <button className="mt-8 h-12 w-48 bg-yellow-400 text-black">Get In Touch</button>
           </div>
         </div>
+      </div> */}
+      <div className="md:mt-[120px]">
+        <GlobeSection />
       </div>
-
-      <GlobeSection />
-
-      {/*<!-- Process -->*/}
+      {/*<!---------------------------- Process ------------------------------------>*/}
 
       <div className="mt-[140px] mb-2 flex items-center justify-center gap-2" data-scroll-section>
         <div className="playfair pl-[10%] text-6xl">Our Process</div>
@@ -231,7 +242,7 @@ export default function Home() {
         </div>
         <div className="pb-[64px]">
           <Swiper
-            className="swiper mx-16 h-[400px] pb-[64px] pt-8"
+            className="swiper mx-16 h-[460px] pb-[64px] pt-8"
             navigation={true}
             modules={[Navigation]}
           >
@@ -250,7 +261,7 @@ export default function Home() {
                   src="./assets/projects/hilton chad2.png"
                   alt=""
                 />
-                <div className="absolute bottom-0 right-[10%]">
+                <div className="absolute bottom-[20%] right-[10%]">
                   <button className="btn">View project</button>
                 </div>
               </div>
@@ -268,7 +279,7 @@ export default function Home() {
                   src="./assets/projects/marriot gujarat2.png"
                   alt=""
                 />
-                <div className="absolute bottom-0 right-[10%]">
+                <div className="absolute bottom-[15%] right-[10%]">
                   <button className="btn">View project</button>
                 </div>
               </div>
@@ -286,7 +297,7 @@ export default function Home() {
                   src="./assets/projects/nairobi crowne plaza2.png"
                   alt=""
                 />
-                <div className="absolute bottom-0 right-[10%]">
+                <div className="absolute bottom-[15%] right-[10%]">
                   <button className="btn">View project</button>
                 </div>
               </div>

@@ -61,7 +61,7 @@ const LayoutWrapper = ({ children }) => {
         }
       }
     })
-  }, [menuActive, SetMenuActive])
+  }, [router])
 
   return (
     <div ref={ScrollContainer} key={router.asPath}>
@@ -73,7 +73,9 @@ const LayoutWrapper = ({ children }) => {
           rel="stylesheet"
         />
       </Head>
-      <div className="w-full bg-white" data-scroll-section>
+
+      {/* ------------------------------ Navbar -------------------------------- */}
+      <div className="w-full bg-white">
         <div className="mx-14 flex flex-row items-center justify-between py-7">
           <div className="hidden md:flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className="mx-2 h-7 w-7">
@@ -138,9 +140,8 @@ const LayoutWrapper = ({ children }) => {
 
       <aside
         id="main-nav"
-        className="absolute top-[100px] right-0 z-50 ml-auto h-[84vh] w-[400px] max-w-0 overflow-hidden bg-white/50 text-black transition-all duration-700"
+        className="fixed top-[100px] right-0 z-50 ml-auto h-[84vh] w-[400px] max-w-0 overflow-hidden bg-white/50 text-black transition-all duration-700"
         style={menuActive ? { maxWidth: 400 } : { maxWidth: 0 }}
-        data-scroll-section
       >
         <div className="h-full px-16 py-16">
           <div className="playfair flex h-full flex-col justify-around text-3xl">

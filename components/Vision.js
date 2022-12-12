@@ -64,21 +64,21 @@ export default function Vision() {
               swiperRef.current?.slideTo(0, 600)
             }}
           >
-            <img src="./assets/assessment.png" className="h-8 w-8 hover:scale-110" />
+            <img src="./assets/assessment.png" alt="" className="h-8 w-8 hover:scale-110" />
           </button>
           <button
             onClick={() => {
               swiperRef.current?.slideTo(1, 600)
             }}
           >
-            <img src="./assets/design.png" className="h-8 w-8 hover:scale-110" />
+            <img src="./assets/design.png" alt="" className="h-8 w-8 hover:scale-110" />
           </button>
           <button
             onClick={() => {
               swiperRef.current?.slideTo(2, 600)
             }}
           >
-            <img src="./assets/procuremnt.png" className="h-8 w-8 hover:scale-110" />
+            <img src="./assets/procuremnt.png" alt="" className="h-8 w-8 hover:scale-110" />
           </button>
           <button
             onClick={() => {
