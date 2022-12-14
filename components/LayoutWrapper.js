@@ -6,6 +6,7 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import imagesLoaded from 'imagesloaded'
 
 const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), {
   ssr: false,
@@ -37,19 +38,26 @@ const LayoutWrapper = ({ children }) => {
         // Loading hasn't finished yet
         document.addEventListener('DOMContentLoaded', function (e) {
           scroll.init()
+          console.log('loaded')
           scroll.update()
         })
       } else {
         // `DOMContentLoaded` has already fired
         scroll.init()
       }
+      imagesLoaded(ScrollContainer, function (instance) {
+        console.log('images loaded')
+        scroll.update()
+      })
     }
 
     getLocomotive()
 
     const handleRouteChange = (url, { shallow }) => {
       scroll.destroy()
+      SetMenuActive(false)
     }
+
     router.events.on('routeChangeStart', handleRouteChange)
     window.addEventListener('click', function (e) {
       if (
@@ -61,19 +69,10 @@ const LayoutWrapper = ({ children }) => {
         }
       }
     })
-  }, [router])
+  }, [router, menuActive])
 
   return (
     <div ref={ScrollContainer} key={router.asPath}>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@400;700;900&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
       {/* ------------------------------ Navbar -------------------------------- */}
       <div className="w-full bg-white">
         <div className="mx-14 flex flex-row items-center justify-between py-7">
@@ -154,7 +153,7 @@ const LayoutWrapper = ({ children }) => {
         </div>
       </aside>
 
-      <main className="h-fit overflow-hidden">{children}</main>
+      <main className="overflow-hidden">{children}</main>
 
       <Footer />
     </div>

@@ -24,7 +24,7 @@ export default function GlobeSection() {
       // DOM node referenced by ref has been unmounted
     } else {
       // DOM node referenced by ref has changed and exists
-      // console.log(node)
+      console.log(node)
       node.controls().enableZoom = false
       node.controls().enableDamping = true
       node.controls().autoRotate = true
@@ -81,18 +81,63 @@ export default function GlobeSection() {
           break
         case 'chad':
           console.log('chad')
+          toggleModal()
+          setModalData(`Corporate Location
+          5th Fl, Building A, Daxin Industrial Park
+          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          Peoples Republic of China
+          +86-20-39232167 / 39232577 / 39232657
+          info@ifield.com.cn
+          Monday - Friday: 9:00 AM - 6:00 PM
+          Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'india':
           console.log('india')
+          toggleModal()
+          setModalData(`Corporate Location
+          5th Fl, Building A, Daxin Industrial Park
+          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          Peoples Republic of China
+          +86-20-39232167 / 39232577 / 39232657
+          info@ifield.com.cn
+          Monday - Friday: 9:00 AM - 6:00 PM
+          Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'usa':
           console.log('usa')
+          toggleModal()
+          setModalData(`Corporate Location
+          5th Fl, Building A, Daxin Industrial Park
+          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          Peoples Republic of China
+          +86-20-39232167 / 39232577 / 39232657
+          info@ifield.com.cn
+          Monday - Friday: 9:00 AM - 6:00 PM
+          Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'nigeria':
           console.log('nigeria')
+          toggleModal()
+          setModalData(`Corporate Location
+          5th Fl, Building A, Daxin Industrial Park
+          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          Peoples Republic of China
+          +86-20-39232167 / 39232577 / 39232657
+          info@ifield.com.cn
+          Monday - Friday: 9:00 AM - 6:00 PM
+          Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'spain':
           console.log('spain')
+          toggleModal()
+          setModalData(`Corporate Location
+          5th Fl, Building A, Daxin Industrial Park
+          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          Peoples Republic of China
+          +86-20-39232167 / 39232577 / 39232657
+          info@ifield.com.cn
+          Monday - Friday: 9:00 AM - 6:00 PM
+          Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         default:
           break
@@ -116,7 +161,7 @@ export default function GlobeSection() {
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                 globeImageUrl="/assets/globe.png"
                 htmlElementsData={gData}
-                width={width}
+                // width={width}
                 htmlElement={gHtmlElements}
               />
             )}
