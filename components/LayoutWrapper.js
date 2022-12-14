@@ -69,7 +69,7 @@ const LayoutWrapper = ({ children }) => {
         }
       }
     })
-  }, [router, menuActive])
+  }, [router])
 
   return (
     <div ref={ScrollContainer} key={router.asPath}>
