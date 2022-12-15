@@ -39,7 +39,6 @@ export default function GlobeSection() {
       // DOM node referenced by ref has been unmounted
     } else {
       // DOM node referenced by ref has changed and exists
-      console.log(node)
       node.controls().enableZoom = false
       node.controls().enableDamping = true
       node.controls().autoRotate = true

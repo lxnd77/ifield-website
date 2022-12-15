@@ -14,10 +14,15 @@ const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), {
 
 const LayoutWrapper = ({ children }) => {
   const [menuActive, SetMenuActive] = useState(false)
+  const [contactActive, SetContactActive] = useState(false)
 
   const toggleMenu = () => {
     let ma = menuActive
     SetMenuActive(!ma)
+  }
+  const toggleContact = () => {
+    let ca = contactActive
+    SetContactActive(!ca)
   }
 
   const ScrollContainer = useRef()
@@ -31,14 +36,14 @@ const LayoutWrapper = ({ children }) => {
       scroll = new Locomotive({
         el: ScrollContainer.current,
         smooth: true,
-        smoothMobile: false,
+        smoothMobile: true,
+        lerp: 0.2,
       })
       scroll.destroy()
       if (document.readyState === 'loading') {
         // Loading hasn't finished yet
         document.addEventListener('DOMContentLoaded', function (e) {
           scroll.init()
-          console.log('loaded')
           scroll.update()
         })
       } else {
@@ -46,7 +51,6 @@ const LayoutWrapper = ({ children }) => {
         scroll.init()
       }
       imagesLoaded(ScrollContainer, function (instance) {
-        console.log('images loaded')
         scroll.update()
       })
     }
@@ -56,9 +60,11 @@ const LayoutWrapper = ({ children }) => {
     const handleRouteChange = (url, { shallow }) => {
       scroll.destroy()
       SetMenuActive(false)
+      SetContactActive(false)
     }
 
     router.events.on('routeChangeStart', handleRouteChange)
+
     window.addEventListener('click', function (e) {
       if (
         !document.getElementById('main-nav').contains(e.target) &&
@@ -148,7 +154,37 @@ const LayoutWrapper = ({ children }) => {
             <Link href={'/about'}>About</Link>
             <Link href={'/services'}>Services</Link>
             <Link href={'/projects'}>Projects</Link>
-            <Link href={'/contact'}>Contact</Link>
+            <button type="button" className="text-left" onClick={toggleContact}>
+              Contact
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <aside
+        id="contact"
+        className="fixed left-[50%] top-[50%] z-50 mx-auto ml-auto h-[400px] w-[800px] max-w-[800px] -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-white/50 text-black transition-all duration-700"
+        style={contactActive ? { top: '50%' } : { top: -200 }}
+      >
+        <div className="m-auto my-auto flex h-[80%] w-[80%] flex-row">
+          <div className="my-auto">
+            <h2 className="playfair text-5xl">Contact</h2>
+            <p>
+              Corporate Location <br /> 5th Fl, Building A, Daxin Industrial Park No.3 Kaifa Dong RD
+              , Xishan Village , Luopu , Panyu District , Guangzhou , Peoples Republic of China
+              +86-20-39232167 / 39232577 / 39232657 info@ifield.com.cn Monday - Friday: 9:00 AM -
+              6:00 PM Saturday - Sunday: 9:00 AM - 12:00 PM
+            </p>
+          </div>
+          <div className="my-auto">
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name"></input>
+              <label for="name">Email:</label>
+              <input type="text" id="email"></input>
+              <label for="name">Message</label>
+              <input type="text" id="message"></input>
+            </form>
           </div>
         </div>
       </aside>

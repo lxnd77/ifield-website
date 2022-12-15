@@ -38,36 +38,37 @@ export default function Home() {
     <>
       {/* ------------------------------------ HERO ----------------------------- */}
       <div
-        className="relative z-20 h-[90vh] w-full bg-[#DBD2BE]"
+        className="relative z-20 h-[90vh] w-full bg-white"
         onMouseMove={mouse_position}
         data-scroll-section
       >
+        {/* bg-[#DBD2BE] */}
         <img
-          className="hImg pointer-events-none absolute right-[20%] top-[15%] w-[400px]"
+          className="hImg pointer-events-none absolute right-[20%] top-[15%] w-[400px] shadow-xl"
           src="./assets/Rectangle 45.png"
           alt=""
           id="i2"
         />
         <img
-          className="hImg pointer-events-none absolute right-[10%] bottom-[10%] w-[300px]"
+          className="hImg pointer-events-none absolute right-[10%] bottom-[10%] w-[300px] shadow-xl"
           src="./assets/Rectangle 50.png"
           alt=""
           id="i1"
         />
         <img
-          className="hImg pointer-events-none absolute left-[8%] bottom-[15%] w-[450px]"
+          className="hImg pointer-events-none absolute left-[8%] bottom-[15%] w-[450px] shadow-xl"
           src="./assets/Rectangle 48.png"
           alt=""
           id="i4"
         />
         <img
-          className="hImg pointer-events-none absolute left-[15%] top-[10%] w-[250px]"
+          className="hImg pointer-events-none absolute left-[15%] top-[10%] w-[250px] shadow-xl"
           src="./assets/Rectangle 49.png"
           alt=""
           id="i3"
         />
 
-        <div className="playfair pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-5xl font-bold text-white">
+        <div className="playfair pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-6xl font-bold text-black">
           FF&E Manufacturing <br />
           Turnkey Solutions
         </div>
@@ -118,32 +119,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="static hidden min-h-[100vh] w-[100%] md:block" data-scroll-section>
-        <div className="relative h-[95vh] bg-black md:w-[90vw]">
-          <img
-            className="absolute top-40 h-[100vh] object-cover object-right md:w-2/5"
-            src="/assets/7.jpg"
-            alt="hotel lobby"
-          />
-          <div className="distinction playfair absolute inset-[30%] h-fit text-6xl text-white">
-            Our Distinction
-          </div>
-
-          <div className="absolute inset-[40%] mx-14 mt-14 hidden w-[40vw] text-xl text-white md:block">
-            <div>
-              We are a team of industry experts offering deluxe turnkey solutions for FF&E
-              manufacture, supply, and installation. Established and operated by hotel owners and
-              industry experts, our end-to-end services ensure high client satisfaction around the
-              globe.
-            </div>
-            <div className="mt-8 text-xl">
-              Our core principle is to provide the best in products, prices, efficiency, and
-              customer service, and that’s the I-Field advantage.
-            </div>
-            <button className="mt-8 h-12 w-48 bg-yellow-400 text-black">Get In Touch</button>
-          </div>
-        </div>
-      </div> */}
       <div className="md:mt-[120px]">
         <GlobeSection />
       </div>
@@ -196,36 +171,38 @@ export default function Home() {
 
       {/* <!------------------------------------------- Impact -------------------------------------> */}
       <div className="static min-h-[100vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
-        <div className="xs:w-full relative mt-20 min-h-[55vh] bg-black lg:left-[20%] lg:w-[70%]">
+        <div className="relative mx-auto mt-20 min-h-[55vh] w-[100vw] bg-black md:w-[70%]">
           <div className="absolute top-16 left-10 h-1 w-[35%] bg-red-900"></div>
           <div className="playfair absolute top-10 left-[40%] text-5xl text-white">Our Impact</div>
-          <div className="absolute top-[25%] left-[25%] m-8 w-[50%] text-xl text-white">
+          <div className="absolute top-[25%] left-[25%] mx-auto my-auto w-[50%] text-xl text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
             aspect of our clients’ FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
-          <div className="absolute -left-[20%] top-[40%] z-10 hidden min-h-[80%] w-[40%] bg-yellow-400 p-10 pt-20 pb-20 text-center text-xl md:block">
+          <div className="-left-[20%] top-[40%] z-10 mx-auto hidden min-h-[80%] w-[40%] bg-yellow-400 p-10 pt-20 pb-20 text-center text-xl md:absolute md:block">
             We completely handle the process from logistics and design, to sourcing and production,
             to shipping and installation. Our quality control is unmatched.
           </div>
-          <div className="w-30 h-30 absolute top-[80%] left-[25%] z-20 m-8 bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-            <img className="m-auto" src="/assets/fiedl.png" alt="ok" />
-            <div className="m-4 w-[100px] text-center text-sm text-black">
-              Field <br />
-              Experts
+          <div className="absolute top-[80%] left-[50%] mx-auto flex w-[400px] -translate-x-[50%] flex-row flex-wrap justify-around gap-4 md:left-[25%] md:translate-x-0 lg:w-[800px]">
+            <div className="w-30 h-30 z-20  bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <img className="m-auto" src="/assets/fiedl.png" alt="ok" />
+              <div className="m-4 w-[100px] text-center text-sm text-black">
+                Field <br />
+                Experts
+              </div>
             </div>
-          </div>
-          <div className="w-30 h-30 absolute top-[80%] left-[45%] z-20 m-8 bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-            <img className="m-auto" src="/assets/turnkey.png" alt="ok" />
-            <div className="m-4 w-[100px] text-center text-sm text-black">Turnkey Solutions</div>
-          </div>
-          <div className="h-30 absolute top-[80%] left-[65%] z-20 m-8 bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-            <img className="m-auto" src="/assets/global.png" alt="ok" />
-            <div className="m-4 w-[100px] text-center text-sm text-black">Global Coverage</div>
-          </div>
-          <div className="h-30 absolute top-[80%] left-[85%] z-20 m-8 bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-            <img className="m-auto" src="/assets/quality.png" alt="ok" />
-            <div className="m-4 w-[100px] text-center text-sm text-black">Unmatched Quality</div>
+            <div className="w-30 h-30 z-20 bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <img className="m-auto" src="/assets/turnkey.png" alt="ok" />
+              <div className="m-4 w-[100px] text-center text-sm text-black">Turnkey Solutions</div>
+            </div>
+            <div className="w-30 h-30 z-20  bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <img className="m-auto" src="/assets/global.png" alt="ok" />
+              <div className="m-4 w-[100px] text-center text-sm text-black">Global Coverage</div>
+            </div>
+            <div className="w-30 h-30 z-20  bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <img className="m-auto" src="/assets/quality.png" alt="ok" />
+              <div className="m-4 w-[100px] text-center text-sm text-black">Unmatched Quality</div>
+            </div>
           </div>
         </div>
       </div>
