@@ -14,6 +14,7 @@ export default function GlobeSection() {
   useEffect(() => {
     setDomLoaded(true)
   }, [])
+
   const chinaAddr = {
     title: 'Corporate Location',
     line1: '5th Fl, Building A, Daxin Industrial Park',
@@ -46,7 +47,7 @@ export default function GlobeSection() {
       node.controls().enablePan = false
       node.controls().minDistance = 200
       node.controls().maxDistance = 500
-      node.controls().rotateSpeed = 0.8
+      node.controls().rotateSpeed = 0.3
       node.controls().zoomSpeed = 1
       node.controls().minPolarAngle = Math.PI / 3.5
       node.controls().maxPolarAngle = Math.PI - Math.PI / 3
@@ -163,7 +164,7 @@ export default function GlobeSection() {
   return (
     <div data-scroll-section>
       <div className="mt-14 mb-6 flex items-center justify-center gap-2">
-        <div className="playfair pl-[10%] text-6xl">Our Presence</div>
+        <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Presence</div>
         <div className="h-1 w-64 bg-red-900"></div>
       </div>
       <div>

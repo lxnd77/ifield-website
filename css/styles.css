@@ -13,12 +13,16 @@ html.has-scroll-smooth {
   --swiper-navigation-color: black;
 }
 
+.html {
+  font-size: 12px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
 .montserrat {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 .playfair {
@@ -147,20 +151,21 @@ html.has-scroll-smooth {
 }
 
 #i1,
+#i2,
 #i4 {
   transition: ease-out;
   transition-duration: 0.8s;
 }
-#i2,
+/* #i2,
 #i3 {
   transition: ease-out;
   transition-duration: 1.2s;
-}
-#ex1-layer2,
+} */
+/* #ex1-layer2,
 #ex1-layer1 {
   transition: ease-out;
   transition-duration: 0.6s;
-}
+} */
 
 /* .persppic {
   transform: rotateY(30deg);

@@ -36,9 +36,8 @@ export default function About() {
     <div className="container mx-auto w-[90vw] overflow-hidden" onMouseMove={mouse_position}>
       <div className="md:grid md:grid-cols-2" id="ex1" data-scroll-section ref={ex1}>
         <div className="container mr-auto md:col-span-1 md:col-start-1">
-          <h1 className="playfair text-6xl leading-normal md:mt-4">
-            Our <br />
-            Company
+          <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 md:text-[4vw]">
+            Our Company
           </h1>
           <br />
           <p className="text-xl">
@@ -110,10 +109,7 @@ export default function About() {
       <div className="mt-32" data-scroll-section>
         <div className="md:grid md:grid-cols-3">
           <div className="flex flex-col justify-end md:col-span-2 md:col-start-1">
-            <h1 className="playfair text-6xl leading-normal md:mt-4">
-              Our <br />
-              Founder
-            </h1>
+            <h1 className="playfair mb-4 mt-4 text-6xl leading-normal ">Our Founder</h1>
             <br />
             <p className="">
               Abhay moved from India to China in 2003 and quickly acquired the skills, knowledge,
@@ -185,12 +181,12 @@ export default function About() {
                 <div className="flex flex-row justify-around">
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">May</h3>
-                    <p className="montserrat my-4 w-[50%] text-xl">
+                    <p className="montserrat my-4 text-xl md:w-[50%]">
                       I field is founded in Hong Kong <br /> Acquired brand verification, and
                       developed supply and execution systems.
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 h-32 w-32"></img>
+                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
                 </div>
               </div>
             </div>
@@ -206,11 +202,11 @@ export default function About() {
                 <div className="flex flex-row justify-around">
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">June</h3>
-                    <p className="montserrat my-4 w-[50%] text-xl">
+                    <p className="montserrat my-4 text-xl md:w-[50%]">
                       Established a joint venture factory in Dongguan, China
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 h-32 w-32"></img>
+                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
                 </div>
               </div>
             </div>
@@ -226,11 +222,11 @@ export default function About() {
                 <div className="flex flex-row justify-around">
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">October</h3>
-                    <p className="montserrat my-4 w-[50%] text-xl">
+                    <p className="montserrat my-4 text-xl md:w-[50%]">
                       Daka Import &Export is established in Guangzhou
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 h-32 w-32"></img>
+                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
                 </div>
               </div>
             </div>
@@ -246,11 +242,11 @@ export default function About() {
                 <div className="flex flex-row justify-around">
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">February</h3>
-                    <p className="montserrat my-4 w-[50%] text-xl">
+                    <p className="montserrat my-4 text-xl md:w-[50%]">
                       I-Field USA is established in Houston, Houston, Texas
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 h-32 w-32"></img>
+                  <img src="assets/pattern1.png" className="md:blockm-8 hidden h-32 w-32"></img>
                 </div>
               </div>
             </div>
@@ -266,12 +262,12 @@ export default function About() {
                 <div className="flex flex-row justify-around">
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">December</h3>
-                    <p className="montserrat my-4 w-[50%] text-xl">
+                    <p className="montserrat my-4 text-xl md:w-[50%]">
                       I Field International Pvt. Ltd., India is established in Jaipur to meet the
                       needs of our growing workforce.
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 h-32 w-32"></img>
+                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
                 </div>
               </div>
             </div>
@@ -287,12 +283,12 @@ export default function About() {
                 <div className="flex flex-row justify-around">
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">December</h3>
-                    <p className="montserrat my-4 w-[50%] text-xl">
+                    <p className="montserrat my-4 text-xl md:w-[50%]">
                       I Field Furnishing Trading L.L.C is established in Dubai as a control hub for
                       our work in the Middle East and East Africa
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 h-32 w-32"></img>
+                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
                 </div>
               </div>
             </div>
@@ -308,12 +304,12 @@ export default function About() {
                 <div className="flex flex-row justify-around">
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">November</h3>
-                    <p className="montserrat my-4 w-[50%] text-xl">
+                    <p className="montserrat my-4 text-xl md:w-[50%]">
                       I-Field Interiors is established in Lagos, Nigeria, to expand our work in the
                       rest of Africa.
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 h-32 w-32"></img>
+                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
                 </div>
               </div>
             </div>

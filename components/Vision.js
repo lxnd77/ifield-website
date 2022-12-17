@@ -26,9 +26,9 @@ export default function Vision() {
   menuItems.forEach((element, index) => {
     items.push(
       <SwiperSlide key={index}>
-        <div className=" mx-auto w-[80%] rounded-xl p-4 shadow-xl">
-          <h2 className="playfair m-8 text-4xl">{element}</h2>
-          <p className="montserrat m-8 text-xl">{menuText[index]}</p>
+        <div className="mx-auto w-[80%] rounded-xl p-4 shadow-xl">
+          <h2 className="playfair m-8 text-[24px]">{element}</h2>
+          <p className="montserrat m-8 text-[16px]">{menuText[index]}</p>
         </div>
       </SwiperSlide>
     )

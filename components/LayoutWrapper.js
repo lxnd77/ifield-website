@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import imagesLoaded from 'imagesloaded'
+import React from 'react'
 
 const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), {
   ssr: false,
@@ -71,17 +72,45 @@ const LayoutWrapper = ({ children }) => {
         !document.getElementById('navbar-burger').contains(e.target)
       ) {
         if (menuActive) {
+          console.log('closing')
           SetMenuActive(false)
         }
       }
     })
   }, [router])
 
+  function recursiveMap(children, fn) {
+    return React.Children.map(children, (child) => {
+      if (!React.isValidElement(child) || typeof child.type == 'string') {
+        return child
+      }
+
+      if (child.props.children) {
+        child = React.cloneElement(child, {
+          children: recursiveMap(child.props.children, fn),
+        })
+      }
+
+      return fn(child)
+    })
+  }
+
+  // Add props to all child elements.
+  const childrenWithProps = recursiveMap(children, (child) => {
+    // Checking isValidElement is the safe way and avoids a TS error too.
+    if (React.isValidElement(child)) {
+      // Pass additional props here
+      return React.cloneElement(child, { toggleContact: { toggleContact } })
+    }
+
+    return child
+  })
+
   return (
     <div ref={ScrollContainer} key={router.asPath}>
       {/* ------------------------------ Navbar -------------------------------- */}
       <div className="w-full bg-white">
-        <div className="mx-14 flex flex-row items-center justify-between py-7">
+        <div className="mx-14 flex flex-row items-center justify-between py-4">
           <div className="hidden md:flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className="mx-2 h-7 w-7">
               <path
@@ -99,7 +128,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <div className="cursor-pointer place-self-center text-white">
               <Link href={'/'}>
-                <Image width="100px" alt="logo" src={logo} objectFit="contain" />
+                <Image width="100" alt="logo" src={logo} objectFit="contain" />
               </Link>
             </div>
           </div>
@@ -163,33 +192,60 @@ const LayoutWrapper = ({ children }) => {
 
       <aside
         id="contact"
-        className="fixed left-[50%] top-[50%] z-50 mx-auto ml-auto h-[400px] w-[800px] max-w-[800px] -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-white/50 text-black transition-all duration-700"
-        style={contactActive ? { top: '50%' } : { top: -200 }}
+        className="fixed left-[50%] top-[50%] z-50 mx-auto ml-auto h-[400px] 
+        w-[800px] max-w-[800px] -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-white text-black transition-all duration-700 "
+        style={contactActive ? { top: '50%', zIndex: 70 } : { top: -200, zIndex: -1 }}
       >
-        <div className="m-auto my-auto flex h-[80%] w-[80%] flex-row">
+        <div className="m-auto my-auto flex h-[80%] w-[80%] flex-row gap-4">
           <div className="my-auto">
-            <h2 className="playfair text-5xl">Contact</h2>
+            <h2 className="playfair text-4xl">Contact</h2>
+            <br />
             <p>
               Corporate Location <br /> 5th Fl, Building A, Daxin Industrial Park No.3 Kaifa Dong RD
-              , Xishan Village , Luopu , Panyu District , Guangzhou , Peoples Republic of China
-              +86-20-39232167 / 39232577 / 39232657 info@ifield.com.cn Monday - Friday: 9:00 AM -
-              6:00 PM Saturday - Sunday: 9:00 AM - 12:00 PM
+              , Xishan Village , Luopu , Panyu District , Guangzhou , Peoples Republic of China{' '}
+            </p>
+            <p>
+              +86-20-39232167 / 39232577 / 39232657 <br />
+              <br />
+              info@ifield.com.cn Monday - Friday: 9:00 AM - 6:00 PM Saturday - Sunday: 9:00 AM -
+              12:00 PM
             </p>
           </div>
-          <div className="my-auto">
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name"></input>
-              <label for="name">Email:</label>
-              <input type="text" id="email"></input>
-              <label for="name">Message</label>
-              <input type="text" id="message"></input>
-            </form>
-          </div>
+
+          <form>
+            <div className="my-auto flex flex-col justify-around">
+              <input
+                type="text"
+                id="name"
+                placeholder="Name"
+                className="flex-1 border-b-2 border-gray-400 py-2 text-gray-600 
+                placeholder-gray-400 outline-none
+                focus:border-green-400"
+              ></input>
+
+              <input
+                type="text"
+                id="email"
+                placeholder="Email"
+                className="flex-1 border-b-2 border-gray-400 py-2 text-gray-600 
+                placeholder-gray-400 outline-none
+                focus:border-green-400"
+              ></input>
+
+              <input
+                type="text"
+                id="message"
+                placeholder="Message"
+                className="flex-1 border-b-2 border-gray-400 py-2 text-gray-600 
+                placeholder-gray-400 outline-none
+                focus:border-green-400"
+              ></input>
+            </div>
+          </form>
         </div>
       </aside>
 
-      <main className="overflow-hidden">{children}</main>
+      <main className="overflow-hidden">{childrenWithProps}</main>
 
       <Footer />
     </div>
