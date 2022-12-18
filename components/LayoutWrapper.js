@@ -23,9 +23,28 @@ const LayoutWrapper = ({ children }) => {
   }
   const toggleContact = () => {
     let ca = contactActive
+
     SetContactActive(!ca)
   }
+  const toggleContactAndMenu = () => {
+    let ca = contactActive
+    let ma = menuActive
+    SetContactActive(!ca)
+    SetMenuActive(!ma)
+  }
+  const toggleOffModals = (e) => {
+    let ca = contactActive
+    let ma = menuActive
 
+    if (e.currentTarget)
+      if (ma) {
+        SetMenuActive(!ma)
+      }
+
+    if (ca) {
+      SetContactActive(!ca)
+    }
+  }
   const ScrollContainer = useRef()
   const router = useRouter()
 
@@ -174,7 +193,7 @@ const LayoutWrapper = ({ children }) => {
 
       <aside
         id="main-nav"
-        className="fixed top-[100px] right-0 z-50 ml-auto h-[84vh] w-[400px] max-w-0 overflow-hidden bg-white/50 text-black transition-all duration-700"
+        className="fixed top-[82px] right-0 z-50 ml-auto h-[90vh] w-[400px] max-w-0 overflow-hidden bg-white/50 text-black transition-all duration-700"
         style={menuActive ? { maxWidth: 400 } : { maxWidth: 0 }}
       >
         <div className="h-full px-16 py-16">
@@ -183,7 +202,7 @@ const LayoutWrapper = ({ children }) => {
             <Link href={'/about'}>About</Link>
             <Link href={'/services'}>Services</Link>
             <Link href={'/projects'}>Projects</Link>
-            <button type="button" className="text-left" onClick={toggleContact}>
+            <button type="button" className="text-left" onClick={toggleContactAndMenu}>
               Contact
             </button>
           </div>
@@ -192,60 +211,69 @@ const LayoutWrapper = ({ children }) => {
 
       <aside
         id="contact"
-        className="fixed left-[50%] top-[50%] z-50 mx-auto ml-auto h-[400px] 
-        w-[800px] max-w-[800px] -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-white text-black transition-all duration-700 "
+        className="fixed left-[50%] top-[50%] z-50 mx-auto ml-auto  w-[80%] -translate-x-1/2 -translate-y-1/2
+         overflow-hidden bg-white text-black  transition-all duration-700 md:w-[600px] "
         style={contactActive ? { top: '50%', zIndex: 70 } : { top: -200, zIndex: -1 }}
       >
-        <div className="m-auto my-auto flex h-[80%] w-[80%] flex-row gap-4">
-          <div className="my-auto">
-            <h2 className="playfair text-4xl">Contact</h2>
-            <br />
-            <p>
-              Corporate Location <br /> 5th Fl, Building A, Daxin Industrial Park No.3 Kaifa Dong RD
-              , Xishan Village , Luopu , Panyu District , Guangzhou , Peoples Republic of China{' '}
-            </p>
-            <p>
-              +86-20-39232167 / 39232577 / 39232657 <br />
-              <br />
-              info@ifield.com.cn Monday - Friday: 9:00 AM - 6:00 PM Saturday - Sunday: 9:00 AM -
-              12:00 PM
-            </p>
+        <div className="m-auto my-auto flex h-[80%] w-[80%] flex-col gap-4 text-[14px]">
+          <div className="flex flex-row justify-between text-2xl">
+            <h2 className="playfair pt-4 text-4xl">Contact Us</h2>
+            <button className="" onClick={toggleContact}>
+              x
+            </button>
           </div>
-
           <form>
             <div className="my-auto flex flex-col justify-around">
               <input
                 type="text"
                 id="name"
                 placeholder="Name"
-                className="flex-1 border-b-2 border-gray-400 py-2 text-gray-600 
+                className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
                 placeholder-gray-400 outline-none
-                focus:border-green-400"
+                invalid:border-pink-500 invalid:text-pink-600 focus:border-green-400 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
               ></input>
 
               <input
                 type="text"
                 id="email"
                 placeholder="Email"
-                className="flex-1 border-b-2 border-gray-400 py-2 text-gray-600 
+                className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
                 placeholder-gray-400 outline-none
-                focus:border-green-400"
+                invalid:border-pink-500 invalid:text-pink-600 focus:border-green-400 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
               ></input>
 
               <input
                 type="text"
                 id="message"
                 placeholder="Message"
-                className="flex-1 border-b-2 border-gray-400 py-2 text-gray-600 
-                placeholder-gray-400 outline-none
-                focus:border-green-400"
+                className="h-[80px] border-0 border-b-2 border-gray-400 py-2 
+                text-gray-600 placeholder-gray-400
+                outline-none focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
               ></input>
+              <button className="mt-4 mb-4 inline-block w-32 rounded-full border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0">
+                Send
+              </button>
             </div>
           </form>
+          <div className="my-auto mb-8 flex flex-row gap-2">
+            <p>
+              5th Fl, Building A, Daxin Industrial Park No.3, Kaifa Dong RD, Xishan Village, Luopu,
+              Panyu District, <br />
+              Guangzhou, Peoples Republic of China <br /> <br />
+              +86-20-39232167 / 39232577 / 39232657 <br />
+              info@ifield.com.cn
+            </p>
+            <p className="grow">
+              Monday - Friday: 9:00 AM - 6:00 PM <br /> <br />
+              Saturday - Sunday: 9:00 AM - 12:00 PM
+            </p>
+          </div>
         </div>
       </aside>
 
-      <main className="overflow-hidden">{childrenWithProps}</main>
+      <main className="overflow-hidden" onClick={toggleOffModals}>
+        {childrenWithProps}
+      </main>
 
       <Footer />
     </div>
