@@ -223,7 +223,7 @@ export default function About() {
                   <div>
                     <h3 className="montserrat my-4 text-xl font-bold">October</h3>
                     <p className="montserrat my-4 text-xl md:w-[50%]">
-                      Daka Import &Export is established in Guangzhou
+                      Daka Import & Export is established in Guangzhou
                     </p>
                   </div>
                   <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>

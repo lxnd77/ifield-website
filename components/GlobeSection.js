@@ -8,7 +8,7 @@ let Globe = () => null
 if (typeof window !== 'undefined') Globe = require('react-globe.gl').default
 export default function GlobeSection() {
   const [mounted, setMounted] = useState(false)
-  const [modalData, setModalData] = useState('nothing')
+  const [modalData, setModalData] = useState(null)
   const [domLoaded, setDomLoaded] = useState(false)
 
   useEffect(() => {
@@ -18,11 +18,11 @@ export default function GlobeSection() {
   const chinaAddr = {
     title: 'Corporate Location',
     line1: '5th Fl, Building A, Daxin Industrial Park',
-    line2: ' No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,',
+    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
     country: 'Peoples Republic of China',
     phone: ' +86-20-39232167 / 39232577 / 39232657 ',
     email: ' info@ifield.com.cn',
-    worktime1: ' Monday - Friday: 9:00 AM - 6:00 PM',
+    worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
 
@@ -85,74 +85,67 @@ export default function GlobeSection() {
         case 'china':
           console.log('china')
           toggleModal()
-          setModalData(`Corporate Location
-          5th Fl, Building A, Daxin Industrial Park
-          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          Peoples Republic of China
-          +86-20-39232167 / 39232577 / 39232657
-          info@ifield.com.cn
-          Monday - Friday: 9:00 AM - 6:00 PM
-          Saturday - Sunday: 9:00 AM - 12:00 PM`)
+          setModalData(chinaAddr)
           break
         case 'chad':
           console.log('chad')
           toggleModal()
-          setModalData(`Corporate Location
-          5th Fl, Building A, Daxin Industrial Park
-          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          Peoples Republic of China
-          +86-20-39232167 / 39232577 / 39232657
-          info@ifield.com.cn
-          Monday - Friday: 9:00 AM - 6:00 PM
-          Saturday - Sunday: 9:00 AM - 12:00 PM`)
+          // setModalData(`Corporate Location
+          // 5th Fl, Building A, Daxin Industrial Park
+          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          // Peoples Republic of China
+          // +86-20-39232167 / 39232577 / 39232657
+          // info@ifield.com.cn
+          // Monday - Friday: 9:00 AM - 6:00 PM
+          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'india':
           console.log('india')
           toggleModal()
-          setModalData(`Corporate Location
-          5th Fl, Building A, Daxin Industrial Park
-          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          Peoples Republic of China
-          +86-20-39232167 / 39232577 / 39232657
-          info@ifield.com.cn
-          Monday - Friday: 9:00 AM - 6:00 PM
-          Saturday - Sunday: 9:00 AM - 12:00 PM`)
+          // setModalData(`Corporate Location
+          // 5th Fl, Building A, Daxin Industrial Park
+          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          // Peoples Republic of China
+          // +86-20-39232167 / 39232577 / 39232657
+          // info@ifield.com.cn
+          // Monday - Friday: 9:00 AM - 6:00 PM
+          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'usa':
           console.log('usa')
           toggleModal()
-          setModalData(`Corporate Location
-          5th Fl, Building A, Daxin Industrial Park
-          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          Peoples Republic of China
-          +86-20-39232167 / 39232577 / 39232657
-          info@ifield.com.cn
-          Monday - Friday: 9:00 AM - 6:00 PM
-          Saturday - Sunday: 9:00 AM - 12:00 PM`)
+          // setModalData(`Corporate Location
+          // 5th Fl, Building A, Daxin Industrial Park
+          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          // Peoples Republic of China
+          // +86-20-39232167 / 39232577 / 39232657
+          // info@ifield.com.cn
+          // Monday - Friday: 9:00 AM - 6:00 PM
+          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'nigeria':
           console.log('nigeria')
           toggleModal()
-          setModalData(`Corporate Location
-          5th Fl, Building A, Daxin Industrial Park
-          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          Peoples Republic of China
-          +86-20-39232167 / 39232577 / 39232657
-          info@ifield.com.cn
-          Monday - Friday: 9:00 AM - 6:00 PM
-          Saturday - Sunday: 9:00 AM - 12:00 PM`)
+          // setModalData(`Corporate Location
+          // 5th Fl, Building A, Daxin Industrial Park
+          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          // Peoples Republic of China
+          // +86-20-39232167 / 39232577 / 39232657
+          // info@ifield.com.cn
+          // Monday - Friday: 9:00 AM - 6:00 PM
+          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'spain':
           console.log('spain')
           toggleModal()
-          setModalData(`Corporate Location
-          5th Fl, Building A, Daxin Industrial Park
-          No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          Peoples Republic of China
-          +86-20-39232167 / 39232577 / 39232657
-          info@ifield.com.cn
-          Monday - Friday: 9:00 AM - 6:00 PM
-          Saturday - Sunday: 9:00 AM - 12:00 PM`)
+          // setModalData(`Corporate Location
+          // 5th Fl, Building A, Daxin Industrial Park
+          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
+          // Peoples Republic of China
+          // +86-20-39232167 / 39232577 / 39232657
+          // info@ifield.com.cn
+          // Monday - Friday: 9:00 AM - 6:00 PM
+          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         default:
           break
@@ -167,7 +160,7 @@ export default function GlobeSection() {
         <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Presence</div>
         <div className="h-1 w-64 bg-red-900"></div>
       </div>
-      <div>
+      <div className="">
         <div id="globeViz">
           {domLoaded && (
             <Globe
@@ -181,7 +174,7 @@ export default function GlobeSection() {
           )}
         </div>
 
-        <div className="text-center">
+        <div className="montserrat p-4 text-center">
           CHINA | HONGKONG (SAR) | INDIA | USA | UAE | NIGERIA | SPAIN
         </div>
       </div>

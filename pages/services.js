@@ -30,6 +30,7 @@ export default function Services() {
           }}
           autoplay={{ delay: 3000 }}
           initialSlide={0}
+          rewind={true}
           onAfterInit={(swiper) => {
             // swiper.slideTo(0, 4000)
           }}
@@ -109,6 +110,34 @@ export default function Services() {
             </div>
           </SwiperSlide>
         </Swiper>
+      </div>
+      <div className="mx-auto flex flex-row justify-around">
+        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">
+          300,000 m<sup>2</sup>
+        </div>
+        <div className="playfair m-4 text-left align-baseline text-2xl">
+          factory equipped with end-to-end capacity.
+        </div>
+      </div>
+      <div className="mx-auto flex flex-row justify-between">
+        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">98</div>
+        <div className="playfair m-4 align-baseline text-2xl">
+          factory equipped with end-to-end capacity.
+        </div>
+      </div>
+      <div className="mx-auto flex flex-row justify-between">
+        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">300</div>
+        <div className="playfair m-4 align-baseline text-2xl">
+          factory equipped with end-to-end capacity.
+        </div>
+      </div>
+      <div className="mx-auto flex flex-row justify-between">
+        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">
+          20,000<sup>2</sup>
+        </div>
+        <div className="playfair m-4 align-baseline text-2xl">
+          factory equipped with end-to-end capacity.
+        </div>
       </div>
     </section>
   )
