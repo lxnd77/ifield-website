@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className="h-600px w-full" data-scroll-section>
         <hr className="m-8 mx-auto w-[80%] border-t-2 border-red-700" />
-        <div className="mx-auto flex flex-col md:w-[70%] md:flex-row ">
+        <div className="mx-auto flex flex-col text-[14px] md:w-[70%] md:flex-row">
           <div className="mx-auto flex max-w-[75%] flex-col justify-around gap-4 p-4">
             <img src="assets/logoblack.png" width="150px" className="mb-4" />
             <div className="flex flex-row items-center gap-2">
