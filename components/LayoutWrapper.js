@@ -147,7 +147,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <div className="cursor-pointer place-self-center text-white">
               <Link href={'/'}>
-                <Image width="100" alt="logo" src={logo} objectFit="contain" />
+                <Image width="100" alt="logo" src={logo} />
               </Link>
             </div>
           </div>
@@ -155,7 +155,7 @@ const LayoutWrapper = ({ children }) => {
             <div className="text-black">
               {/* ------------------------- Menu Toggle button ---------------------------- */}
               <button
-                className="navbar-burger group z-60 relative"
+                className="navbar-burger z-60 group relative"
                 id="navbar-burger"
                 type="button"
                 onClick={toggleMenu}
