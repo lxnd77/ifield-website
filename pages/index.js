@@ -24,6 +24,8 @@ export default function Home({ toggleContact }) {
 
   function mouse_position(e) {
     let xy = [e.clientX, e.clientY]
+    console.log(e.clientX)
+    console.log(e.clientY)
     let position1 = xy.concat([i1.current])
     let position2 = xy.concat([i2.current])
     let position3 = xy.concat([i4.current])
@@ -136,7 +138,7 @@ export default function Home({ toggleContact }) {
 
       {/* <!-------------------------- Achievements ----------------------------> */}
       <div
-        className="container mx-auto mt-40 flex h-full w-full justify-center bg-white"
+        className="container mx-auto mt-24 flex h-full w-full justify-center bg-white"
         data-scroll-section
       >
         <div className="grid w-[60%] grid-cols-6 gap-4">

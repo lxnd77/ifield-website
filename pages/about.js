@@ -14,7 +14,20 @@ export default function About() {
     let calcX = -(y - box.y - box.height / 2) / constrain
     let calcY = (x - box.x - box.width / 2) / constrain
 
-    return 'perspective(100px) ' + '   rotateX(' + calcX + 'deg) ' + '   rotateY(' + calcY + 'deg)'
+    return (
+      'perspective(100px) ' +
+      '   rotateX(' +
+      calcX +
+      'deg) ' +
+      '   rotateY(' +
+      calcY +
+      'deg)' +
+      'translate(' +
+      calcY * -20 +
+      'px ,' +
+      calcX * -10 +
+      'px) '
+    )
   }
 
   function transformElement(el, xyEl) {
@@ -23,7 +36,6 @@ export default function About() {
 
   function mouse_position(e) {
     let xy = [e.clientX, e.clientY]
-
     let position1 = xy.concat([ex1Layer1.current])
     let position2 = xy.concat([ex1Layer2.current])
 
@@ -32,9 +44,16 @@ export default function About() {
       transformElement(ex1Layer2.current, position2)
     })
   }
+
   return (
-    <div className="container mx-auto w-[90vw] overflow-hidden" onMouseMove={mouse_position}>
-      <div className="md:grid md:grid-cols-2" id="ex1" data-scroll-section ref={ex1}>
+    <div className="container mx-auto w-[90vw] overflow-hidden">
+      <div
+        className="md:grid md:grid-cols-2"
+        id="ex1"
+        data-scroll-section
+        ref={ex1}
+        onMouseMove={mouse_position}
+      >
         <div className="container mr-auto md:col-span-1 md:col-start-1">
           <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 md:text-[4vw]">
             Our Company

@@ -7,7 +7,6 @@ import GlobeModal from './GlobeModal'
 let Globe = () => null
 if (typeof window !== 'undefined') Globe = require('react-globe.gl').default
 export default function GlobeSection() {
-  const [mounted, setMounted] = useState(false)
   const [modalData, setModalData] = useState(null)
   const [domLoaded, setDomLoaded] = useState(false)
 
@@ -43,12 +42,10 @@ export default function GlobeSection() {
       node.controls().enableZoom = false
       node.controls().enableDamping = true
       node.controls().autoRotate = true
-      node.controls().dynamicDampingFactor = 0.01
+      node.controls().dynamicDampingFactor = 0.05
       node.controls().enablePan = false
-      node.controls().minDistance = 200
-      node.controls().maxDistance = 500
-      node.controls().rotateSpeed = 0.3
-      node.controls().zoomSpeed = 1
+
+      node.controls().rotateSpeed = 0.1
       node.controls().minPolarAngle = Math.PI / 3.5
       node.controls().maxPolarAngle = Math.PI - Math.PI / 3
     }
@@ -90,62 +87,22 @@ export default function GlobeSection() {
         case 'chad':
           console.log('chad')
           toggleModal()
-          // setModalData(`Corporate Location
-          // 5th Fl, Building A, Daxin Industrial Park
-          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          // Peoples Republic of China
-          // +86-20-39232167 / 39232577 / 39232657
-          // info@ifield.com.cn
-          // Monday - Friday: 9:00 AM - 6:00 PM
-          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'india':
           console.log('india')
           toggleModal()
-          // setModalData(`Corporate Location
-          // 5th Fl, Building A, Daxin Industrial Park
-          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          // Peoples Republic of China
-          // +86-20-39232167 / 39232577 / 39232657
-          // info@ifield.com.cn
-          // Monday - Friday: 9:00 AM - 6:00 PM
-          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'usa':
           console.log('usa')
           toggleModal()
-          // setModalData(`Corporate Location
-          // 5th Fl, Building A, Daxin Industrial Park
-          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          // Peoples Republic of China
-          // +86-20-39232167 / 39232577 / 39232657
-          // info@ifield.com.cn
-          // Monday - Friday: 9:00 AM - 6:00 PM
-          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'nigeria':
           console.log('nigeria')
           toggleModal()
-          // setModalData(`Corporate Location
-          // 5th Fl, Building A, Daxin Industrial Park
-          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          // Peoples Republic of China
-          // +86-20-39232167 / 39232577 / 39232657
-          // info@ifield.com.cn
-          // Monday - Friday: 9:00 AM - 6:00 PM
-          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         case 'spain':
           console.log('spain')
           toggleModal()
-          // setModalData(`Corporate Location
-          // 5th Fl, Building A, Daxin Industrial Park
-          // No.3 Kaifa Dong RD , Xishan Village , Luopu , Panyu District , Guangzhou ,
-          // Peoples Republic of China
-          // +86-20-39232167 / 39232577 / 39232657
-          // info@ifield.com.cn
-          // Monday - Friday: 9:00 AM - 6:00 PM
-          // Saturday - Sunday: 9:00 AM - 12:00 PM`)
           break
         default:
           break
@@ -160,15 +117,17 @@ export default function GlobeSection() {
         <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Presence</div>
         <div className="h-1 w-64 bg-red-900"></div>
       </div>
-      <div className="">
+      <div className="h-[652px]">
         <div id="globeViz">
           {domLoaded && (
             <Globe
               ref={onRefChange}
-              bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+              // bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
               globeImageUrl="/assets/globe.png"
               htmlElementsData={gData}
               htmlElement={gHtmlElements}
+              waitForGlobeReady={false}
+              enablePointerInteraction={false}
               // onGlobeReady={() => init()}
             />
           )}

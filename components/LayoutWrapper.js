@@ -9,10 +9,6 @@ import { useRouter } from 'next/router'
 import imagesLoaded from 'imagesloaded'
 import React from 'react'
 
-const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), {
-  ssr: false,
-})
-
 const LayoutWrapper = ({ children }) => {
   const [menuActive, SetMenuActive] = useState(false)
   const [contactActive, SetContactActive] = useState(false)
@@ -51,13 +47,13 @@ const LayoutWrapper = ({ children }) => {
   useEffect(() => {
     let scroll = null
     async function getLocomotive() {
+      console.log('getLoco')
       const Locomotive = (await import('locomotive-scroll')).default
 
       scroll = new Locomotive({
         el: ScrollContainer.current,
         smooth: true,
         smoothMobile: true,
-        lerp: 0.2,
       })
       scroll.destroy()
       if (document.readyState === 'loading') {
@@ -147,7 +143,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <div className="cursor-pointer place-self-center text-white">
               <Link href={'/'}>
-                <Image width="100" alt="logo" src={logo} />
+                <Image width="100" alt="logo" src={logo} objectFit="contain" />
               </Link>
             </div>
           </div>
