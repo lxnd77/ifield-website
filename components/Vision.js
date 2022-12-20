@@ -44,8 +44,6 @@ export default function Vision() {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {

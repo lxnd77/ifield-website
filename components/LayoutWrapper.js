@@ -13,6 +13,45 @@ const LayoutWrapper = ({ children }) => {
   const [menuActive, SetMenuActive] = useState(false)
   const [contactActive, SetContactActive] = useState(false)
 
+  const handleSubmit = async (event) => {
+    // Stop the form from submitting and refreshing the page.
+    event.preventDefault()
+
+    // Get data from the form.
+
+    const name = event.target.name.value
+    const email = event.target.email.value
+    const message = event.target.message.value
+    sendMail(name, email, message)
+  }
+
+  async function sendMail(name, from, message) {
+    const data = {
+      name: name,
+      from: from,
+      message: message,
+    }
+
+    // Send the form data to our API and get a response.
+    const response = await fetch('/api/sendMail', {
+      // Body of the request is the JSON data we created above.
+      body: JSON.stringify(data),
+      // Tell the server we're sending JSON.
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // The method is POST because we are sending data.
+      method: 'POST',
+    })
+
+    // Get the response data from server as JSON.
+    // If server returns the name submitted, that means the form works.
+    const result = await response.json()
+    console.log(result)
+    alert(result.message)
+    toggleContact()
+  }
+
   const toggleMenu = () => {
     let ma = menuActive
     SetMenuActive(!ma)
@@ -43,35 +82,37 @@ const LayoutWrapper = ({ children }) => {
   }
   const ScrollContainer = useRef()
   const router = useRouter()
-
+  let scroll = null
   useEffect(() => {
-    let scroll = null
     async function getLocomotive() {
       console.log('getLoco')
       const Locomotive = (await import('locomotive-scroll')).default
 
-      scroll = new Locomotive({
-        el: ScrollContainer.current,
-        smooth: true,
-        smoothMobile: true,
-      })
-      scroll.destroy()
-      if (document.readyState === 'loading') {
-        // Loading hasn't finished yet
-        document.addEventListener('DOMContentLoaded', function (e) {
-          scroll.init()
-          scroll.update()
+      if (!scroll) {
+        console.log('new scroll')
+        scroll = new Locomotive({
+          el: ScrollContainer.current,
+          smooth: true,
+          smoothMobile: true,
         })
-      } else {
-        // `DOMContentLoaded` has already fired
-        scroll.init()
       }
-      imagesLoaded(ScrollContainer, function (instance) {
-        scroll.update()
-      })
+      scroll.update()
+      // scroll.destroy()
+      // if (document.readyState === 'loading') {
+      //   // Loading hasn't finished yet
+      //   document.addEventListener('DOMContentLoaded', function (e) {
+      //     scroll.init()
+      //     scroll.update()
+      //   })
+      // } else {
+      //   // `DOMContentLoaded` has already fired
+      //   scroll.init()
+      //   scroll.update()
+      // }
+      // imagesLoaded(ScrollContainer, function (instance) {
+      //   scroll.update()
+      // })
     }
-
-    getLocomotive()
 
     const handleRouteChange = (url, { shallow }) => {
       scroll.destroy()
@@ -87,11 +128,11 @@ const LayoutWrapper = ({ children }) => {
         !document.getElementById('navbar-burger').contains(e.target)
       ) {
         if (menuActive) {
-          console.log('closing')
           SetMenuActive(false)
         }
       }
     })
+    getLocomotive()
   }, [router])
 
   function recursiveMap(children, fn) {
@@ -162,7 +203,7 @@ const LayoutWrapper = ({ children }) => {
                       className={
                         menuActive
                           ? 'h-[2px] w-7 origin-left rotate-[42deg] transform bg-black transition-all duration-300'
-                          : 'h-[2px] w-7 origin-left transform bg-black transition-all duration-300'
+                          : 'h-[2px] w-7 origin-left transform rounded bg-black transition-all duration-300'
                       }
                     ></div>
                     <div
@@ -175,8 +216,8 @@ const LayoutWrapper = ({ children }) => {
                     <div
                       className={
                         menuActive
-                          ? 'h-[2px] w-7 origin-left -rotate-[42deg] transform bg-black transition-all duration-300'
-                          : 'h-[2px] w-7 origin-left transform bg-black transition-all duration-300'
+                          ? 'h-[2.5px] w-7 origin-left -rotate-[42deg] transform bg-black transition-all duration-300'
+                          : 'h-[2.5px] w-7 origin-left transform rounded bg-black transition-all duration-300'
                       }
                     ></div>
                   </div>
@@ -218,7 +259,7 @@ const LayoutWrapper = ({ children }) => {
               x
             </button>
           </div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="my-auto flex flex-col justify-around">
               <input
                 type="text"
@@ -232,7 +273,7 @@ const LayoutWrapper = ({ children }) => {
               <input
                 type="text"
                 id="email"
-                placeholder="Email"
+                placeholder="email@address.com"
                 className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
                 placeholder-gray-400 outline-none
                 invalid:border-pink-500 invalid:text-pink-600 focus:border-green-400 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
@@ -246,7 +287,10 @@ const LayoutWrapper = ({ children }) => {
                 text-gray-600 placeholder-gray-400
                 outline-none focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
               ></input>
-              <button className="mt-4 mb-4 inline-block w-32 rounded-full border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0">
+              <button
+                type="submit"
+                className="mt-4 mb-4 inline-block w-32 rounded-full border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              >
                 Send
               </button>
             </div>
