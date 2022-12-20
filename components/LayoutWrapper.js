@@ -265,6 +265,7 @@ const LayoutWrapper = ({ children }) => {
                 type="text"
                 id="name"
                 placeholder="Name"
+                required
                 className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
                 placeholder-gray-400 outline-none
                 invalid:border-pink-500 invalid:text-pink-600 focus:border-green-400 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
@@ -274,6 +275,7 @@ const LayoutWrapper = ({ children }) => {
                 type="text"
                 id="email"
                 placeholder="email@address.com"
+                required
                 className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
                 placeholder-gray-400 outline-none
                 invalid:border-pink-500 invalid:text-pink-600 focus:border-green-400 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
@@ -283,16 +285,15 @@ const LayoutWrapper = ({ children }) => {
                 type="text"
                 id="message"
                 placeholder="Message"
+                required
                 className="h-[80px] border-0 border-b-2 border-gray-400 py-2 
                 text-gray-600 placeholder-gray-400
                 outline-none focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
               ></input>
-              <button
+              <input
                 type="submit"
-                className="mt-4 mb-4 inline-block w-32 rounded-full border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-              >
-                Send
-              </button>
+                className="mt-4 mb-4 inline-block w-32 rounded-full border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out content-[Submit] hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              ></input>
             </div>
           </form>
           <div className="my-auto mb-8 flex flex-row gap-2">

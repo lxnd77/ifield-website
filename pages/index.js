@@ -41,7 +41,7 @@ export default function Home({ toggleContact }) {
     <>
       {/* ------------------------------------ HERO ----------------------------- */}
       <div
-        className="relative z-20 h-[90vh] w-full bg-[#DBD2BE]"
+        className="relative h-[90vh] w-full bg-[#DBD2BE]"
         onMouseMove={mouse_position}
         data-scroll-section
       >
