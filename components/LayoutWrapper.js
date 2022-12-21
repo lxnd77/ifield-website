@@ -143,7 +143,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <div className="cursor-pointer place-self-center text-white">
               <Link href={'/'}>
-                <Image width="100" alt="logo" src={logo} objectFit="contain" />
+                <Image width="100" alt="logo" src={logo} />
               </Link>
             </div>
           </div>

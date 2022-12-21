@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import Image from 'next/image'
 
 export default function About() {
   const ex1 = useRef()
@@ -66,7 +67,13 @@ export default function About() {
           <br />
           <div className="md:grid md:grid-cols-3">
             <div className="container md:col-span-1 md:col-start-1">
-              <img src="assets/pattern1.png" className="my-auto mx-auto px-4 py-4" />
+              <Image
+                width={500}
+                height={500}
+                alt=""
+                src="/assets/pattern1.png"
+                className="my-auto mx-auto px-4 py-4"
+              />
             </div>
             <div className="container text-justify text-sm md:col-span-2 md:col-start-2 md:px-4">
               When we first started out as hotel contractors, I-Field was based in Hong Kong with a
@@ -94,14 +101,20 @@ export default function About() {
         </div>
 
         <div className="ex1 h-full w-full md:relative md:col-span-1 md:col-start-2">
-          <img
-            src="assets/projects/marriot gujarat3.png"
+          <Image
+            width={600}
+            height={600}
+            alt=""
+            src="/assets/projects/marriot gujarat3.png"
             className="hImg pointer-events-none top-[10%] aspect-square overflow-hidden object-cover drop-shadow-2xl md:absolute md:left-[10%] md:w-[60%]"
             id="ex1-layer1"
             ref={ex1Layer1}
           />
-          <img
-            src="assets/projects/marriot gujarat3.png"
+          <Image
+            width={600}
+            height={600}
+            alt=""
+            src="/assets/projects/marriot gujarat3.png"
             className="hImg pointer-events-none overflow-hidden object-cover drop-shadow-2xl md:absolute md:right-[20%] md:top-[35%] md:h-[350px] md:w-[200px]"
             id="ex1-layer2"
             ref={ex1Layer2}
@@ -119,8 +132,11 @@ export default function About() {
           end-to-end service process ensures that projects are completed on time, at great prices,
           so your operations can begin the moment you turn the key.
         </p>
-        <img
-          src="assets/pattern2.png"
+        <Image
+          width={500}
+          height={500}
+          alt=""
+          src="/assets/pattern2.png"
           className="absolute -right-[10%] my-auto md:col-span-1 md:col-start-2"
         />
       </div>
@@ -152,7 +168,7 @@ export default function About() {
             </p>
           </div>
           <div className="flex flex-col justify-end md:col-span-1 md:col-start-3">
-            <img src="assets/profile.png" className="" />
+            <Image width={500} height={500} alt="" src="/assets/profile.png" className="" />
           </div>
         </div>
         <div>
@@ -161,12 +177,30 @@ export default function About() {
       </div>
 
       <div className="mx-auto mt-16 flex w-[70vw] flex-wrap justify-around" data-scroll-section>
-        <img src="assets/profile.png" alt="" className="mb-16 h-80 w-80" />
-        <img src="assets/profile.png" alt="" className="mb-16 h-80 w-80" />
-        <img src="assets/profile.png" alt="" className="mb-16 h-80 w-80" />
-        <img src="assets/profile.png" alt="" className="h-80 w-80" />
-        <img src="assets/profile.png" alt="" className="h-80 w-80" />
-        <img src="assets/profile.png" alt="" className="h-80 w-80" />
+        <Image
+          width={500}
+          height={500}
+          src="/assets/profile.png"
+          alt=""
+          className="mb-16 h-80 w-80"
+        />
+        <Image
+          width={500}
+          height={500}
+          src="/assets/profile.png"
+          alt=""
+          className="mb-16 h-80 w-80"
+        />
+        <Image
+          width={500}
+          height={500}
+          src="/assets/profile.png"
+          alt=""
+          className="mb-16 h-80 w-80"
+        />
+        <Image width={500} height={500} src="/assets/profile.png" alt="" className="h-80 w-80" />
+        <Image width={500} height={500} src="/assets/profile.png" alt="" className="h-80 w-80" />
+        <Image width={500} height={500} src="/assets/profile.png" alt="" className="h-80 w-80" />
       </div>
       {/* -------------------------- Timeline --------------------------------- */}
       <div className="bg-[#191919] text-white" data-scroll-section>
@@ -195,7 +229,13 @@ export default function About() {
                 2003
               </h2>
               <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <img src="assets/7.jpg" className="mx-auto h-[202px] w-[536px] object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/7.jpg"
+                  className="mx-auto h-[202px] w-[536px] object-cover"
+                  alt=""
+                />
 
                 <div className="flex flex-row justify-around">
                   <div>
@@ -205,7 +245,13 @@ export default function About() {
                       developed supply and execution systems.
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/assets/pattern1.png"
+                    className="m-8 hidden h-32 w-32 md:block"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -216,7 +262,13 @@ export default function About() {
                 2011
               </h2>
               <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <img src="assets/7.jpg" className="mx-auto h-[202px] w-[536px] object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/7.jpg"
+                  className="mx-auto h-[202px] w-[536px] object-cover"
+                  alt=""
+                />
 
                 <div className="flex flex-row justify-around">
                   <div>
@@ -225,7 +277,13 @@ export default function About() {
                       Established a joint venture factory in Dongguan, China
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/assets/pattern1.png"
+                    className="m-8 hidden h-32 w-32 md:block"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -236,7 +294,13 @@ export default function About() {
                 2013
               </h2>
               <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <img src="assets/7.jpg" className="mx-auto h-[202px] w-[536px] object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/7.jpg"
+                  className="mx-auto h-[202px] w-[536px] object-cover"
+                  alt=""
+                />
 
                 <div className="flex flex-row justify-around">
                   <div>
@@ -245,7 +309,13 @@ export default function About() {
                       Daka Import & Export is established in Guangzhou
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/assets/pattern1.png"
+                    className="m-8 hidden h-32 w-32 md:block"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -256,7 +326,13 @@ export default function About() {
                 2019
               </h2>
               <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <img src="assets/7.jpg" className="mx-auto h-[202px] w-[536px] object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/7.jpg"
+                  className="mx-auto h-[202px] w-[536px] object-cover"
+                  alt=""
+                />
 
                 <div className="flex flex-row justify-around">
                   <div>
@@ -265,7 +341,13 @@ export default function About() {
                       I-Field USA is established in Houston, Houston, Texas
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="md:blockm-8 hidden h-32 w-32"></img>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/assets/pattern1.png"
+                    className="md:blockm-8 hidden h-32 w-32"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -276,7 +358,13 @@ export default function About() {
                 2019
               </h2>
               <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <img src="assets/7.jpg" className="mx-auto h-[202px] w-[536px] object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/7.jpg"
+                  className="mx-auto h-[202px] w-[536px] object-cover"
+                  alt=""
+                />
 
                 <div className="flex flex-row justify-around">
                   <div>
@@ -286,7 +374,13 @@ export default function About() {
                       needs of our growing workforce.
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/assets/pattern1.png"
+                    className="m-8 hidden h-32 w-32 md:block"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -297,7 +391,13 @@ export default function About() {
                 2020
               </h2>
               <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <img src="assets/7.jpg" className="mx-auto h-[202px] w-[536px] object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/7.jpg"
+                  className="mx-auto h-[202px] w-[536px] object-cover"
+                  alt=""
+                />
 
                 <div className="flex flex-row justify-around">
                   <div>
@@ -307,7 +407,13 @@ export default function About() {
                       our work in the Middle East and East Africa
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/assets/pattern1.png"
+                    className="m-8 hidden h-32 w-32 md:block"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -318,7 +424,13 @@ export default function About() {
                 2021
               </h2>
               <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <img src="assets/7.jpg" className="mx-auto h-[202px] w-[536px] object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src="/assets/7.jpg"
+                  className="mx-auto h-[202px] w-[536px] object-cover"
+                  alt=""
+                />
 
                 <div className="flex flex-row justify-around">
                   <div>
@@ -328,7 +440,13 @@ export default function About() {
                       rest of Africa.
                     </p>
                   </div>
-                  <img src="assets/pattern1.png" className="m-8 hidden h-32 w-32 md:block"></img>
+                  <Image
+                    width={500}
+                    height={500}
+                    src="/assets/pattern1.png"
+                    className="m-8 hidden h-32 w-32 md:block"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>

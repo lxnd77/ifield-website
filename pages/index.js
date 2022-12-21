@@ -3,12 +3,14 @@ import Vision from '@/components/Vision'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
 import { useRef } from 'react'
+import Image from 'next/image'
 
 export default function Home({ toggleContact }) {
   const constrain = 260
   const i1 = useRef(null)
   const i2 = useRef(null)
   const i4 = useRef(null)
+
   function transforms(x, y, el) {
     let box = el.getBoundingClientRect()
     let calcX = -(y - box.y - box.height / 2) / constrain
@@ -47,26 +49,32 @@ export default function Home({ toggleContact }) {
         onMouseMove={mouse_position}
         data-scroll-section
       >
-        <img
+        <Image
           className="hImg pointer-events-none absolute right-[20%] top-[15%] w-[400px] shadow-xl"
-          src="./assets/Rectangle 45.png"
+          src="/assets/Rectangle 45.png"
           alt=""
           id="i2"
           ref={i2}
+          width={400}
+          height={400}
         />
-        <img
+        <Image
           className="hImg pointer-events-none absolute right-[10%] bottom-[10%] w-[300px] shadow-xl"
-          src="./assets/Rectangle 50.png"
+          src="/assets/Rectangle 50.png"
           alt=""
           id="i1"
           ref={i1}
+          width={400}
+          height={400}
         />
-        <img
+        <Image
           className="hImg pointer-events-none absolute left-[8%] bottom-[15%] w-[450px] shadow-xl"
-          src="./assets/Rectangle 48.png"
+          src="/assets/Rectangle 48.png"
           alt=""
           id="i4"
           ref={i4}
+          width={400}
+          height={400}
         />
 
         <div className="playfair pointer-events-none z-50 my-auto h-full w-full bg-white/40 text-left text-[2.6rem] leading-tight text-black md:text-[5vw]">
@@ -94,10 +102,12 @@ export default function Home({ toggleContact }) {
         </div>
 
         <div className="flex w-full flex-col bg-black md:w-[90vw]  md:flex-row md:pt-[10%] lg:pt-8">
-          <img
-            className=" relative h-[100vh] object-cover md:top-[12vh] md:w-[50vw]"
+          <Image
+            className="relative h-[100vh] w-[100vw] object-cover md:top-[12vh] md:w-[50vw]"
             src="/assets/7.jpg"
             alt="hotel lobby"
+            width={500}
+            height={1000}
           />
           <div className="mx-14  mt-[20%] w-[80%] items-center text-xl text-white">
             <div className="align-items-center absolute top-[10vw] right-[6vw] hidden w-[50%] align-middle md:flex">
@@ -143,10 +153,22 @@ export default function Home({ toggleContact }) {
       >
         <div className="grid w-[60%] grid-cols-6 gap-4">
           <div className="col-span-3 col-start-1 mx-auto flex justify-center">
-            <img className="object-contain" src="/assets/aahoa.png" alt="AAHOA" />
+            <Image
+              width={400}
+              height={400}
+              className="object-contain"
+              src="/assets/aahoa.png"
+              alt="AAHOA"
+            />
           </div>
           <div className="col-span-3 col-start-4 mx-auto flex justify-center">
-            <img className="object-contain" src="/assets/cfa.png" alt="CFA" />
+            <Image
+              width={200}
+              height={200}
+              className="object-contain"
+              src="/assets/cfa.png"
+              alt="CFA"
+            />
           </div>
           <div className="col-span-3 col-start-1 mx-auto flex justify-center text-center">
             Member of Asian American Hotel Owners Association
@@ -178,43 +200,50 @@ export default function Home({ toggleContact }) {
       {/* <!------------------------------------------- Impact -------------------------------------> */}
       <div className="static min-h-[100vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
         <div className="relative mx-auto mt-20 min-h-[55vh] w-[100vw] bg-black md:w-[70%]">
-          <div className="absolute top-16 left-10 h-1 w-[35%] bg-red-900"></div>
-          <div className="playfair absolute top-10 left-[40%] text-[2.4rem] text-white md:text-[4vw]">
-            Our Impact
+          <div className="mt-[140px] mb-2 flex items-center  py-[24px]">
+            <div className="h-1 w-[20%] bg-red-900 "></div>
+            <div className="playfair pl-[1%] text-[2.4rem] text-white md:text-[4vw]">
+              Our Process
+            </div>
           </div>
-          <div className="absolute top-[35%] left-[25%] mx-auto my-auto w-[50%] text-xl text-white">
+          {/* <div className=" top-16 left-10 h-1 w-[35%] bg-red-900"></div>
+          <div className="playfair  top-10 left-[40%] text-[2.4rem] text-white md:text-[4vw]">
+            Our Impact
+          </div> */}
+          <div className=" top-[35%] left-[25%] mx-auto my-auto w-[50%] text-xl text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
             aspect of our clients’ FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
-          <div className="-left-[20%] top-[40%] z-10 mx-auto hidden min-h-[80%] w-[40%] bg-yellow-400 p-10 pt-20 pb-20 text-center text-xl md:absolute md:block">
+          <div className="-left-[20%] top-[30%] z-10 mx-auto hidden min-h-[80%] w-[40%] bg-yellow-400 p-10 pt-20 pb-20 text-center text-xl md:absolute md:block">
             We completely handle the process from logistics and design, to sourcing and production,
             to shipping and installation. Our quality control is unmatched.
           </div>
-          <div
-            className="absolute top-[80%] left-[50%] mx-auto flex w-[400px] -translate-x-[50%] 
-          flex-row flex-wrap justify-around gap-2 md:left-[25%] md:translate-x-0 lg:w-[800px]"
-          >
+          {/* <div
+            className="relative mt-8 flex flex-row flex-wrap justify-center gap-[12px] pb-[36px]
+          md:left-[25%] md:w-[50vw] md:justify-start"
+          > */}
+          <div className=" relative mx-[12px] mr-[26px] mt-8 grid grid-cols-2 gap-2 pb-[36px] md:left-[25%] md:mx-0 md:w-[50vw] lg:grid-cols-4">
             <div
-              className="w-30 h-30 z-20 flex flex-col bg-white p-2 shadow-xl transition duration-700
-            ease-in-out hover:scale-110"
+              className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition
+            duration-700 ease-in-out hover:scale-110"
             >
-              <img className="m-auto" src="/assets/fiedl.png" alt="ok" />
+              <Image width={65} height={65} className="m-auto" src="/assets/fiedl.png" alt="ok" />
               <div className="m-4 w-[100px] text-center text-sm text-black">
                 Field <br />
                 Experts
               </div>
             </div>
-            <div className="w-30 h-30 z-20 bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-              <img className="m-auto" src="/assets/turnkey.png" alt="ok" />
+            <div className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <Image width={65} height={65} className="m-auto" src="/assets/turnkey.png" alt="ok" />
               <div className="m-4 w-[100px] text-center text-sm text-black">Turnkey Solutions</div>
             </div>
-            <div className="w-30 h-30 z-20  bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-              <img className="m-auto" src="/assets/global.png" alt="ok" />
+            <div className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <Image width={65} height={65} className="m-auto" src="/assets/global.png" alt="ok" />
               <div className="m-4 w-[100px] text-center text-sm text-black">Global Coverage</div>
             </div>
-            <div className="w-30 h-30 z-20  bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-              <img className="m-auto" src="/assets/quality.png" alt="ok" />
+            <div className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <Image width={65} height={65} className="m-auto" src="/assets/quality.png" alt="ok" />
               <div className="m-4 w-[100px] text-center text-sm text-black">Unmatched Quality</div>
             </div>
           </div>
@@ -242,14 +271,18 @@ export default function Home({ toggleContact }) {
             <SwiperSlide className="swiper-slide w-full">
               <div className="relative h-full max-w-[800px]">
                 <div className="absolute top-[6%] left-[24px] text-6xl text-gray-400">01</div>
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   className="absolute right-0 top-[0%] w-[60vw] min-w-[260px] max-w-[500px]"
-                  src="./assets/projects/hilton chad.png"
+                  src="/assets/projects/hilton chad.png"
                   alt=""
                 />
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   className="absolute left-0 top-[28%] w-[50vw] min-w-[230px] max-w-[400px]"
-                  src="./assets/projects/hilton chad2.png"
+                  src="/assets/projects/hilton chad2.png"
                   alt=""
                 />
                 <div className="absolute bottom-[20%] right-[10%]">
@@ -260,14 +293,18 @@ export default function Home({ toggleContact }) {
             <SwiperSlide className="swiper-slide w-full">
               <div className="relative h-full max-w-[800px]">
                 <div className="absolute top-[6%] left-[24px] text-6xl text-gray-400">02</div>
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   className="absolute right-0 top-[0%] w-[60vw] min-w-[260px] max-w-[500px]"
-                  src="./assets/projects/marriot gujarat.png"
+                  src="/assets/projects/marriot gujarat.png"
                   alt=""
                 />
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   className="absolute left-0 top-[28%] w-[50vw] min-w-[230px] max-w-[400px]"
-                  src="./assets/projects/marriot gujarat2.png"
+                  src="/assets/projects/marriot gujarat2.png"
                   alt=""
                 />
                 <div className="absolute bottom-[15%] right-[10%]">
@@ -278,14 +315,18 @@ export default function Home({ toggleContact }) {
             <SwiperSlide className="swiper-slide w-full">
               <div className="relative h-full max-w-[800px]">
                 <div className="absolute top-[6%] left-[24px] text-6xl text-gray-400">03</div>
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   className="absolute right-0 top-[0%] w-[60vw] min-w-[260px] max-w-[500px]"
-                  src="./assets/projects/nairobi crowne plaza.png"
+                  src="/assets/projects/nairobi crowne plaza.png"
                   alt=""
                 />
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   className="absolute left-0 top-[28%] w-[50vw] min-w-[230px] max-w-[400px]"
-                  src="./assets/projects/nairobi crowne plaza2.png"
+                  src="/assets/projects/nairobi crowne plaza2.png"
                   alt=""
                 />
                 <div className="absolute bottom-[15%] right-[10%]">
