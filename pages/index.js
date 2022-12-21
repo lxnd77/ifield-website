@@ -26,8 +26,6 @@ export default function Home({ toggleContact }) {
 
   function mouse_position(e) {
     let xy = [e.clientX, e.clientY]
-    console.log(e.clientX)
-    console.log(e.clientY)
     let position1 = xy.concat([i1.current])
     let position2 = xy.concat([i2.current])
     let position3 = xy.concat([i4.current])
@@ -45,7 +43,7 @@ export default function Home({ toggleContact }) {
     <>
       {/* ------------------------------------ HERO ----------------------------- */}
       <div
-        className="relative z-20 h-[90vh] w-full bg-[#DBD2BE]"
+        className="relative h-[90vh] w-full bg-[#DBD2BE]"
         onMouseMove={mouse_position}
         data-scroll-section
       >
