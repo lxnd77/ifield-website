@@ -1,21 +1,24 @@
 import styles from '../css/services.module.css'
-
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Autoplay } from 'swiper'
+import { Navigation, FreeMode, Mousewheel, Scrollbar } from 'swiper'
 
 export default function Services() {
   return (
-    <section className="container mx-auto mt-16 w-[80%] bg-white" data-scroll-section id="con">
+    <section className="container z-0 mx-auto mt-16 bg-white" data-scroll-section id="con">
       <div
-        className="playfair pointer-events-none z-50 my-auto h-full w-full bg-white/40 text-left text-[2.6rem] leading-tight
-       text-black md:text-[4vw]"
+        className="playfair pointer-events-none z-50 my-auto h-full w-full bg-white/40  text-left text-[2.6rem]
+       leading-tight text-black md:text-[4vw]"
       >
         <h1 className="">Our Services</h1>
       </div>
       <div className="flex flex-row">
         <Swiper
-          navigation={true}
-          modules={[Navigation, Autoplay]}
+          data-scroll
+          data-scroll-speed="-12"
+          data-scroll-offset="50%"
+          // navigation={true}
+          modules={[Navigation, Mousewheel, FreeMode, Scrollbar]}
           breakpoints={{
             // when window width is >= 640px
             640: {
@@ -28,9 +31,12 @@ export default function Services() {
               slidesPerGroup: 2,
             },
           }}
-          autoplay={{ delay: 3000 }}
+          // autoplay={{ delay: 3000 }}
+          scrollbar={{ draggable: true }}
+          mousewheel={{ enabled: true, sensitivity: 5.5 }}
+          freeMode={{ enabled: true, sticky: false, momentumBounce: false }}
           initialSlide={0}
-          rewind={true}
+          // rewind={true}
           onAfterInit={(swiper) => {
             // swiper.slideTo(0, 4000)
           }}
@@ -111,32 +117,41 @@ export default function Services() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="mx-auto flex flex-row justify-around">
-        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">
-          300,000 m<sup>2</sup>
+      {/* <Image
+        src="/assets/pattern3.png"
+        width={700}
+        height={700}
+        alt=""
+        className="absolute top-[10vh] h-[100vh] w-auto object-cover"
+      ></Image> */}
+      <div className="z-10 w-[80%] bg-white  md:mt-[90vh]">
+        <div className="mx-auto flex flex-row justify-around">
+          <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">
+            300,000 m<sup>2</sup>
+          </div>
+          <div className="playfair m-4 text-left align-baseline text-2xl">
+            factory equipped with end-to-end capacity.
+          </div>
         </div>
-        <div className="playfair m-4 text-left align-baseline text-2xl">
-          factory equipped with end-to-end capacity.
+        <div className="mx-auto flex flex-row justify-between">
+          <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">98</div>
+          <div className="playfair m-4 align-baseline text-2xl">
+            factory equipped with end-to-end capacity.
+          </div>
         </div>
-      </div>
-      <div className="mx-auto flex flex-row justify-between">
-        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">98</div>
-        <div className="playfair m-4 align-baseline text-2xl">
-          factory equipped with end-to-end capacity.
+        <div className="mx-auto flex flex-row justify-between">
+          <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">300</div>
+          <div className="playfair m-4 align-baseline text-2xl">
+            factory equipped with end-to-end capacity.
+          </div>
         </div>
-      </div>
-      <div className="mx-auto flex flex-row justify-between">
-        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">300</div>
-        <div className="playfair m-4 align-baseline text-2xl">
-          factory equipped with end-to-end capacity.
-        </div>
-      </div>
-      <div className="mx-auto flex flex-row justify-between">
-        <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">
-          20,000<sup>2</sup>
-        </div>
-        <div className="playfair m-4 align-baseline text-2xl">
-          factory equipped with end-to-end capacity.
+        <div className="mx-auto flex flex-row justify-between">
+          <div className="montserrat m-4 w-[35%] text-right text-3xl font-bold">
+            20,000<sup>2</sup>
+          </div>
+          <div className="playfair m-4 align-baseline text-2xl">
+            factory equipped with end-to-end capacity.
+          </div>
         </div>
       </div>
     </section>
