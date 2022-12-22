@@ -1,4 +1,3 @@
-const withImages = require('next-images')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -60,10 +59,7 @@ module.exports = withBundleAnalyzer({
     path: '/',
   },
     basePath: isDev ? "" : "/ifield-next",
-   [withImages, {
-        assetPrefix: isDev ? "" : "/ifield-next/"
-    }],
-      assetPrefix: isDev ? "" : "/ifield-next/",
+    assetPrefix: isDev ? "" : "/ifield-next/",
 
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
