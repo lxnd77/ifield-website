@@ -1,3 +1,5 @@
+const withImages = require('next-images')
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -57,7 +59,12 @@ module.exports = withBundleAnalyzer({
     loader: 'imgix',
     path: '/',
   },
-    basePath: "/ifield-next",
+    basePath: isDev ? "" : "/ifield-next",
+   [withImages, {
+        assetPrefix: isDev ? "" : "/ifield-next/"
+    }],
+      assetPrefix: isDev ? "" : "/ifield-next/",
+
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
