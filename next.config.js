@@ -58,8 +58,7 @@ module.exports = withBundleAnalyzer({
     loader: 'imgix',
     path: '/',
   },
-    basePath: "/ifield-next",
-    assetPrefix:"/ifield-next/",
+
 
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
