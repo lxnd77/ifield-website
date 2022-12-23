@@ -45,7 +45,7 @@ export default function GlobeSection() {
       node.controls().dynamicDampingFactor = 0.05
       node.controls().enablePan = false
 
-      node.controls().rotateSpeed = 0.1
+      node.controls().rotateSpeed = 0.04
       node.controls().minPolarAngle = Math.PI / 3.5
       node.controls().maxPolarAngle = Math.PI - Math.PI / 3
     }
