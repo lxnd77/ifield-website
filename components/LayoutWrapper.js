@@ -268,7 +268,7 @@ const LayoutWrapper = ({ children }) => {
                 required
                 className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
                 placeholder-gray-400 outline-none
-                invalid:border-pink-500 invalid:text-pink-600 focus:border-green-400 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
+                focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
               ></input>
 
               <input
@@ -278,7 +278,7 @@ const LayoutWrapper = ({ children }) => {
                 required
                 className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
                 placeholder-gray-400 outline-none
-                invalid:border-pink-500 invalid:text-pink-600 focus:border-green-400 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
+                focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
               ></input>
 
               <input

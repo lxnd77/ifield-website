@@ -6,8 +6,8 @@ export default async function sendMail(req, res) {
     methods: ['POST'],
   })
   const mailjet = new Mailjet.apiConnect(
-    process.env.MJ_APIKEY_PUBLIC,
-    process.env.MJ_APIKEY_SECRET,
+    process.env.NEXT_PUBLIC_MJ_APIKEY_PUBLIC,
+    process.env.NEXT_PUBLIC_MJ_APIKEY_SECRET,
     {
       config: { timeout: 1000, maxBodyLength: 1500, maxContentLength: 100 },
       options: {},
