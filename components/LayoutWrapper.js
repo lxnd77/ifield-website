@@ -11,75 +11,21 @@ import React from 'react'
 
 const LayoutWrapper = ({ children }) => {
   const [menuActive, SetMenuActive] = useState(false)
-  const [contactActive, SetContactActive] = useState(false)
-
-  const handleSubmit = async (event) => {
-    // Stop the form from submitting and refreshing the page.
-    event.preventDefault()
-
-    // Get data from the form.
-
-    const name = event.target.name.value
-    const email = event.target.email.value
-    const message = event.target.message.value
-    sendMail(name, email, message)
-  }
-
-  async function sendMail(name, from, message) {
-    const data = {
-      name: name,
-      from: from,
-      message: message,
-    }
-
-    // Send the form data to our API and get a response.
-    const response = await fetch('/api/sendMail', {
-      // Body of the request is the JSON data we created above.
-      body: JSON.stringify(data),
-      // Tell the server we're sending JSON.
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      // The method is POST because we are sending data.
-      method: 'POST',
-    })
-
-    // Get the response data from server as JSON.
-    // If server returns the name submitted, that means the form works.
-    const result = await response.json()
-    console.log(result)
-    alert(result.message)
-    toggleContact()
-  }
 
   const toggleMenu = () => {
     let ma = menuActive
     SetMenuActive(!ma)
   }
-  const toggleContact = () => {
-    let ca = contactActive
 
-    SetContactActive(!ca)
-  }
-  const toggleContactAndMenu = () => {
-    let ca = contactActive
-    let ma = menuActive
-    SetContactActive(!ca)
-    SetMenuActive(!ma)
-  }
   const toggleOffModals = (e) => {
-    let ca = contactActive
     let ma = menuActive
 
     if (e.currentTarget)
       if (ma) {
         SetMenuActive(!ma)
       }
-
-    if (ca) {
-      SetContactActive(!ca)
-    }
   }
+
   const ScrollContainer = useRef()
   const router = useRouter()
   let scroll = null
@@ -96,28 +42,15 @@ const LayoutWrapper = ({ children }) => {
           smoothMobile: true,
         })
       }
+      imagesLoaded('#container', function () {
+        scroll.update()
+      })
       scroll.update()
-      // scroll.destroy()
-      // if (document.readyState === 'loading') {
-      //   // Loading hasn't finished yet
-      //   document.addEventListener('DOMContentLoaded', function (e) {
-      //     scroll.init()
-      //     scroll.update()
-      //   })
-      // } else {
-      //   // `DOMContentLoaded` has already fired
-      //   scroll.init()
-      //   scroll.update()
-      // }
-      // imagesLoaded(ScrollContainer, function (instance) {
-      //   scroll.update()
-      // })
     }
 
     const handleRouteChange = (url, { shallow }) => {
       scroll.destroy()
       SetMenuActive(false)
-      SetContactActive(false)
     }
 
     router.events.on('routeChangeStart', handleRouteChange)
@@ -156,7 +89,7 @@ const LayoutWrapper = ({ children }) => {
     // Checking isValidElement is the safe way and avoids a TS error too.
     if (React.isValidElement(child)) {
       // Pass additional props here
-      return React.cloneElement(child, { toggleContact: { toggleContact } })
+      return React.cloneElement(child, { toggleContact: { toggleMenu } })
     }
 
     return child
@@ -230,84 +163,16 @@ const LayoutWrapper = ({ children }) => {
 
       <aside
         id="main-nav"
-        className="fixed top-[82px] right-0 z-50 ml-auto h-[90vh] w-[400px] max-w-0 overflow-hidden bg-white/50 text-black transition-all duration-700"
-        style={menuActive ? { maxWidth: 400 } : { maxWidth: 0 }}
+        className="fixed top-[82px] right-0 z-50 ml-auto h-[90vh] w-[400px] overflow-hidden bg-white/50 text-black transition-all duration-700"
+        style={menuActive ? { right: 0 } : { right: -400 }}
       >
         <div className="h-full px-16 py-16">
           <div className="playfair flex h-full flex-col justify-around text-3xl">
             <Link href={'/'}>Home</Link>
-            <Link href={'/about'}>About</Link>
-            <Link href={'/services'}>Services</Link>
-            <Link href={'/projects'}>Projects</Link>
-            <button type="button" className="text-left" onClick={toggleContactAndMenu}>
-              Contact
-            </button>
-          </div>
-        </div>
-      </aside>
-
-      <aside
-        id="contact"
-        className="fixed left-[50%] top-[50%] z-50 mx-auto ml-auto  w-[80%] -translate-x-1/2 -translate-y-1/2
-         overflow-hidden bg-white text-black  transition-all duration-700 md:w-[600px] "
-        style={contactActive ? { top: '50%', zIndex: 70 } : { top: -200, zIndex: -1 }}
-      >
-        <div className="m-auto my-auto flex h-[80%] w-[80%] flex-col gap-4 text-[14px]">
-          <div className="flex flex-row justify-between text-2xl">
-            <h2 className="playfair pt-4 text-4xl">Contact Us</h2>
-            <button className="" onClick={toggleContact}>
-              x
-            </button>
-          </div>
-          <form onSubmit={handleSubmit}>
-            <div className="my-auto flex flex-col justify-around">
-              <input
-                type="text"
-                id="name"
-                placeholder="Name"
-                required
-                className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
-                placeholder-gray-400 outline-none
-                focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
-              ></input>
-
-              <input
-                type="text"
-                id="email"
-                placeholder="email@address.com"
-                required
-                className="flex-1 border-0 border-b-2 border-gray-400 py-2 text-gray-600 
-                placeholder-gray-400 outline-none
-                focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
-              ></input>
-
-              <input
-                type="text"
-                id="message"
-                placeholder="Message"
-                required
-                className="h-[80px] border-0 border-b-2 border-gray-400 py-2 
-                text-gray-600 placeholder-gray-400
-                outline-none focus:border-green-400 focus:required:border-pink-500 focus:required:ring-pink-500 "
-              ></input>
-              <input
-                type="submit"
-                className="mt-4 mb-4 inline-block w-32 rounded-full border-2 border-red-600 px-6 py-2 text-xs font-medium uppercase leading-tight text-red-600 transition duration-150 ease-in-out content-[Submit] hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-              ></input>
-            </div>
-          </form>
-          <div className="my-auto mb-8 flex flex-row gap-2">
-            <p>
-              5th Fl, Building A, Daxin Industrial Park No.3, Kaifa Dong RD, Xishan Village, Luopu,
-              Panyu District, <br />
-              Guangzhou, Peoples Republic of China <br /> <br />
-              +86-20-39232167 / 39232577 / 39232657 <br />
-              info@ifield.com.cn
-            </p>
-            <p className="grow">
-              Monday - Friday: 9:00 AM - 6:00 PM <br /> <br />
-              Saturday - Sunday: 9:00 AM - 12:00 PM
-            </p>
+            <Link href={'/about'}>About Us</Link>
+            <Link href={'/process'}>Our Process</Link>
+            <Link href={'/projects'}>Our Projects</Link>
+            <Link href={'/contact'}>Contact Us</Link>
           </div>
         </div>
       </aside>

@@ -61,13 +61,12 @@ export default function GlobeSection() {
     </svg>`
 
   const chinaOffice = { lat: 23.128994, lng: 113.25325, location: 'china' }
-  const chadOffice = { lat: 12.134846, lng: 15.055741, location: 'chad' }
   const indiaOffice = { lat: 26.912434, lng: 75.78727, location: 'india' }
   const usaOffice = { lat: 31.968599, lng: -99.90181, location: 'usa' }
   const nigeriaOffice = { lat: 9.081999, lng: 8.675277, location: 'nigeria' }
   const spainOffice = { lat: 40.463667, lng: -3.74922, location: 'spain' }
 
-  const gData = [chinaOffice, chadOffice, indiaOffice, usaOffice, nigeriaOffice, spainOffice]
+  const gData = [chinaOffice, indiaOffice, usaOffice, nigeriaOffice, spainOffice]
 
   function gHtmlElements(d) {
     const el = document.createElement('div')
@@ -83,10 +82,6 @@ export default function GlobeSection() {
           console.log('china')
           toggleModal()
           setModalData(chinaAddr)
-          break
-        case 'chad':
-          console.log('chad')
-          toggleModal()
           break
         case 'india':
           console.log('india')
@@ -113,11 +108,7 @@ export default function GlobeSection() {
 
   return (
     <div data-scroll-section>
-      <div className="mt-14 mb-6 flex items-center justify-center gap-2">
-        <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Presence</div>
-        <div className="h-1 w-64 bg-red-900"></div>
-      </div>
-      <div className="h-[652px]">
+      <div className="h-[400px]">
         <div id="globeViz">
           {domLoaded && (
             <Globe
@@ -128,13 +119,12 @@ export default function GlobeSection() {
               htmlElement={gHtmlElements}
               waitForGlobeReady={false}
               enablePointerInteraction={false}
+              backgroundColor="white"
+              height={400}
+              width={400}
               // onGlobeReady={() => init()}
             />
           )}
-        </div>
-
-        <div className="montserrat p-4 text-center">
-          CHINA | HONGKONG (SAR) | INDIA | USA | UAE | NIGERIA | SPAIN
         </div>
       </div>
 
