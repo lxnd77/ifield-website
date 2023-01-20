@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383.69 74.69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #971c20;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <circle class="cls-1" cx="37.34" cy="37.34" r="37.34" transform="translate(-7.77 64.81) rotate(-76.33)"/>
+      <circle class="cls-1" cx="140.34" cy="37.34" r="37.34" transform="translate(70.9 164.89) rotate(-76.33)"/>
+      <circle class="cls-1" cx="243.34" cy="37.34" r="37.34" transform="translate(149.56 264.97) rotate(-76.33)"/>
+      <circle class="cls-1" cx="346.34" cy="37.34" r="37.34" transform="translate(228.22 365.06) rotate(-76.33)"/>
+    </g>
+  </g>
+</svg>
