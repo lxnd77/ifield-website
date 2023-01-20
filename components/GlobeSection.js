@@ -55,10 +55,18 @@ export default function GlobeSection() {
     document.getElementById('modal').classList.toggle('hidden')
   }
   const markerSvg = `
-    <svg viewBox="-4 0 36 36">
-      <path fill="white" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
-      <circle fill="#8D1B1C" cx="14" cy="14" r="7"></circle>
-    </svg>`
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.94 4.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8e1b1d;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M2.94,1.47c0-.81-.66-1.47-1.47-1.47S0,.66,0,1.47c0,.73,1.47,3.38,1.47,3.38,0,0,1.47-2.65,1.47-3.38Z"/>
+  </g>
+</svg>`
 
   const chinaOffice = { lat: 23.128994, lng: 113.25325, location: 'china' }
   const indiaOffice = { lat: 26.912434, lng: 75.78727, location: 'india' }
@@ -72,7 +80,7 @@ export default function GlobeSection() {
     const el = document.createElement('div')
     el.innerHTML = markerSvg
     el.style.color = 'black'
-    el.style.width = `40px`
+    el.style.width = `20px`
     el.className = `marker${d.location}`
     el.style['pointer-events'] = 'auto'
     el.style.cursor = 'pointer'
@@ -108,7 +116,7 @@ export default function GlobeSection() {
 
   return (
     <div data-scroll-section>
-      <div className="h-[400px]">
+      <div className="h-[400px] w-fit">
         <div id="globeViz">
           {domLoaded && (
             <Globe

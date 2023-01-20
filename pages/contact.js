@@ -40,12 +40,71 @@ const Contact = () => {
   }
 
   return (
-    <div>
-      <div className="mb-2 flex items-center " data-scroll-section>
+    <div data-scroll-section>
+      <div className="mb-2 flex items-center ">
         <div className="h-1 w-[20%] bg-red-900 "></div>
         <div className="playfair pl-[1%] text-[2.4rem] text-black md:text-[4vw]">Contact Us</div>
       </div>
-      <GlobeSection />
+      <div className="flex flex-row flex-wrap">
+        <GlobeSection />
+        <form></form>
+      </div>
+      <div className="container mx-auto flex w-[90%] flex-row flex-wrap gap-8">
+        <div className="w-[300px]">
+          <div className="flex flex-row">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Head Office</h2>
+          </div>
+          <p className="montserrat text-justify">
+            1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
+          </p>
+        </div>
+        <div className="w-[300px]">
+          <div className="flex flex-row">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Head Office</h2>
+          </div>
+          <p className="montserrat text-justify">
+            1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
+          </p>
+        </div>
+        <div className="w-[300px]">
+          <div className="flex flex-row">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Head Office</h2>
+          </div>
+          <p className="montserrat text-justify">
+            1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
+          </p>
+        </div>
+        <div className="w-[300px]">
+          <div className="flex flex-row">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Head Office</h2>
+          </div>
+          <p className="montserrat text-justify">
+            1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
+          </p>
+        </div>
+        <div className="w-[300px]">
+          <div className="flex flex-row">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Head Office</h2>
+          </div>
+          <p className="montserrat text-justify">
+            1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
+          </p>
+        </div>
+        <div className="w-[300px]">
+          <div className="flex flex-row">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Head Office</h2>
+          </div>
+          <p className="montserrat text-justify">
+            1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

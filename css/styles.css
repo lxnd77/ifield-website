@@ -64,38 +64,50 @@ body {
 }
 
 .markerchina::after {
-  background-color: black;
-  color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   content: 'China & HongKong';
 }
 
 .markerindia::after {
-  background-color: black;
-  color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   content: 'India';
 }
 
 .markerspain::after {
-  background-color: black;
-  color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   content: 'Spain';
 }
 
 .markerchad::after {
-  background-color: black;
-  color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   content: 'Chad';
 }
 
 .markernigeria::after {
-  background-color: black;
-  color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   content: 'Nigeria';
 }
 
 .markerusa::after {
-  background-color: black;
-  color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   content: 'USA';
 }
 
