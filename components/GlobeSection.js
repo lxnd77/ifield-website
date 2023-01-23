@@ -24,6 +24,56 @@ export default function GlobeSection() {
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
+  const indiaAddr = {
+    title: 'Corporate Location',
+    line1: '5th Fl, Building A, Daxin Industrial Park',
+    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
+    country: 'Peoples Republic of China',
+    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
+    email: ' info@ifield.ae',
+    worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
+    worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
+  }
+  const spainAddr = {
+    title: 'Corporate Location',
+    line1: '5th Fl, Building A, Daxin Industrial Park',
+    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
+    country: 'Peoples Republic of China',
+    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
+    email: ' info@ifield.com.cn',
+    worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
+    worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
+  }
+  const nigeriaAddr = {
+    title: 'Corporate Location',
+    line1: '5th Fl, Building A, Daxin Industrial Park',
+    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
+    country: 'Peoples Republic of China',
+    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
+    email: ' info@ifield.com.cn',
+    worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
+    worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
+  }
+  const uaeAddr = {
+    title: 'Corporate Location',
+    line1: '5th Fl, Building A, Daxin Industrial Park',
+    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
+    country: 'Peoples Republic of China',
+    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
+    email: ' info@ifield.com.cn',
+    worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
+    worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
+  }
+  const usaAddr = {
+    title: 'Corporate Location',
+    line1: '5th Fl, Building A, Daxin Industrial Park',
+    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
+    country: 'Peoples Republic of China',
+    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
+    email: ' info@ifield.com.cn',
+    worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
+    worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
+  }
 
   const globeRef = useRef(null)
 
@@ -127,7 +177,7 @@ export default function GlobeSection() {
               htmlElement={gHtmlElements}
               waitForGlobeReady={false}
               enablePointerInteraction={false}
-              backgroundColor="white"
+              backgroundColor="rgba(255, 255, 255, 0.1)"
               height={400}
               width={400}
               // onGlobeReady={() => init()}

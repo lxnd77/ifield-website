@@ -42,8 +42,8 @@ export default async function sendMail(req, res) {
             Name: 'Admin',
           },
         ],
-        Subject: 'New Communication from ifield website',
-        TextPart: body.message + ' FROM ' + body.from,
+        Subject: 'New Communication from Ifield website',
+        TextPart: body.message + '\n FROM ' + body.from + '\n COMPANY: ' + body.company,
       },
     ],
   })
