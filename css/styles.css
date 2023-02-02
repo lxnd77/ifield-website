@@ -126,6 +126,16 @@ body {
   top: 95%;
 }
 
+@media only screen and (min-width: 768px) {
+  .swiper-button-next {
+    right: 40% !important;
+  }
+
+  .swiper-button-prev {
+    left: 40% !important;
+  }
+}
+
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
   content: 'Prev';

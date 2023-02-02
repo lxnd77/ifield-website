@@ -1,8 +1,12 @@
-import GlobeSection from '@/components/GlobeSection'
-import Vision from '@/components/Vision'
+// import GlobeSection from '@/components/GlobeSection'
+// import Vision from '@/components/Vision'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper'
-import { useRef, useEffect } from 'react'
+import { Navigation, EffectFade, Autoplay } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+// import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import CountUp from 'react-countup'
 
@@ -11,31 +15,99 @@ export default function Home({ toggleContact }) {
     <>
       {/* ------------------------------------ HERO ----------------------------- */}
       <div
-        className="relative h-[90vh] 
-        w-full"
+        className="relative h-auto w-full md:h-[90vh] "
+        // style={{
+        //   backgroundImage: 'url("/assets/Rectangle 45.png")',
+        //   backgroundRepeat: 'no-repeat',
+        //   backgroundSize: 'cover',
+        // }}
+        id="heroBG"
         // onMouseMove={mouse_position}
         data-scroll-section
       >
-        <Image
-          className="hImg pointer-events-none absolute right-[20%] top-[15%] w-[400px] shadow-xl"
+        <Swiper
+          spaceBetween={30}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          effect={'fade'}
+          speed={800}
+          modules={[EffectFade, Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="bg-black">
+              <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
+                <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
+                  FF&E Manufacturing <br />
+                  Turnkey Solutions
+                </h1>
+
+                <div className=" z-50 m-10 w-fit cursor-pointer">
+                  <button className="btn " onClick={toggleContact.toggleContact}>
+                    Get in touch
+                  </button>
+                </div>
+              </div>
+              <img
+                className="relative z-[0] h-[80vh] object-cover opacity-[0.7] md:h-auto"
+                src="/assets/hero/hero (1).jpeg"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="bg-black">
+              <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
+                <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
+                  FF&E Manufacturing <br />
+                  Turnkey Solutions
+                </h1>
+
+                <div className=" z-50 m-10 w-fit cursor-pointer">
+                  <button className="btn " onClick={toggleContact.toggleContact}>
+                    Get in touch
+                  </button>
+                </div>
+              </div>
+              <img
+                className="relative z-[0] h-[80vh] object-cover opacity-[0.7] md:h-auto"
+                src="/assets/hero/hero (2).jpeg"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="bg-black">
+              <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
+                <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
+                  FF&E Manufacturing <br />
+                  Turnkey Solutions
+                </h1>
+
+                <div className=" z-50 m-10 w-fit cursor-pointer">
+                  <button className="btn " onClick={toggleContact.toggleContact}>
+                    Get in touch
+                  </button>
+                </div>
+              </div>
+              <img
+                className="relative z-[0] h-[80vh] object-cover opacity-[0.7] md:h-auto"
+                src="/assets/hero/hero (3).jpg"
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+
+        {/* <Image
+          className="hImg pointer-events-none absolute right-0 top-0 h-full w-full object-cover mix-blend-darken	"
           src="/assets/Rectangle 45.png"
           alt=""
           id="i2"
           // ref={i2}
           width={400}
           height={400}
-        />
-        <Image
-          className="hImg pointer-events-none absolute right-[10%] bottom-[10%] w-[300px] shadow-xl"
-          src="/assets/Rectangle 50.png"
-          alt=""
-          id="i1"
-          // ref={i1}
-          width={400}
-          height={400}
-        />
-
-        <div className=" playfair pointer-events-none z-50 m-10 my-auto text-left text-[2.6rem] leading-tight text-black md:text-[5vw]">
+        /> */}
+        {/* <div className=" playfair pointer-events-none z-50 m-10 my-auto text-left text-[2.6rem] leading-tight text-black md:text-[5vw]">
           <h1>
             FF&E Manufacturing <br />
             Turnkey Solutions
@@ -45,7 +117,7 @@ export default function Home({ toggleContact }) {
           <button className="btn " onClick={toggleContact.toggleContact}>
             Get in touch
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* <!------------------------------ The I-Field Advantage --------------------------------------> */}
@@ -93,7 +165,7 @@ export default function Home({ toggleContact }) {
         </div>
       </div>
 
-      <div className="md:mt-[120px]">{/* <GlobeSection /> */}</div>
+      {/* <div className="md:mt-[120px]"><GlobeSection /></div> */}
       {/*<!---------------------------- Process ------------------------------------>*/}
 
       {/* <!------------------------------------------- Impact -------------------------------------> */}
@@ -114,7 +186,7 @@ export default function Home({ toggleContact }) {
             aspect of our clients’ FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
-          <div className="-left-[20%] top-[30%] z-10 mx-auto hidden min-h-[80%] w-[40%] bg-yellow-400 p-10 pt-20 pb-20 text-center text-xl md:absolute md:block">
+          <div className="-left-[20%] top-[30%] z-10 mx-auto hidden min-h-[80%] w-[40%] items-center bg-yellow-400 px-10 pt-20 pb-20 text-left text-xl md:absolute md:flex">
             We completely handle the process from logistics and design, to sourcing and production,
             to shipping and installation. Our quality control is unmatched.
           </div>
@@ -124,26 +196,50 @@ export default function Home({ toggleContact }) {
           > */}
           <div className=" relative mx-[12px] mr-[26px] mt-8 grid grid-cols-2 gap-2 pb-[36px] md:left-[25%] md:mx-0 md:w-[50vw] lg:grid-cols-4">
             <div
-              className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition
+              className="w-30 h-30 z-20 flex flex-col items-center  p-2 shadow-xl transition
             duration-700 ease-in-out hover:scale-110"
             >
-              <Image width={65} height={65} className="m-auto" src="/assets/fiedl.png" alt="ok" />
-              <div className="m-4 w-[100px] text-center text-sm text-black">
+              <Image
+                width={65}
+                height={65}
+                className="m-auto invert filter"
+                src="/assets/fiedl.png"
+                alt="ok"
+              />
+              <div className="m-4 w-[100px] text-center text-sm text-white">
                 Field <br />
                 Experts
               </div>
             </div>
-            <div className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-              <Image width={65} height={65} className="m-auto" src="/assets/turnkey.png" alt="ok" />
-              <div className="m-4 w-[100px] text-center text-sm text-black">Turnkey Solutions</div>
+            <div className="w-30 h-30 z-20 flex flex-col items-center p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <Image
+                width={65}
+                height={65}
+                className="m-auto invert filter"
+                src="/assets/turnkey.png"
+                alt="ok"
+              />
+              <div className="m-4 w-[100px] text-center text-sm text-white">Turnkey Solutions</div>
             </div>
-            <div className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-              <Image width={65} height={65} className="m-auto" src="/assets/global.png" alt="ok" />
-              <div className="m-4 w-[100px] text-center text-sm text-black">Global Coverage</div>
+            <div className="w-30 h-30 z-20 flex flex-col items-center p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <Image
+                width={65}
+                height={65}
+                className="m-auto invert filter"
+                src="/assets/global.png"
+                alt="ok"
+              />
+              <div className="m-4 w-[100px] text-center text-sm text-white">Global Coverage</div>
             </div>
-            <div className="w-30 h-30 z-20 flex flex-col items-center bg-white p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
-              <Image width={65} height={65} className="m-auto" src="/assets/quality.png" alt="ok" />
-              <div className="m-4 w-[100px] text-center text-sm text-black">Unmatched Quality</div>
+            <div className="w-30 h-30 z-20 flex flex-col items-center p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+              <Image
+                width={65}
+                height={65}
+                className="m-auto invert filter"
+                src="/assets/quality.png"
+                alt="ok"
+              />
+              <div className="m-4 w-[100px] text-center text-sm text-white">Unmatched Quality</div>
             </div>
           </div>
         </div>
@@ -159,77 +255,120 @@ export default function Home({ toggleContact }) {
           All our projects are highly customized for the client, but each one has the I-Field stamp
           of unmatched quality.
         </div>
-        <div className="pb-[64px]">
-          <Swiper
-            className="swiper mx-16 h-[460px] pb-[64px] pt-8"
-            navigation={true}
-            modules={[Navigation]}
-          >
+        <div className="pb-[64px] pt-[64px]">
+          <Swiper className="swiper mx-16" navigation={true} modules={[Navigation]}>
             {/* <!-- Additional required wrapper --> */}
             {/* <!-- Slides --> */}
-            <SwiperSlide className="swiper-slide w-full">
-              <div className="relative h-full max-w-[800px]">
-                <div className="absolute top-[6%] left-[24px] text-6xl text-gray-400">01</div>
-                <Image
-                  width={500}
-                  height={500}
-                  className="absolute right-0 top-[0%] w-[60vw] min-w-[260px] max-w-[500px]"
-                  src="/assets/projects/hilton chad.png"
-                  alt=""
-                />
-                <Image
-                  width={500}
-                  height={500}
-                  className="absolute left-0 top-[28%] w-[50vw] min-w-[230px] max-w-[400px]"
-                  src="/assets/projects/hilton chad2.png"
-                  alt=""
-                />
-                <div className="absolute bottom-[20%] right-[10%]">
-                  <button className="btn">View project</button>
+            <SwiperSlide className="swiper-slide w-full overflow-hidden">
+              <div className="relative h-full pb-[36px] ">
+                <div className="absolute  left-[12%] text-6xl text-gray-400 md:top-[8%]">01</div>
+                <div className="flex h-full flex-col xl:flex-row">
+                  <div className="flex h-full grow-0 items-start">
+                    <Image
+                      width={500}
+                      height={500}
+                      className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
+                      src="/assets/projects/hilton chad2.png"
+                      alt=""
+                    />
+                    <Image
+                      width={500}
+                      height={500}
+                      className=" ml-[-10%] w-[60vw]  min-w-[260px] max-w-[500px] object-contain"
+                      src="/assets/projects/hilton chad.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="p-8">
+                    <div className="playfair pb-8 text-4xl">Marriott Hotel Ikeja</div>
+                    <div>
+                      The gorgeous Lagos Marriott Hotel Ikeja is one of our proudest achievements.
+                      This 250-key project includes 200 standard rooms, presidential and vice
+                      presidential suites, a specialty restaurant, and an azure pool bar. This hotel
+                      became an iField project because the Marriott Office in the UK recommended our
+                      services to the owners at the SIFAX group. It continues to be an icon in the
+                      hospitality industry in its region.
+                    </div>
+                    <div className="mt-8 mb-8 flex">
+                      <button className="btn">View project</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide w-full">
-              <div className="relative h-full max-w-[800px]">
-                <div className="absolute top-[6%] left-[24px] text-6xl text-gray-400">02</div>
-                <Image
-                  width={500}
-                  height={500}
-                  className="absolute right-0 top-[0%] w-[60vw] min-w-[260px] max-w-[500px]"
-                  src="/assets/projects/marriot gujarat.png"
-                  alt=""
-                />
-                <Image
-                  width={500}
-                  height={500}
-                  className="absolute left-0 top-[28%] w-[50vw] min-w-[230px] max-w-[400px]"
-                  src="/assets/projects/marriot gujarat2.png"
-                  alt=""
-                />
-                <div className="absolute bottom-[15%] right-[10%]">
-                  <button className="btn">View project</button>
+            <SwiperSlide className="swiper-slide w-full overflow-hidden">
+              <div className="relative h-full pb-[36px] ">
+                <div className="absolute  left-[12%] text-6xl text-gray-400 md:top-[8%]">02</div>
+                <div className="flex h-full flex-col xl:flex-row">
+                  <div className="flex h-full grow-0 items-start">
+                    <Image
+                      width={500}
+                      height={500}
+                      className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
+                      src="/assets/projects/nairobi crowne plaza.png"
+                      alt=""
+                    />
+                    <Image
+                      width={500}
+                      height={500}
+                      className=" ml-[-10%] w-[60vw]  min-w-[260px] max-w-[500px] object-contain"
+                      src="/assets/projects/nairobi crowne plaza3.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="p-8">
+                    <div className="playfair pb-8 text-4xl">Crowne Plaza</div>
+                    <div>
+                      The Crowne Plaza in Nairobi was worked on by our international team, and
+                      covered 144 keys. Its stunning bespoke ringed chandelier was installed by
+                      iField experts. With rings going up to 3m in diameter, it brings out the
+                      luminous luxury of this marvellous hotel. We also created magic glass screens
+                      that switch between frosted and transparent at the touch of a button.
+                    </div>
+                    <div className="mt-8 mb-8 flex">
+                      <button className="btn">View project</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide w-full">
-              <div className="relative h-full max-w-[800px]">
-                <div className="absolute top-[6%] left-[24px] text-6xl text-gray-400">03</div>
-                <Image
-                  width={500}
-                  height={500}
-                  className="absolute right-0 top-[0%] w-[60vw] min-w-[260px] max-w-[500px]"
-                  src="/assets/projects/nairobi crowne plaza.png"
-                  alt=""
-                />
-                <Image
-                  width={500}
-                  height={500}
-                  className="absolute left-0 top-[28%] w-[50vw] min-w-[230px] max-w-[400px]"
-                  src="/assets/projects/nairobi crowne plaza2.png"
-                  alt=""
-                />
-                <div className="absolute bottom-[15%] right-[10%]">
-                  <button className="btn">View project</button>
+            <SwiperSlide className="swiper-slide w-full overflow-hidden">
+              <div className="relative h-full pb-[36px] ">
+                <div className="absolute  left-[12%] text-6xl text-gray-400 md:top-[8%]">03</div>
+                <div className="flex h-full flex-col xl:flex-row">
+                  <div className="flex h-full grow-0 items-start">
+                    <Image
+                      width={500}
+                      height={500}
+                      className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
+                      src="/assets/projects/marriot gujarat2.png"
+                      alt=""
+                    />
+                    <Image
+                      width={500}
+                      height={500}
+                      className=" ml-[-10%] w-[60vw]  min-w-[260px] max-w-[500px] object-contain"
+                      src="/assets/projects/marriot gujarat.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="p-8">
+                    <div className="playfair pb-8 text-4xl">Marriott Hotel Surat</div>
+                    <div>
+                      The Marriott Hotel in Surat was built on the bones of the Taj hotel. iField
+                      handled this transformation, handling 209 keys. 3D printing effects were used
+                      to make headboards, and glass sliding doors with a mirror on one side made
+                      each room feel spacious and unique. This project took place while the hotel
+                      was already operational, and was implemented in seamless phases, ensuring that
+                      the hotel guests were undisturbed.
+                    </div>
+                    <div className="mt-8 mb-8 flex">
+                      <button className="btn">View project</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
