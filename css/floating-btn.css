@@ -1,0 +1,70 @@
+.float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #981c20;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+  margin-top: 14px;
+  margin-left: 15px;
+  color: white;
+  fill: white;
+}
+
+/*== start of code for tooltips ==*/
+.tool {
+  position: relative;
+}
+
+/*== common styles for both parts of tool tip ==*/
+.tool::before,
+.tool::after {
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  z-index: -100;
+  font-size: 0.75em;
+}
+
+.tool:hover::before,
+.tool:focus::before,
+.tool:hover::after,
+.tool:focus::after {
+  opacity: 1;
+  transform: scale(1) translateY(-0.6em);
+  z-index: 100;
+}
+
+/*== speech bubble ==*/
+.tool::after {
+  background: #3e474f;
+  border-radius: 0.25em;
+  bottom: 100%;
+  color: #edeff0;
+  content: attr(data-tip);
+  margin-left: -5.5em;
+  padding: 0.2em;
+  transition: all cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+  transform: scale(0.6) translateY(50%);
+  width: 8.5em;
+}
+
+.tool:hover::after,
+.tool:focus::after {
+  transition: all 0.35s cubic-bezier(0.84, -0.18, 0.31, 1.26);
+}
+
+@media (max-width: 760px) {
+  .tool::after {
+    font-size: 0.75em;
+    margin-left: -5em;
+    width: 10em;
+  }
+}

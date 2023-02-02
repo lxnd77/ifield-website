@@ -65,8 +65,8 @@ export default function About() {
             residential properties, and commercial facilities. since 2003.
           </p>
           <br />
-          <div className="md:grid md:grid-cols-3">
-            <div className="container md:col-span-1 md:col-start-1">
+          <div className="items-center md:grid md:grid-cols-3">
+            <div className="container  md:col-span-1 md:col-start-1">
               <Image
                 width={500}
                 height={500}
@@ -82,6 +82,18 @@ export default function About() {
               are the owners and developers for high-end hospitality facilities around the world,
               and we consistently deliver custom projects of impeccable quality. We are nearing 100
               successfully completed contracts.
+            </div>
+          </div>
+          <div className="py-8 ">
+            <h2 className="playfair mb-8 text-[2.4rem] leading-normal md:mt-4 md:text-5xl">
+              Our Vision
+            </h2>
+            <div className="text-l">
+              We are iField, relentless in our commitment to providing FF&E of unmatched quality to
+              globally acclaimed luxury hotels. Our clients are assured of immaculate attention to
+              detail in services that are streamlined, sustainable, and cost efficient. We are
+              driven by excellence at every level, from CEO to floor worker, and from client
+              relations to handing over the key.
             </div>
           </div>
           <div className="container mx-4 flex flex-row pt-8">
@@ -144,7 +156,9 @@ export default function About() {
       <div className="mt-32" data-scroll-section>
         <div className="md:grid md:grid-cols-3">
           <div className="flex flex-col justify-end md:col-span-2 md:col-start-1">
-            <h1 className="playfair mb-4 mt-4 text-6xl leading-normal ">Our Founder</h1>
+            <h2 className="playfair mb-8 text-[2.4rem] leading-normal md:mt-2 md:text-5xl">
+              Our Founder
+            </h2>
             <br />
             <p className="">
               Abhay moved from India to China in 2003 and quickly acquired the skills, knowledge,
