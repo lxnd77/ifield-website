@@ -255,7 +255,7 @@ export default function Home({ toggleContact }) {
           All our projects are highly customized for the client, but each one has the I-Field stamp
           of unmatched quality.
         </div>
-        <div className="pb-[64px] pt-[64px]">
+        <div className="pt-[64px] md:pb-[64px]">
           <Swiper className="swiper mx-16" navigation={true} modules={[Navigation]}>
             {/* <!-- Additional required wrapper --> */}
             {/* <!-- Slides --> */}
@@ -376,34 +376,25 @@ export default function Home({ toggleContact }) {
         </div>
       </div>
       {/* <!-------------------------- Achievements ----------------------------> */}
-      <div
-        className="container mx-auto mt-4 mb-8 flex h-full w-full justify-center bg-white"
-        data-scroll-section
-      >
+      <div className="mt-4 mb-8 h-full w-full  bg-white" data-scroll-section>
         <div className="">
-          <div className="mx-auto flex flex-row">
-            <div className="m-8 flex w-64 flex-col items-center justify-center gap-4 text-center align-middle">
-              <Image src="/assets/aahoa.png" alt="aahoa member" width={150} height={150} />
-              Member of American Association of Hotels
-              <Image src="/assets/cfa.png" alt="cfa member" width={150} height={150} />
-              Member of China Furniture Association
-              <Image src="/assets/chambers.png" alt="cfa member" width={150} height={150} />
-              Member of Dubai Chambers
-            </div>
-            <div className="m-8 flex flex-col justify-center gap-4">
+          <div className="mx-auto flex w-full flex-col items-center justify-around">
+            <div className="m-8 flex w-full flex-col justify-center gap-[36px] text-center md:flex-row md:gap-[12%]">
               <div className="playfair text-5xl ">
                 <CountUp duration={5} end={20} enableScrollSpy scrollSpyDelay={1000} />
-                <div className="montserrat text-lg">Countries</div>
+                <div className="montserrat mt-2 text-lg">Countries</div>
               </div>
               <div className="playfair text-5xl ">
                 <CountUp duration={5} end={60} enableScrollSpy scrollSpyDelay={1000} />+
-                <div className="montserrat text-lg">Projects Completed</div>
+                <div className="montserrat mt-2 text-lg">Projects Completed</div>
               </div>
               <div className="playfair text-5xl ">
                 <CountUp duration={5} end={390} enableScrollSpy scrollSpyDelay={1000} />
-                <div className="montserrat text-lg">Global staff</div>
+                <div className="montserrat mt-2 text-lg">Global staff</div>
               </div>
-              <div className="playfair text-5xl ">
+            </div>
+            <div className="m-8 flex  w-full  flex-col items-center justify-center gap-[36px] text-center md:mr-16 md:flex-row md:gap-[18%]">
+              <div className="playfair  text-5xl ">
                 <CountUp
                   duration={5}
                   end={20000}
@@ -413,22 +404,50 @@ export default function Home({ toggleContact }) {
                   scrollSpyDelay={1000}
                 />
                 m²
-                <div className="montserrat text-lg">Factory with end to end capacity</div>
+                <div className="montserrat mt-2 text-lg">
+                  Factory with <br />
+                  end to end capacity
+                </div>
               </div>
               <div className="playfair text-5xl ">
                 <CountUp duration={5} end={20} enableScrollSpy scrollSpyDelay={1000} />
-                <div className="montserrat text-lg">Years</div>
+                <div className="montserrat mt-2 text-lg">Years</div>
+              </div>
+            </div>
+            <div className="m-8 flex w-full flex-col justify-center gap-[48px] text-center align-middle md:flex-row md:items-baseline md:gap-[2%] ">
+              <div className="flex w-full flex-col items-center justify-center text-center">
+                <Image src="/assets/aahoa.png" alt="aahoa member" width={150} height={150} />
+                <p className="mt-4">
+                  Member of <br />
+                  American Association of Hotels
+                </p>
+              </div>
+              <div className="flex w-full flex-col items-center justify-center text-center">
+                <Image src="/assets/cfa.png" alt="cfa member" width={150} height={150} />
+                <p className="mt-4">
+                  {' '}
+                  Member of <br />
+                  China Furniture Association{' '}
+                </p>
+              </div>
+              <div className="flex w-full flex-col items-center justify-center text-center">
+                <Image src="/assets/chambers.png" alt="cfa member" width={150} height={150} />
+                <p className="mt-4">
+                  {' '}
+                  Member of <br />
+                  Dubai Chambers{' '}
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* --------------------------- Clients -------------------------------- */}
       <div data-scroll-section>
         <div className="flex items-center justify-center gap-2">
           <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Clients</div>
           <div className="h-1 w-64 bg-red-900"></div>
         </div>
-
         <div class="mx-auto flex h-full w-[80%] flex-wrap justify-between" id="clients">
           <img src="/assets/clients/1.png" className="m-4 aspect-auto w-36"></img>
           <img src="/assets/clients/2.png" className="m-4 aspect-auto w-36"></img>

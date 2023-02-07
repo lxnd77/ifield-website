@@ -52,7 +52,7 @@ const Contact = () => {
       </div>
       <div className="flex flex-row flex-wrap">
         <GlobeSection />
-        <form onSubmit={handleSubmit} className="my-auto flex w-[600px] flex-col gap-4 p-4">
+        <form onSubmit={handleSubmit} className="my-auto flex w-[600px] flex-col gap-4 p-4 px-8">
           <input
             id="name"
             name="name"
@@ -85,7 +85,10 @@ const Contact = () => {
             placeholder-gray-400 outline-none
             focus:border-red-800"
           />
-          <button type="submit" className="justify-right w-32 rounded-full bg-red-800 p-2">
+          <button
+            type="submit"
+            className="justify-right w-32 rounded-full bg-red-800 p-2 text-white"
+          >
             Submit
           </button>
         </form>
@@ -96,7 +99,7 @@ const Contact = () => {
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">Head Office</h2>
           </div>
-          <p className="montserrat pt-2 text-justify">
+          <p className="montserrat pt-2 ">
             1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
           </p>
         </div>
@@ -105,7 +108,7 @@ const Contact = () => {
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">China Office</h2>
           </div>
-          <p className="montserrat pt-2 text-justify">
+          <p className="montserrat pt-2 ">
             315, 3rd Floor, DeWei Tower, No.626 Shibai Industrial Road, Panyu District, Guangzhou,
             P.R. China <br /> Tel :+86 20 39232167 / 39232577 / 39232657 | Fax: +86 20 34337465
           </p>
@@ -115,7 +118,7 @@ const Contact = () => {
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">UAE Office</h2>
           </div>
-          <p className="montserrat pt-2 text-justify">
+          <p className="montserrat pt-2 ">
             Office 156, Floor1, European Business Centre Bldg, Dubai Investment Park, Jabel Ali,
             Dubai, United Arab Emirates, P.O. Box No. 451970 <br /> Tel: +971 043540227 | +971
             501382847 | +86 13828402777
@@ -126,7 +129,7 @@ const Contact = () => {
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">Nigeria Office</h2>
           </div>
-          <p className="montserrat pt-2 text-justify">
+          <p className="montserrat pt-2 ">
             Block 13, Plot 2, Palace Road, VI, Lagos Nigeria <br /> M: +234 9037572893
           </p>
         </div>
@@ -135,7 +138,7 @@ const Contact = () => {
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">India Office</h2>
           </div>
-          <p className="montserrat pt-2 text-justify">
+          <p className="montserrat pt-2 ">
             E-201, Vaishali Nagar, Near Defence Public School, Jaipur, Rajasthan, India <br />
             M: +91 9887514715
           </p>
@@ -145,7 +148,7 @@ const Contact = () => {
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">Spain Office</h2>
           </div>
-          <p className="montserrat pt-2 text-justify">
+          <p className="montserrat pt-2 ">
             C/Forners i Pastissers 1907760 Ciutadella de Menorca <br />
             Tel: +34 971380495 / 676815728
           </p>

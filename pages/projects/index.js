@@ -40,18 +40,18 @@ export default function Projects({ projects }) {
               </Link>
             ))}
           </div>
-          <div className="container m-8 flex flex-col gap-4 md:h-[800px] md:flex-wrap">
+          <div className="container mt-16 flex flex-col gap-4 border-t-2 border-red-700 pt-8 md:h-[800px] md:flex-wrap	">
             <div>
-              <h2 className="playfair text-bold pt-2 text-2xl">United States of America</h2>
-              <ul>
+              <h2 className="playfair text-bold mb-4 pt-2 text-2xl">United States of America</h2>
+              <ul className="proj-list">
                 <li>LaQuinta, Houston, Texas</li>
                 <li>Hyatt Place, Houston, Texas</li>
                 <li>Hampton Inn, Houston, Texas</li>
               </ul>
             </div>
             <div>
-              <h2 className="playfair text-bold pt-2 text-2xl">Middle East & Africa</h2>
-              <ul>
+              <h2 className="playfair text-bold mb-4 pt-2 text-2xl">Middle East & Africa</h2>
+              <ul className="proj-list">
                 <li>Spring Hills 1, Bahrain</li>
                 <li>Spring Hills 2, Bahrain</li>
                 <li>Spring Hills 3 & 4, Bahrain</li>
@@ -77,8 +77,8 @@ export default function Projects({ projects }) {
               </ul>
             </div>
             <div>
-              <h2 className="playfair text-bold pt-2 text-2xl">India & South-East Asia</h2>
-              <ul>
+              <h2 className="playfair text-bold mb-4 pt-2 text-2xl">India & South-East Asia</h2>
+              <ul className="proj-list">
                 <li>Aaron Regina, Goa</li>
                 <li>Aqua Resorts, Goa</li>
                 <li>BM Hotels, Mudra Port</li>
@@ -115,8 +115,8 @@ export default function Projects({ projects }) {
               </ul>
             </div>
             <div>
-              <h2 className="playfair text-bold pt-2 text-2xl">China</h2>
-              <ul>
+              <h2 className="playfair text-bold mb-4 pt-2 text-2xl">China</h2>
+              <ul className="proj-list">
                 <li>Club Zilan, Chengdu</li>
                 <li>Central Park, Beijing</li>
                 <li>City Plaza, GuangZhou</li>

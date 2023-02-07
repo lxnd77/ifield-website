@@ -24,6 +24,10 @@
   margin: revert;
 }
 
+.proj-list {
+  font-size: small;
+}
+
 .swiper-wrapper {
   scroll-behavior: smooth;
   transition: 0.6s !important;

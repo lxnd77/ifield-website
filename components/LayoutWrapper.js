@@ -163,7 +163,7 @@ const LayoutWrapper = ({ children }) => {
 
       <aside
         id="main-nav"
-        className="fixed top-[82px] right-0 z-50 ml-auto h-[90vh] w-[400px] overflow-hidden bg-white/50 text-black transition-all duration-700"
+        className=" fixed	 top-[82px] right-0 z-50 ml-auto h-[90vh] w-[400px] overflow-hidden bg-white/90 text-black backdrop-blur transition-all duration-700"
         style={menuActive ? { right: 0 } : { right: -400 }}
       >
         <div className="h-full px-16 py-16">
