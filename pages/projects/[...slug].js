@@ -34,9 +34,9 @@ export default function Project({ project }) {
     <div className="mx-auto w-[90%]" data-scroll-section>
       <h1 className="playfair text-5xl"> Projects</h1>
       <h2 className="playfair mt-6 text-4xl"> {project.frontMatter.title}</h2>
-      <div className="md:ml-[10vw]">
+      <div className="">
         <Swiper
-          className="swiper my-[64px]  h-[30vh] pb-[64px] pt-8 md:h-[400px]"
+          className="swiper my-[64px]  h-[50vh] pb-[16px] pt-8 md:h-[400px]"
           navigation={true}
           slidesPerView={2.5}
           spaceBetween={16}
@@ -44,19 +44,19 @@ export default function Project({ project }) {
         >
           {/* <!-- Slides --> */}
           <SwiperSlide className="swiper-slide">
-            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc} alt="" />
+            <Image
+              width={500}
+              height={500}
+              className="object-fill"
+              src={project.frontMatter.imgSrc}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc} alt="" />
+            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc2} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc} alt="" />
+            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc3} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>

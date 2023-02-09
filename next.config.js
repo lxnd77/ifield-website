@@ -50,6 +50,15 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
+  {
+    key: 'Access-Control-Allow-Origin',
+    value: 'https://ifield-next.vercel.app',
+  },
+  {
+    key: 'Access-Control-Allow-Origin',
+    value: 'http://localhost:3000',
+  },
+  { key: 'Access-Control-Allow-Credentials', value: 'true' },
 ]
 
 module.exports = withBundleAnalyzer({

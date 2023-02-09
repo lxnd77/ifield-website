@@ -4,10 +4,10 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <>
-      <a href="#" target="_blank" class="float">
-        <span class="tool" data-tip="Donwload Brochure" tabindex="1">
+      <a href="#" target="_blank" className="float">
+        <span className="tool" data-tip="Download Brochure" tabIndex="1">
           <svg
-            class="my-float"
+            className="my-float"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             width="24"

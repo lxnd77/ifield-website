@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import TimelineSection from 'components/TimelineSection'
 import Image from 'next/image'
 
 export default function About() {
@@ -68,8 +69,8 @@ export default function About() {
           <div className="items-center md:grid md:grid-cols-3">
             <div className="container  md:col-span-1 md:col-start-1">
               <Image
-                width={500}
-                height={500}
+                width={300}
+                height={300}
                 alt=""
                 src="/assets/pattern1.png"
                 className="my-auto mx-auto px-4 py-4"
@@ -77,7 +78,7 @@ export default function About() {
             </div>
             <div className="container text-justify text-sm md:col-span-2 md:col-start-2 md:px-4">
               When we first started out as hotel contractors, I-Field was based in Hong Kong with a
-              representative office in Guangzhou, China. Since then, we’ve grown to be one of the
+              representative office in Guangzhou, China. Since then, we've grown to be one of the
               largest FF&E solutions companies in Asia, with reach in over 20 countries. Our clients
               are the owners and developers for high-end hospitality facilities around the world,
               and we consistently deliver custom projects of impeccable quality. We are nearing 100
@@ -96,13 +97,13 @@ export default function About() {
               relations to handing over the key.
             </div>
           </div>
-          <div className="container mx-4 flex flex-row pt-8">
+          <div className="container  flex flex-row ">
             <div className="w-fit">
               <div className="h-4 w-4 rounded-full bg-[#981620]"></div>
-              <div className="relative right-[40%] mx-auto h-48 border-r-4 border-[#981620]"></div>
+              <div className="relative right-[40%] mx-auto h-40 border-r-4 border-[#981620]"></div>
             </div>
             <div>
-              <p className="ml-8 mt-16 text-justify italic">
+              <p className="mt-4 pl-8 text-justify italic">
                 Our founder and CEO, Abhay, is an anchor in the FF&E industry, and personally
                 attends to every client and project for the best outcomes. Each level of our
                 operations is optimized to provide our clients with guaranteed quality in services
@@ -116,26 +117,26 @@ export default function About() {
           <Image
             width={600}
             height={600}
-            alt=""
-            src="/assets/projects/marriot gujarat3.png"
-            className="hImg pointer-events-none top-[10%] aspect-square overflow-hidden object-cover drop-shadow-2xl md:absolute md:left-[10%] md:w-[60%]"
+            alt="Marriot Lagos"
+            src="/assets/projects/lagos2.jpeg"
+            className=" hImg pointer-events-none top-[10%] m-8 mx-auto aspect-square overflow-hidden object-cover drop-shadow-xl md:absolute md:left-[10%] md:w-[60%]"
             id="ex1-layer1"
             ref={ex1Layer1}
           />
           <Image
             width={600}
             height={600}
-            alt=""
+            alt="Marriot Gujarat"
             src="/assets/projects/marriot gujarat3.png"
-            className="hImg pointer-events-none overflow-hidden object-cover drop-shadow-2xl md:absolute md:right-[20%] md:top-[35%] md:h-[350px] md:w-[200px]"
+            className="hImg pointer-events-none m-8 mx-auto overflow-hidden object-cover drop-shadow-xl md:absolute md:right-[20%] md:top-[35%] md:h-[350px] md:w-[200px]"
             id="ex1-layer2"
             ref={ex1Layer2}
           />
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-2" data-scroll-section>
-        <p className="mx-4 my-auto md:col-span-1 md:col-start-1">
+      <div className="justify-between  md:grid md:grid-cols-2" data-scroll-section>
+        <p className="my-4 md:col-span-1 md:col-start-1">
           We work with acclaimed architects and interior designers for our custom manufacturing
           process, which fuses the handwork of skilled craftspeople with state of the art
           technology, handling mid to high volume production to satisfy each unique client and their
@@ -149,13 +150,13 @@ export default function About() {
           height={500}
           alt=""
           src="/assets/pattern2.png"
-          className="absolute -right-[10%] my-auto md:col-span-1 md:col-start-2"
+          className="my-auto justify-self-end md:col-span-1 md:col-start-2"
         />
       </div>
 
-      <div className="mt-32" data-scroll-section>
+      <div className="mt-8" data-scroll-section>
         <div className="md:grid md:grid-cols-3">
-          <div className="flex flex-col justify-end md:col-span-2 md:col-start-1">
+          <div className="flex flex-col justify-start md:col-span-2 md:col-start-1">
             <h2 className="playfair mb-8 text-[2.4rem] leading-normal md:mt-2 md:text-5xl">
               Our Founder
             </h2>
@@ -181,7 +182,7 @@ export default function About() {
               company’s investments in expanding to hotels across the world.
             </p>
           </div>
-          <div className="flex flex-col justify-end md:col-span-1 md:col-start-3">
+          <div className="order-first flex flex-col justify-end md:order-last md:col-span-1 md:col-start-3">
             <Image width={500} height={500} alt="" src="/assets/profile.png" className="" />
           </div>
         </div>
@@ -226,244 +227,76 @@ export default function About() {
           }}
           grabCursor={true}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          slidesPerView={'auto'}
+          slidesPerView={1}
           spaceBetween={30}
           pagination={{
             type: 'bullets',
             clickable: 'true',
             renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + index + '</span>'
+              return '<span class="' + className + '">' + ++index + '</span>'
             },
           }}
           className="swiperabout"
         >
           <SwiperSlide className="">
-            <div className="relative flex w-[80%] flex-row p-4">
-              <h2 className="playfair absolute m-4 h-fit w-fit origin-right -rotate-90 text-6xl font-bold">
-                2003
-              </h2>
-              <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/assets/7.jpg"
-                  className="mx-auto h-[202px] w-[536px] object-cover"
-                  alt=""
-                />
-
-                <div className="flex flex-row justify-around">
-                  <div>
-                    <h3 className="montserrat my-4 text-xl font-bold">May</h3>
-                    <p className="montserrat my-4 text-xl md:w-[50%]">
-                      I field is founded in Hong Kong <br /> Acquired brand verification, and
-                      developed supply and execution systems.
-                    </p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    src="/assets/pattern1.png"
-                    className="m-8 hidden h-32 w-32 md:block"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            <TimelineSection
+              year="2003"
+              month="May"
+              text="I field is founded in Hong Kong Acquired brand verification, and
+                      developed supply and execution systems."
+              pic="/assets/old1.jpg"
+            />
           </SwiperSlide>
           <SwiperSlide className="">
-            <div className="relative flex w-[80%] flex-row p-4">
-              <h2 className="playfair absolute m-4 h-fit w-fit origin-right -rotate-90 text-6xl font-bold">
-                2011
-              </h2>
-              <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/assets/7.jpg"
-                  className="mx-auto h-[202px] w-[536px] object-cover"
-                  alt=""
-                />
-
-                <div className="flex flex-row justify-around">
-                  <div>
-                    <h3 className="montserrat my-4 text-xl font-bold">June</h3>
-                    <p className="montserrat my-4 text-xl md:w-[50%]">
-                      Established a joint venture factory in Dongguan, China
-                    </p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    src="/assets/pattern1.png"
-                    className="m-8 hidden h-32 w-32 md:block"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            <TimelineSection
+              year="2011"
+              month="June"
+              text="Established a joint venture factory in Dongguan, China"
+              pic="/assets/old2.jpg"
+            />
           </SwiperSlide>
           <SwiperSlide className="">
-            <div className="relative flex w-[80%] flex-row p-4">
-              <h2 className="playfair absolute m-4 h-fit w-fit origin-right -rotate-90 text-6xl font-bold">
-                2013
-              </h2>
-              <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/assets/7.jpg"
-                  className="mx-auto h-[202px] w-[536px] object-cover"
-                  alt=""
-                />
-
-                <div className="flex flex-row justify-around">
-                  <div>
-                    <h3 className="montserrat my-4 text-xl font-bold">October</h3>
-                    <p className="montserrat my-4 text-xl md:w-[50%]">
-                      Daka Import & Export is established in Guangzhou
-                    </p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    src="/assets/pattern1.png"
-                    className="m-8 hidden h-32 w-32 md:block"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            <TimelineSection
+              year="2013"
+              month="October"
+              text="Daka Import & Export is established in Guangzhou"
+              pic="/assets/old3.jpg"
+            />
           </SwiperSlide>
           <SwiperSlide className="">
-            <div className="relative flex w-[80%] flex-row p-4">
-              <h2 className="playfair absolute m-4 h-fit w-fit origin-right -rotate-90 text-6xl font-bold">
-                2019
-              </h2>
-              <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/assets/7.jpg"
-                  className="mx-auto h-[202px] w-[536px] object-cover"
-                  alt=""
-                />
-
-                <div className="flex flex-row justify-around">
-                  <div>
-                    <h3 className="montserrat my-4 text-xl font-bold">February</h3>
-                    <p className="montserrat my-4 text-xl md:w-[50%]">
-                      I-Field USA is established in Houston, Houston, Texas
-                    </p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    src="/assets/pattern1.png"
-                    className="md:blockm-8 hidden h-32 w-32"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            <TimelineSection
+              year="2019"
+              month="February"
+              text="I-Field USA is established in Houston, Houston, Texas"
+              pic="/assets/old4.jpg"
+            />
           </SwiperSlide>
           <SwiperSlide className="">
-            <div className="relative flex w-[80%] flex-row p-4">
-              <h2 className="playfair absolute m-4 h-fit w-fit origin-right -rotate-90 text-6xl font-bold">
-                2019
-              </h2>
-              <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/assets/7.jpg"
-                  className="mx-auto h-[202px] w-[536px] object-cover"
-                  alt=""
-                />
-
-                <div className="flex flex-row justify-around">
-                  <div>
-                    <h3 className="montserrat my-4 text-xl font-bold">December</h3>
-                    <p className="montserrat my-4 text-xl md:w-[50%]">
-                      I Field International Pvt. Ltd., India is established in Jaipur to meet the
-                      needs of our growing workforce.
-                    </p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    src="/assets/pattern1.png"
-                    className="m-8 hidden h-32 w-32 md:block"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            <TimelineSection
+              year="2019"
+              month="December"
+              text="I Field International Pvt. Ltd., India is established in Jaipur to meet the
+              needs of our growing workforce."
+              pic="/assets/old5.jpeg"
+            />
           </SwiperSlide>
           <SwiperSlide className="">
-            <div className="relative flex w-[80%] flex-row p-4">
-              <h2 className="playfair absolute m-4 h-fit w-fit origin-right -rotate-90 text-6xl font-bold">
-                2020
-              </h2>
-              <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/assets/7.jpg"
-                  className="mx-auto h-[202px] w-[536px] object-cover"
-                  alt=""
-                />
-
-                <div className="flex flex-row justify-around">
-                  <div>
-                    <h3 className="montserrat my-4 text-xl font-bold">December</h3>
-                    <p className="montserrat my-4 text-xl md:w-[50%]">
-                      I Field Furnishing Trading L.L.C is established in Dubai as a control hub for
-                      our work in the Middle East and East Africa
-                    </p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    src="/assets/pattern1.png"
-                    className="m-8 hidden h-32 w-32 md:block"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            <TimelineSection
+              year="2020"
+              month="December"
+              text="I Field Furnishing Trading L.L.C is established in Dubai as a control hub for
+              our work in the Middle East and East Africa"
+              pic="/assets/old6.jpeg"
+            />
           </SwiperSlide>
           <SwiperSlide className="">
-            <div className="relative flex w-[80%] flex-row p-4">
-              <h2 className="playfair absolute m-4 h-fit w-fit origin-right -rotate-90 text-6xl font-bold">
-                2021
-              </h2>
-              <div className="my-8 flex w-full flex-col bg-[#191919]  text-white">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/assets/7.jpg"
-                  className="mx-auto h-[202px] w-[536px] object-cover"
-                  alt=""
-                />
-
-                <div className="flex flex-row justify-around">
-                  <div>
-                    <h3 className="montserrat my-4 text-xl font-bold">November</h3>
-                    <p className="montserrat my-4 text-xl md:w-[50%]">
-                      I-Field Interiors is established in Lagos, Nigeria, to expand our work in the
-                      rest of Africa.
-                    </p>
-                  </div>
-                  <Image
-                    width={500}
-                    height={500}
-                    src="/assets/pattern1.png"
-                    className="m-8 hidden h-32 w-32 md:block"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            <TimelineSection
+              year="2021"
+              month="November"
+              text="I-Field Interiors is established in Lagos, Nigeria, to expand our work in the
+              rest of Africa."
+              pic="/assets/7.jpg"
+            />
           </SwiperSlide>
         </Swiper>
       </div>

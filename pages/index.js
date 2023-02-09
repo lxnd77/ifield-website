@@ -25,99 +25,63 @@ export default function Home({ toggleContact }) {
         // onMouseMove={mouse_position}
         data-scroll-section
       >
+        <div className="bg-black">
+          <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
+            <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
+              FF&E Manufacturing <br />
+              Turnkey Solutions
+            </h1>
+
+            <div className=" z-50 m-10 w-fit cursor-pointer">
+              <button className="btn " onClick={toggleContact.toggleContact}>
+                Get in touch
+              </button>
+            </div>
+          </div>
+        </div>
         <Swiper
-          spaceBetween={30}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
           effect={'fade'}
-          speed={800}
           modules={[EffectFade, Autoplay]}
           className="mySwiper"
         >
           <SwiperSlide>
             <div className="bg-black">
-              <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
-                <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
-                  FF&E Manufacturing <br />
-                  Turnkey Solutions
-                </h1>
-
-                <div className=" z-50 m-10 w-fit cursor-pointer">
-                  <button className="btn " onClick={toggleContact.toggleContact}>
-                    Get in touch
-                  </button>
-                </div>
-              </div>
-              <img
-                className="relative z-[0] h-[80vh] object-cover opacity-[0.7] md:h-auto"
+              <Image
+                className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7] "
                 src="/assets/hero/hero (1).jpeg"
+                alt="marriot 1"
+                width={1080}
+                height={1620}
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="bg-black">
-              <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
-                <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
-                  FF&E Manufacturing <br />
-                  Turnkey Solutions
-                </h1>
-
-                <div className=" z-50 m-10 w-fit cursor-pointer">
-                  <button className="btn " onClick={toggleContact.toggleContact}>
-                    Get in touch
-                  </button>
-                </div>
-              </div>
-              <img
-                className="relative z-[0] h-[80vh] object-cover opacity-[0.7] md:h-auto"
+              <Image
+                className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
                 src="/assets/hero/hero (2).jpeg"
+                alt="crowne 1"
+                width={1080}
+                height={1620}
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="bg-black">
-              <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
-                <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
-                  FF&E Manufacturing <br />
-                  Turnkey Solutions
-                </h1>
-
-                <div className=" z-50 m-10 w-fit cursor-pointer">
-                  <button className="btn " onClick={toggleContact.toggleContact}>
-                    Get in touch
-                  </button>
-                </div>
-              </div>
-              <img
-                className="relative z-[0] h-[80vh] object-cover opacity-[0.7] md:h-auto"
+              <Image
+                className=" relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
                 src="/assets/hero/hero (3).jpg"
+                alt="surat 1"
+                width={1080}
+                height={1620}
               />
             </div>
           </SwiperSlide>
         </Swiper>
-
-        {/* <Image
-          className="hImg pointer-events-none absolute right-0 top-0 h-full w-full object-cover mix-blend-darken	"
-          src="/assets/Rectangle 45.png"
-          alt=""
-          id="i2"
-          // ref={i2}
-          width={400}
-          height={400}
-        /> */}
-        {/* <div className=" playfair pointer-events-none z-50 m-10 my-auto text-left text-[2.6rem] leading-tight text-black md:text-[5vw]">
-          <h1>
-            FF&E Manufacturing <br />
-            Turnkey Solutions
-          </h1>
-        </div>
-        <div className=" z-50 m-10 w-fit cursor-pointer">
-          <button className="btn " onClick={toggleContact.toggleContact}>
-            Get in touch
-          </button>
-        </div> */}
       </div>
 
       {/* <!------------------------------ The I-Field Advantage --------------------------------------> */}
@@ -155,7 +119,7 @@ export default function Home({ toggleContact }) {
               </div>
               <div className="mt-8 text-xl">
                 Our core principle is to provide the best in products, prices, efficiency, and
-                customer service, and that’s the I-Field advantage.
+                customer service, and that's the I-Field advantage.
               </div>
               <button className="mt-8 mb-8 h-12 w-48 bg-yellow-400 text-center text-black">
                 Get In Touch
@@ -165,7 +129,6 @@ export default function Home({ toggleContact }) {
         </div>
       </div>
 
-      {/* <div className="md:mt-[120px]"><GlobeSection /></div> */}
       {/*<!---------------------------- Process ------------------------------------>*/}
 
       {/* <!------------------------------------------- Impact -------------------------------------> */}
@@ -183,7 +146,7 @@ export default function Home({ toggleContact }) {
           </div> */}
           <div className=" top-[35%] left-[25%] mx-auto my-auto w-[50%] text-xl text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
-            aspect of our clients’ FF&E needs in-house. Every project is customized, in
+            aspect of our clients' FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
           <div className="-left-[20%] top-[30%] z-10 mx-auto hidden min-h-[80%] w-[40%] items-center bg-yellow-400 px-10 pt-20 pb-20 text-left text-xl md:absolute md:flex">
