@@ -36,10 +36,16 @@ export default function Project({ project }) {
       <h2 className="playfair mt-6 text-4xl"> {project.frontMatter.title}</h2>
       <div className="">
         <Swiper
-          className="swiper my-[64px]  h-[50vh] pb-[16px] pt-8 md:h-[400px]"
+          className="swiper my-[64px]  h-[300px] pb-[16px] pt-8 md:h-[300px]"
           navigation={true}
-          slidesPerView={2.5}
-          spaceBetween={16}
+          slidesPerView={1}
+          breakpoints={{
+            768: {
+              slidesPerView: 1.5,
+              spaceBetweenSlides: 32,
+            },
+          }}
+          spaceBetween={32}
           modules={[Navigation]}
         >
           {/* <!-- Slides --> */}
@@ -47,16 +53,28 @@ export default function Project({ project }) {
             <Image
               width={500}
               height={500}
-              className="object-fill"
+              className="aspect-auto h-full w-full object-cover object-center"
               src={project.frontMatter.imgSrc}
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc2} alt="" />
+            <Image
+              width={500}
+              height={500}
+              className="aspect-auto h-full w-full object-cover object-center"
+              src={project.frontMatter.imgSrc2}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <Image width={500} height={500} className="" src={project.frontMatter.imgSrc3} alt="" />
+            <Image
+              width={500}
+              height={500}
+              className="aspect-auto h-full w-full object-cover object-center"
+              src={project.frontMatter.imgSrc3}
+              alt=""
+            />
           </SwiperSlide>
         </Swiper>
       </div>

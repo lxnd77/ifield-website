@@ -7,7 +7,7 @@ export default function Process() {
       <div>
         <Image
           className="mt-4"
-          src="/assets/processHero100.jpg"
+          src="/assets/processHero100.png"
           alt="heroImage"
           width={1920}
           height={200}

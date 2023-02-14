@@ -118,7 +118,7 @@ export default function About() {
             width={600}
             height={600}
             alt="Marriot Lagos"
-            src="/assets/projects/lagos2.jpeg"
+            src="/assets/projects/lagos2.png"
             className=" hImg pointer-events-none top-[10%] m-8 mx-auto aspect-square overflow-hidden object-cover drop-shadow-xl md:absolute md:left-[10%] md:w-[60%]"
             id="ex1-layer1"
             ref={ex1Layer1}
@@ -163,14 +163,14 @@ export default function About() {
             <br />
             <p className="">
               Abhay moved from India to China in 2003 and quickly acquired the skills, knowledge,
-              and network, to found I-Field as one of China’s leading turnkey manufacturers in FF&E.
+              and network, to found I-Field as one of China's leading turnkey manufacturers in FF&E.
               In 2012, Abhay led the initiative to invest in a customized furniture manufacturing
               unit in a joint venture with an established furniture company. Two short years later,
               he invested in establishing the GuangZhou Daka Import & Export Company so that I-Field
               could be entirely self-reliant in its operations.
               <br />
               <br />
-              Abhay’s expertise in FF&E goes in hand with his understanding of how to manage people.
+              Abhay's expertise in FF&E goes in hand with his understanding of how to manage people.
               He learned to work with local industries and workers. Wherever I-Field has operations,
               local economies benefit from the employment opportunities, and employees benefit from
               specialized training programs.
@@ -179,7 +179,7 @@ export default function About() {
               His passion, talent, and decades of experience make Abhay an amazing leader. He has a
               matchless track record of building positive relationships with everyone from
               stakeholders, to clients, to floor staff. His ventures and efforts have led the
-              company’s investments in expanding to hotels across the world.
+              company's investments in expanding to hotels across the world.
             </p>
           </div>
           <div className="order-first flex flex-col justify-end md:order-last md:col-span-1 md:col-start-3">
@@ -192,30 +192,78 @@ export default function About() {
       </div>
 
       <div className="mx-auto mt-16 flex w-[70vw] flex-wrap justify-around" data-scroll-section>
-        <Image
-          width={500}
-          height={500}
-          src="/assets/profile.png"
-          alt=""
-          className="mb-16 h-80 w-80"
-        />
-        <Image
-          width={500}
-          height={500}
-          src="/assets/profile.png"
-          alt=""
-          className="mb-16 h-80 w-80"
-        />
-        <Image
-          width={500}
-          height={500}
-          src="/assets/profile.png"
-          alt=""
-          className="mb-16 h-80 w-80"
-        />
-        <Image width={500} height={500} src="/assets/profile.png" alt="" className="h-80 w-80" />
-        <Image width={500} height={500} src="/assets/profile.png" alt="" className="h-80 w-80" />
-        <Image width={500} height={500} src="/assets/profile.png" alt="" className="h-80 w-80" />
+        <div className="playfair flex flex-col text-center text-xl">
+          <Image
+            width={500}
+            height={500}
+            src="/assets/avataaars.png"
+            alt=""
+            className="h-80 w-80"
+          />
+          <h2 className="m-4">
+            Punya Bhargava <br /> Business Development Manager
+          </h2>
+        </div>
+        <div className="playfair flex flex-col text-center text-xl">
+          <Image
+            width={500}
+            height={500}
+            src="/assets/avataaars.png"
+            alt=""
+            className="h-80 w-80"
+          />
+          <h2 className="m-4">
+            Punya Bhargava <br /> Business Development Manager
+          </h2>
+        </div>
+        <div className="playfair flex flex-col text-center text-xl">
+          <Image
+            width={500}
+            height={500}
+            src="/assets/avataaars.png"
+            alt=""
+            className="h-80 w-80"
+          />
+          <h2 className="m-4">
+            Punya Bhargava <br /> Business Development Manager
+          </h2>
+        </div>
+        <div className="playfair flex flex-col text-center text-xl">
+          <Image
+            width={500}
+            height={500}
+            src="/assets/avataaars.png"
+            alt=""
+            className="h-80 w-80"
+          />
+          <h2 className="m-4">
+            Punya Bhargava <br /> Business Development Manager
+          </h2>
+        </div>
+        <div className="playfair flex flex-col text-center text-xl">
+          <Image
+            width={500}
+            height={500}
+            src="/assets/avataaars.png"
+            alt=""
+            className="h-80 w-80"
+          />
+          <h2 className="m-4">
+            Punya Bhargava <br /> Business Development Manager
+          </h2>
+        </div>
+        <div className="playfair flex flex-col text-center text-xl">
+          <Image
+            width={500}
+            height={500}
+            src="/assets/avataaars.png"
+            alt=""
+            className="h-80 w-80"
+          />
+          <h2 className="m-4">
+            Punya Bhargava <br /> Business Development Manager
+          </h2>
+        </div>
       </div>
       {/* -------------------------- Timeline --------------------------------- */}
       <div className="bg-[#191919] text-white" data-scroll-section>
@@ -244,7 +292,7 @@ export default function About() {
               month="May"
               text="I field is founded in Hong Kong Acquired brand verification, and
                       developed supply and execution systems."
-              pic="/assets/old1.jpg"
+              pic="/assets/old1.png"
             />
           </SwiperSlide>
           <SwiperSlide className="">
@@ -252,7 +300,7 @@ export default function About() {
               year="2011"
               month="June"
               text="Established a joint venture factory in Dongguan, China"
-              pic="/assets/old2.jpg"
+              pic="/assets/old2.png"
             />
           </SwiperSlide>
           <SwiperSlide className="">
@@ -260,7 +308,7 @@ export default function About() {
               year="2013"
               month="October"
               text="Daka Import & Export is established in Guangzhou"
-              pic="/assets/old3.jpg"
+              pic="/assets/old3.png"
             />
           </SwiperSlide>
           <SwiperSlide className="">
@@ -268,7 +316,7 @@ export default function About() {
               year="2019"
               month="February"
               text="I-Field USA is established in Houston, Houston, Texas"
-              pic="/assets/old4.jpg"
+              pic="/assets/old4.png"
             />
           </SwiperSlide>
           <SwiperSlide className="">
@@ -277,7 +325,7 @@ export default function About() {
               month="December"
               text="I Field International Pvt. Ltd., India is established in Jaipur to meet the
               needs of our growing workforce."
-              pic="/assets/old5.jpeg"
+              pic="/assets/old5.png"
             />
           </SwiperSlide>
           <SwiperSlide className="">
@@ -286,7 +334,7 @@ export default function About() {
               month="December"
               text="I Field Furnishing Trading L.L.C is established in Dubai as a control hub for
               our work in the Middle East and East Africa"
-              pic="/assets/old6.jpeg"
+              pic="/assets/old6.png"
             />
           </SwiperSlide>
           <SwiperSlide className="">
@@ -295,7 +343,7 @@ export default function About() {
               month="November"
               text="I-Field Interiors is established in Lagos, Nigeria, to expand our work in the
               rest of Africa."
-              pic="/assets/7.jpg"
+              pic="/assets/7.png"
             />
           </SwiperSlide>
         </Swiper>

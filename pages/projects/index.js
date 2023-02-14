@@ -20,9 +20,12 @@ export default function Projects({ projects }) {
       <PageSEO title={`Projects - ${siteMetadata.title}`} description={siteMetadata.description} />
       <div data-scroll-section>
         <div className="container m-8 mx-auto h-full w-[90%] p-8">
-          <h1 className="playfair mb-8 text-4xl leading-normal md:mt-4 md:text-5xl">
-            Our Projects
-          </h1>
+          <div className="align-items-center w-[50%] align-middle md:flex">
+            <div className="playfair mb-4 font-serif text-[4vw] leading-snug text-black ">
+              Our Projects
+            </div>
+            <div className="my-auto h-1 w-[28%] bg-red-900"></div>
+          </div>
           <div className="flex flex-col gap-5 lg:flex-row">
             {projects.map((project) => (
               <Link key={project.title} href={project.href}>
@@ -31,7 +34,7 @@ export default function Projects({ projects }) {
                     src={project.imgSrc}
                     width={501}
                     height={300}
-                    className="h-[256px] w-full object-cover"
+                    className="h-[256px] object-cover"
                     alt={project.title}
                   />
                   <div className="playfair text-lg font-bold">{project.title}</div>

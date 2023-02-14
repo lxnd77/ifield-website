@@ -93,8 +93,8 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <div className="container mx-auto my-auto flex flex-col flex-wrap justify-around justify-items-center gap-4 md:h-[400px] ">
-        <div className="m-auto w-[300px] p-2">
+      <div className="container mx-auto flex flex-col flex-wrap  items-start justify-between lg:h-[400px] lg:gap-4 ">
+        <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">Head Office</h2>
@@ -103,7 +103,7 @@ const Contact = () => {
             1408, 13/F, CEO Tower, 77 Wing Hong Street, Cheung She Wan, Hong Kong
           </p>
         </div>
-        <div className="m-auto w-[300px] p-2">
+        <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">China Office</h2>
@@ -113,7 +113,7 @@ const Contact = () => {
             P.R. China <br /> Tel :+86 20 39232167 / 39232577 / 39232657 | Fax: +86 20 34337465
           </p>
         </div>
-        <div className="m-auto w-[300px] p-2">
+        <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">UAE Office</h2>
@@ -124,7 +124,7 @@ const Contact = () => {
             501382847 | +86 13828402777
           </p>
         </div>
-        <div className="m-auto w-[300px] p-2">
+        <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">Nigeria Office</h2>
@@ -133,7 +133,7 @@ const Contact = () => {
             Block 13, Plot 2, Palace Road, VI, Lagos Nigeria <br /> M: +234 9037572893
           </p>
         </div>
-        <div className="m-auto w-[300px] p-2">
+        <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">India Office</h2>
@@ -143,7 +143,7 @@ const Contact = () => {
             M: +91 9887514715
           </p>
         </div>
-        <div className="m-auto w-[300px] p-2">
+        <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">Spain Office</h2>
@@ -153,6 +153,14 @@ const Contact = () => {
             Tel: +34 971380495 / 676815728
           </p>
         </div>
+      </div>
+      <div className="m-16 mx-auto w-[85%]">
+        <p>
+          We are always on the lookout for fresh talent. Send us your resume to{' '}
+          <a className="text-left text-[#b91c1c] underline" href="mailto:hr@ifield.ae">
+            hr@ifield.ae
+          </a>
+        </p>
       </div>
     </div>
   )

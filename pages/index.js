@@ -9,6 +9,7 @@ import 'swiper/css/pagination'
 // import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import CountUp from 'react-countup'
+import Link from 'next/link'
 
 export default function Home({ toggleContact }) {
   return (
@@ -34,7 +35,7 @@ export default function Home({ toggleContact }) {
 
             <div className=" z-50 m-10 w-fit cursor-pointer">
               <button className="btn " onClick={toggleContact.toggleContact}>
-                Get in touch
+                <Link href={'/contact'}>Get in touch</Link>
               </button>
             </div>
           </div>
@@ -52,7 +53,7 @@ export default function Home({ toggleContact }) {
             <div className="bg-black">
               <Image
                 className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7] "
-                src="/assets/hero/hero (1).jpeg"
+                src="/assets/hero/hero (1).png"
                 alt="marriot 1"
                 width={1080}
                 height={1620}
@@ -63,7 +64,7 @@ export default function Home({ toggleContact }) {
             <div className="bg-black">
               <Image
                 className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
-                src="/assets/hero/hero (2).jpeg"
+                src="/assets/hero/hero (2).png"
                 alt="crowne 1"
                 width={1080}
                 height={1620}
@@ -74,7 +75,7 @@ export default function Home({ toggleContact }) {
             <div className="bg-black">
               <Image
                 className=" relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
-                src="/assets/hero/hero (3).jpg"
+                src="/assets/hero/hero (3).png"
                 alt="surat 1"
                 width={1080}
                 height={1620}
@@ -98,7 +99,7 @@ export default function Home({ toggleContact }) {
         <div className="flex w-full flex-col bg-black md:w-[90vw]  md:flex-row md:pt-[10%] lg:pt-8">
           <Image
             className="relative h-[100vh] w-[100vw] object-cover md:top-[12vh] md:w-[50vw]"
-            src="/assets/7.jpg"
+            src="/assets/7.png"
             alt="hotel lobby"
             width={500}
             height={1000}
@@ -122,7 +123,7 @@ export default function Home({ toggleContact }) {
                 customer service, and that's the I-Field advantage.
               </div>
               <button className="mt-8 mb-8 h-12 w-48 bg-yellow-400 text-center text-black">
-                Get In Touch
+                <Link href={'/about'}>Learn More</Link>
               </button>
             </div>
           </div>
@@ -254,7 +255,9 @@ export default function Home({ toggleContact }) {
                       hospitality industry in its region.
                     </div>
                     <div className="mt-8 mb-8 flex">
-                      <button className="btn">View project</button>
+                      <button className="btn">
+                        <Link href={'/projects/marriot-lagos'}>View Project</Link>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -291,7 +294,9 @@ export default function Home({ toggleContact }) {
                       that switch between frosted and transparent at the touch of a button.
                     </div>
                     <div className="mt-8 mb-8 flex">
-                      <button className="btn">View project</button>
+                      <button className="btn">
+                        <Link href={'/projects/crowne-plaza-nairobi'}>View Project</Link>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -329,7 +334,9 @@ export default function Home({ toggleContact }) {
                       the hotel guests were undisturbed.
                     </div>
                     <div className="mt-8 mb-8 flex">
-                      <button className="btn">View project</button>
+                      <button className="btn">
+                        <Link href={'/projects/marriot-gujarat'}>View Project</Link>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -411,31 +418,175 @@ export default function Home({ toggleContact }) {
           <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Clients</div>
           <div className="h-1 w-64 bg-red-900"></div>
         </div>
-        <div class="mx-auto flex h-full w-[80%] flex-wrap justify-between" id="clients">
-          <img src="/assets/clients/1.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/2.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/3.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/4.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/5.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/6.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/7.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/8.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/9.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/10.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/11.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/12.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/13.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/14.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/15.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/16.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/17.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/18.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/19.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/20.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/21.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/22.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/23.png" className="m-4 aspect-auto w-36"></img>
-          <img src="/assets/clients/24.png" className="m-4 aspect-auto w-36"></img>
+        <div class="mx-auto flex h-full w-[90%] flex-wrap justify-evenly gap-4" id="clients">
+          <Image
+            src="/assets/clients/1.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/3.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/2.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/4.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/5.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/6.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/7.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/8.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/9.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/10.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/11.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/12.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/13.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/14.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/15.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/16.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/17.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/18.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/19.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/20.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/21.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/22.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/23.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
+          <Image
+            src="/assets/clients/24.png"
+            className="aspect-auto w-36"
+            height={36}
+            width={36}
+            alt="client"
+          ></Image>
         </div>
       </div>
     </>
