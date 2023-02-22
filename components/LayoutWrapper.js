@@ -3,11 +3,13 @@ import Image from 'next/image'
 import logo from 'public/assets/logoblack.png'
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
-import imagesLoaded from 'imagesloaded'
 import React from 'react'
+
+import {
+  LocomotiveScrollProvider as RLSProvider,
+  useLocomotiveScroll,
+} from 'react-locomotive-scroll'
 
 const LayoutWrapper = ({ children }) => {
   const [menuActive, SetMenuActive] = useState(false)
@@ -17,39 +19,19 @@ const LayoutWrapper = ({ children }) => {
     SetMenuActive(!ma)
   }
 
-  const toggleOffModals = (e) => {
+  const toggleOffMenu = (e) => {
     let ma = menuActive
-
     if (e.currentTarget)
       if (ma) {
         SetMenuActive(!ma)
       }
   }
 
-  const ScrollContainer = useRef()
   const router = useRouter()
-  let scroll = null
+  const containerRef = useRef(null)
+
   useEffect(() => {
-    async function getLocomotive() {
-      console.log('getLoco')
-      const Locomotive = (await import('locomotive-scroll')).default
-
-      if (!scroll) {
-        console.log('new scroll')
-        scroll = new Locomotive({
-          el: ScrollContainer.current,
-          smooth: true,
-          smoothMobile: true,
-        })
-      }
-      imagesLoaded('#container', function () {
-        scroll.update()
-      })
-      scroll.update()
-    }
-
     const handleRouteChange = (url, { shallow }) => {
-      scroll.destroy()
       SetMenuActive(false)
     }
 
@@ -65,40 +47,12 @@ const LayoutWrapper = ({ children }) => {
         }
       }
     })
-    getLocomotive()
-  }, [router])
-
-  function recursiveMap(children, fn) {
-    return React.Children.map(children, (child) => {
-      if (!React.isValidElement(child) || typeof child.type == 'string') {
-        return child
-      }
-
-      if (child.props.children) {
-        child = React.cloneElement(child, {
-          children: recursiveMap(child.props.children, fn),
-        })
-      }
-
-      return fn(child)
-    })
-  }
-
-  // Add props to all child elements.
-  const childrenWithProps = recursiveMap(children, (child) => {
-    // Checking isValidElement is the safe way and avoids a TS error too.
-    if (React.isValidElement(child)) {
-      // Pass additional props here
-      return React.cloneElement(child, { toggleContact: { toggleMenu } })
-    }
-
-    return child
-  })
+  }, [router, menuActive])
 
   return (
-    <div ref={ScrollContainer} key={router.asPath}>
+    <div key={router.asPath}>
       {/* ------------------------------ Navbar -------------------------------- */}
-      <div className="w-full bg-white">
+      <div className="fixed top-0 z-[100] w-full bg-white md:static">
         <div className="mx-14 flex flex-row items-center justify-between py-4">
           <div className="hidden md:flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className="mx-2 h-7 w-7">
@@ -160,10 +114,11 @@ const LayoutWrapper = ({ children }) => {
           </div>
         </div>
       </div>
-
+      {/* ------------------------------ Aside -------------------------------- */}
       <aside
         id="main-nav"
-        className=" fixed	 top-[82px] right-0 z-50 ml-auto h-[90vh] w-[400px] overflow-hidden bg-white/90 text-black backdrop-blur transition-all duration-700"
+        className=" fixed	 top-[82px] right-0 z-[100] ml-auto h-[90vh] w-[400px] max-w-full 
+                    overflow-hidden bg-white/90 text-black backdrop-blur transition-all duration-700"
         style={menuActive ? { right: 0 } : { right: -400 }}
       >
         <div className="h-full px-16 py-16">
@@ -176,12 +131,38 @@ const LayoutWrapper = ({ children }) => {
           </div>
         </div>
       </aside>
-
-      <main className="overflow-hidden" onClick={toggleOffModals}>
-        {childrenWithProps}
-      </main>
-
-      <Footer />
+      <RLSProvider
+        options={{
+          smooth: true,
+          smoothMobile: false,
+          resetNativeScroll: true,
+          // ... all available Locomotive Scroll instance options
+        }}
+        watch={
+          [
+            //..all the dependencies you want to watch to update the scroll.
+            //  Basicaly, you would want to watch page/location changes
+            //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+          ]
+        }
+        location={router.asPath}
+        onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 0, disableLerp: true })}
+        // onLocationChange={(scroll) => {
+        //   scroll.destroy()
+        //   scroll.init()
+        // }}
+        containerRef={containerRef}
+      >
+        <main
+          className="mt-[82px] h-full overflow-hidden bg-white md:mt-0 md:overflow-auto"
+          onClick={toggleOffMenu}
+        >
+          <div ref={containerRef} className="w-full" data-scroll-container>
+            {children}
+            <Footer />
+          </div>
+        </main>
+      </RLSProvider>
     </div>
   )
 }

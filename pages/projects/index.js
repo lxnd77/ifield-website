@@ -19,11 +19,11 @@ export default function Projects({ projects }) {
     <div>
       <PageSEO title={`Projects - ${siteMetadata.title}`} description={siteMetadata.description} />
       <div data-scroll-section>
-        <div className="container m-8 mx-auto h-full w-[90%] p-8">
+        <div className="container m-8 mx-auto h-full w-[90%]">
           <div className="align-items-center w-[50%] align-middle md:flex">
-            <div className="playfair mb-4 font-serif text-[4vw] leading-snug text-black ">
+            <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 md:text-[4vw]">
               Our Projects
-            </div>
+            </h1>
             <div className="my-auto h-1 w-[28%] bg-red-900"></div>
           </div>
           <div className="flex flex-col gap-5 lg:flex-row">

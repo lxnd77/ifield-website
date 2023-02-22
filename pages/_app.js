@@ -11,6 +11,8 @@ import '@fontsource/inter/variable-full.css'
 import '@/css/vision.css'
 import '@/css/timeline.css'
 import '@/css/locomotive-scroll.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import Head from 'next/head'
 import Script from 'next/script'
@@ -20,12 +22,23 @@ import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 
+import { useEffect, useRef } from 'react'
+
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init({
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50,
+    })
+  }, [])
   return (
     <>
+      {/* <div data-scroll-container> */}
+
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="referrer" content="no-referrer-when-downgrade"></meta>
@@ -43,9 +56,13 @@ export default function App({ Component, pageProps }) {
       `}</Script>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
+
       <LayoutWrapper>
-        <Component {...pageProps} />
+        <div>
+          <Component {...pageProps} />
+        </div>
       </LayoutWrapper>
+      {/* </div> */}
     </>
   )
 }

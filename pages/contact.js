@@ -1,3 +1,5 @@
+import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
 const { default: GlobeSection } = require('@/components/GlobeSection')
 
 const Contact = () => {
@@ -43,6 +45,10 @@ const Contact = () => {
 
   return (
     <div data-scroll-section>
+      <PageSEO
+        title={`Contact Us - ${siteMetadata.title}`}
+        description={siteMetadata.description}
+      />
       <div className="mb-2 flex items-center ">
         <div className="h-1 w-[10%] bg-red-900 "></div>
         <div className="playfair pl-[1%] text-[2.4rem] text-black md:text-[4vw]">

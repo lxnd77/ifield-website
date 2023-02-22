@@ -4,6 +4,8 @@ import { Navigation } from 'swiper'
 import Image from 'next/image'
 import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
+import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
 
 export async function getStaticPaths() {
   const projects = getFiles('projects')
@@ -26,12 +28,15 @@ export async function getStaticProps(context) {
   }
 }
 export default function Project({ project }) {
-  console.log(project)
   const { mdxSource, toc, frontMatter } = project
   const MDXLayout = useMemo(() => getMDXComponent(mdxSource), [mdxSource])
   const Layout = require(`@/layouts/PostSimple`).default
   return (
     <div className="mx-auto w-[90%]" data-scroll-section>
+      <PageSEO
+        title={`${project.frontMatter.title} - ${siteMetadata.title}`}
+        description={siteMetadata.description}
+      />
       <h1 className="playfair text-5xl"> Projects</h1>
       <h2 className="playfair mt-6 text-4xl"> {project.frontMatter.title}</h2>
       <div className="">

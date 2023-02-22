@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <>
-      <a href="#" target="_blank" className="float">
+      <a href="#" download target="brochure.pdf" className="float z-[90]">
         <span className="tool" data-tip="Download Brochure" tabIndex="1">
           <svg
             className="my-float"
@@ -19,10 +19,10 @@ export default function Footer() {
         </span>
       </a>
       <footer>
-        <div className="h-600px w-full" data-scroll-section>
-          <hr className="m-8 mx-auto w-[80%] border-t-2 border-red-700" />
-          <div className="mx-auto flex flex-col text-[14px] md:w-[70%] md:flex-row">
-            <div className="mx-auto mb-16 flex max-w-[75%] flex-col justify-around gap-4 p-4">
+        <div className="h-[400px] w-full" data-scroll-section>
+          <hr className="m-8 mx-auto w-[80%] border-t-2 border-[#981C20]" />
+          <div className=" mx-auto mb-16 flex flex-col justify-around text-[14px] md:w-[70%] md:flex-row">
+            <div className="mx-auto flex min-w-[300px] max-w-[75%] grow flex-col justify-around gap-4 p-4">
               <Image
                 src="/assets/logoblack.png"
                 width="150"
@@ -46,15 +46,15 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto mb-16 flex flex-col justify-around gap-4 p-4">
+            <div className="m-4 mx-auto flex w-[80%] flex-col justify-center gap-4">
               <h2>Subscribe to our newsletter to stay updated</h2>
               <div className="flex flex-row">
-                <input className=" relative mx-0 mb-0 rounded" type="text"></input>
-                <button className="font-Inter w-[154px] rounded-[0px_4px_4px_0px] bg-[#B91C1C] text-center text-white ">
+                <input className=" relative mx-0 mb-0 w-[80%] rounded" type="text"></input>
+                <button className="font-Inter rounded-[0px_4px_4px_0px] bg-[#981C20] px-8 text-center text-white ">
                   Subscribe
                 </button>
               </div>
-              <div className="flex justify-around">
+              <div className="flex justify-around gap-2 text-center">
                 <Link href={'/'}>Home</Link>
                 <Link href={'/about'}>About Us</Link>
                 <Link href={'/process'}>Our Process</Link>

@@ -10,10 +10,15 @@ import 'swiper/css/pagination'
 import Image from 'next/image'
 import CountUp from 'react-countup'
 import Link from 'next/link'
+import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
-export default function Home({ toggleContact }) {
+export default function Home() {
+  const { scroll } = useLocomotiveScroll()
   return (
     <>
+      <PageSEO title={siteMetadata.headerTitle} description={siteMetadata.description} />
       {/* ------------------------------------ HERO ----------------------------- */}
       <div
         className="relative h-auto w-full md:h-[90vh] "
@@ -34,7 +39,7 @@ export default function Home({ toggleContact }) {
             </h1>
 
             <div className=" z-50 m-10 w-fit cursor-pointer">
-              <button className="btn " onClick={toggleContact.toggleContact}>
+              <button className="btn ">
                 <Link href={'/contact'}>Get in touch</Link>
               </button>
             </div>
@@ -89,8 +94,8 @@ export default function Home({ toggleContact }) {
 
       <div className="relative" data-scroll-section>
         {/*<!-------------------Mobile title------------------->*/}
-        <div className="flex bg-black align-middle md:hidden">
-          <div className="playfair mb-8 py-6 pl-[10%] font-serif text-[2.4rem] text-white md:text-[4vw] ">
+        <div className="flex bg-white align-middle md:hidden">
+          <div className="playfair mb-8 py-6 pl-[10%] font-serif text-[2.4rem] text-black md:text-[4vw] ">
             Our Distinction
           </div>
           <div className="my-auto h-1 w-full bg-red-900"></div>
@@ -134,10 +139,10 @@ export default function Home({ toggleContact }) {
 
       {/* <!------------------------------------------- Impact -------------------------------------> */}
       <div className="static min-h-[100vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
-        <div className="relative mx-auto mt-20 min-h-[55vh] w-[100vw] bg-black md:w-[70%]">
-          <div className="mt-[140px] mb-2 flex items-center  py-[24px]">
+        <div className="relative mx-auto min-h-[55vh] w-[100vw] bg-white md:w-[70%] md:bg-black">
+          <div className="mb-2 flex items-center  py-[24px]">
             <div className="h-1 w-[20%] bg-red-900 "></div>
-            <div className="playfair pl-[1%] text-[2.4rem] text-white md:text-[4vw]">
+            <div className="playfair pl-[1%] text-[2.4rem] text-black md:text-[4vw] md:text-white">
               Our Process
             </div>
           </div>
@@ -145,7 +150,7 @@ export default function Home({ toggleContact }) {
           <div className="playfair  top-10 left-[40%] text-[2.4rem] text-white md:text-[4vw]">
             Our Impact
           </div> */}
-          <div className=" top-[35%] left-[25%] mx-auto my-auto w-[50%] text-xl text-white">
+          <div className=" top-[35%] left-[25%] mx-auto my-auto w-[50%] text-xl text-black md:text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
             aspect of our clients' FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
@@ -160,50 +165,56 @@ export default function Home({ toggleContact }) {
           > */}
           <div className=" relative mx-[12px] mr-[26px] mt-8 grid grid-cols-2 gap-2 pb-[36px] md:left-[25%] md:mx-0 md:w-[50vw] lg:grid-cols-4">
             <div
-              className="w-30 h-30 z-20 flex flex-col items-center  p-2 shadow-xl transition
+              className="w-30 h-30 z-20 flex flex-col items-center  rounded-2xl p-2 shadow-xl transition
             duration-700 ease-in-out hover:scale-110"
             >
               <Image
                 width={65}
                 height={65}
-                className="m-auto invert filter"
+                className="m-auto md:invert md:filter"
                 src="/assets/fiedl.png"
                 alt="ok"
               />
-              <div className="m-4 w-[100px] text-center text-sm text-white">
+              <div className="m-4 w-[100px] text-center text-sm  text-black md:text-white">
                 Field <br />
                 Experts
               </div>
             </div>
-            <div className="w-30 h-30 z-20 flex flex-col items-center p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+            <div className="w-30 h-30 z-20 flex flex-col items-center rounded-2xl p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
               <Image
                 width={65}
                 height={65}
-                className="m-auto invert filter"
+                className="m-auto filter md:invert"
                 src="/assets/turnkey.png"
                 alt="ok"
               />
-              <div className="m-4 w-[100px] text-center text-sm text-white">Turnkey Solutions</div>
+              <div className="m-4 w-[100px] text-center text-sm text-black md:text-white">
+                Turnkey Solutions
+              </div>
             </div>
-            <div className="w-30 h-30 z-20 flex flex-col items-center p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+            <div className="w-30 h-30 z-20 flex flex-col items-center rounded-2xl p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
               <Image
                 width={65}
                 height={65}
-                className="m-auto invert filter"
+                className="m-auto filter md:invert"
                 src="/assets/global.png"
                 alt="ok"
               />
-              <div className="m-4 w-[100px] text-center text-sm text-white">Global Coverage</div>
+              <div className="m-4 w-[100px] text-center text-sm text-black md:text-white">
+                Global Coverage
+              </div>
             </div>
-            <div className="w-30 h-30 z-20 flex flex-col items-center p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
+            <div className="w-30 h-30 z-20 flex flex-col items-center rounded-2xl p-2 shadow-xl transition duration-700 ease-in-out hover:scale-110">
               <Image
                 width={65}
                 height={65}
-                className="m-auto invert filter"
+                className="m-auto filter md:invert"
                 src="/assets/quality.png"
                 alt="ok"
               />
-              <div className="m-4 w-[100px] text-center text-sm text-white">Unmatched Quality</div>
+              <div className="m-4 w-[100px] text-center text-sm text-black md:text-white">
+                Unmatched Quality
+              </div>
             </div>
           </div>
         </div>
@@ -219,7 +230,7 @@ export default function Home({ toggleContact }) {
           All our projects are highly customized for the client, but each one has the I-Field stamp
           of unmatched quality.
         </div>
-        <div className="pt-[64px] md:pb-[64px]">
+        <div className="mx-auto max-w-[100%] pt-[64px] md:pb-[64px]">
           <Swiper className="swiper mx-16" navigation={true} modules={[Navigation]}>
             {/* <!-- Additional required wrapper --> */}
             {/* <!-- Slides --> */}
@@ -249,10 +260,7 @@ export default function Home({ toggleContact }) {
                     <div>
                       The gorgeous Lagos Marriott Hotel Ikeja is one of our proudest achievements.
                       This 250-key project includes 200 standard rooms, presidential and vice
-                      presidential suites, a specialty restaurant, and an azure pool bar. This hotel
-                      became an iField project because the Marriott Office in the UK recommended our
-                      services to the owners at the SIFAX group. It continues to be an icon in the
-                      hospitality industry in its region.
+                      presidential suites, a specialty restaurant, and an azure pool bar.
                     </div>
                     <div className="mt-8 mb-8 flex">
                       <button className="btn">
@@ -289,9 +297,7 @@ export default function Home({ toggleContact }) {
                     <div>
                       The Crowne Plaza in Nairobi was worked on by our international team, and
                       covered 144 keys. Its stunning bespoke ringed chandelier was installed by
-                      iField experts. With rings going up to 3m in diameter, it brings out the
-                      luminous luxury of this marvellous hotel. We also created magic glass screens
-                      that switch between frosted and transparent at the touch of a button.
+                      iField experts.
                     </div>
                     <div className="mt-8 mb-8 flex">
                       <button className="btn">
@@ -329,9 +335,7 @@ export default function Home({ toggleContact }) {
                       The Marriott Hotel in Surat was built on the bones of the Taj hotel. iField
                       handled this transformation, handling 209 keys. 3D printing effects were used
                       to make headboards, and glass sliding doors with a mirror on one side made
-                      each room feel spacious and unique. This project took place while the hotel
-                      was already operational, and was implemented in seamless phases, ensuring that
-                      the hotel guests were undisturbed.
+                      each room feel spacious and unique.
                     </div>
                     <div className="mt-8 mb-8 flex">
                       <button className="btn">
@@ -362,6 +366,7 @@ export default function Home({ toggleContact }) {
                 <CountUp duration={5} end={390} enableScrollSpy scrollSpyDelay={1000} />
                 <div className="montserrat mt-2 text-lg">Global staff</div>
               </div>
+              {/*TODO:: FIX */}
             </div>
             <div className="m-8 flex  w-full  flex-col items-center justify-center gap-[36px] text-center md:mr-16 md:flex-row md:gap-[18%]">
               <div className="playfair  text-5xl ">
@@ -369,7 +374,6 @@ export default function Home({ toggleContact }) {
                   duration={5}
                   end={20000}
                   enableScrollSpy
-                  scrollSpyOnce
                   seperator={','}
                   scrollSpyDelay={1000}
                 />
@@ -409,6 +413,7 @@ export default function Home({ toggleContact }) {
                 </p>
               </div>
             </div>
+            {/*TODO:: FIX */}
           </div>
         </div>
       </div>
@@ -418,7 +423,7 @@ export default function Home({ toggleContact }) {
           <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Clients</div>
           <div className="h-1 w-64 bg-red-900"></div>
         </div>
-        <div class="mx-auto flex h-full w-[90%] flex-wrap justify-evenly gap-4" id="clients">
+        <div className="mx-auto flex h-full w-[90%] flex-wrap justify-evenly gap-4" id="clients">
           <Image
             src="/assets/clients/1.png"
             className="aspect-auto w-36"

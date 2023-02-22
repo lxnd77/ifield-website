@@ -47,7 +47,7 @@ export default function Vision() {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + menuItems[index] + '</span>'
+            return '<span className="' + className + '">' + menuItems[index] + '</span>'
           },
         }}
         // Navigation arrows
