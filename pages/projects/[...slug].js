@@ -39,25 +39,29 @@ export default function Project({ project }) {
       />
       <h1 className="playfair text-5xl"> Projects</h1>
       <h2 className="playfair mt-6 text-4xl"> {project.frontMatter.title}</h2>
+      <div>
+        <div className="projectContent ">
+          <MDXLayout layout={Layout} />
+        </div>
+      </div>
       <div className="">
         <Swiper
-          className="swiper my-[64px]  h-[300px] pb-[16px] pt-8 md:h-[300px]"
+          className="swiper mb-[16px] h-[400px] "
           navigation={true}
           slidesPerView={1}
           breakpoints={{
             768: {
-              slidesPerView: 1.5,
+              slidesPerView: 2,
               spaceBetweenSlides: 32,
             },
           }}
-          spaceBetween={32}
           modules={[Navigation]}
         >
           {/* <!-- Slides --> */}
           <SwiperSlide className="swiper-slide">
             <Image
               width={500}
-              height={500}
+              height={400}
               className="aspect-auto h-full w-full object-cover object-center"
               src={project.frontMatter.imgSrc}
               alt=""
@@ -66,7 +70,7 @@ export default function Project({ project }) {
           <SwiperSlide className="swiper-slide">
             <Image
               width={500}
-              height={500}
+              height={400}
               className="aspect-auto h-full w-full object-cover object-center"
               src={project.frontMatter.imgSrc2}
               alt=""
@@ -75,19 +79,13 @@ export default function Project({ project }) {
           <SwiperSlide className="swiper-slide">
             <Image
               width={500}
-              height={500}
+              height={400}
               className="aspect-auto h-full w-full object-cover object-center"
               src={project.frontMatter.imgSrc3}
               alt=""
             />
           </SwiperSlide>
         </Swiper>
-      </div>
-      <div>
-        <p>{project.frontMatter.location}</p>
-        <div className="projectContent ">
-          <MDXLayout layout={Layout} />
-        </div>
       </div>
     </div>
   )

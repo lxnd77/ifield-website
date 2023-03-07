@@ -124,10 +124,41 @@ body {
 .leave-right {
   opacity: 0;
 }
+div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mx-16.swiper-backface-hidden
+  div.swiper-button-next {
+  color: black;
+}
+div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mx-16.swiper-backface-hidden
+  div.swiper-button-prev {
+  color: black;
+}
+
+div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mx-16.swiper-backface-hidden
+  div.swiper-button-next::before {
+  content: '';
+  position: absolute;
+  width: 88px;
+  height: 1px;
+  background: black;
+  top: 50%;
+  left: -104px;
+}
+
+div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.mx-16.swiper-backface-hidden
+  div.swiper-button-prev::before {
+  content: '';
+  position: absolute;
+  width: 88px;
+  height: 1px;
+  background: black;
+  top: 50%;
+  right: -104px;
+}
 
 .swiper-button-next,
 .swiper-button-prev {
   top: 95%;
+  color: white;
 }
 
 @media only screen and (min-width: 768px) {
@@ -147,9 +178,6 @@ body {
   /* left: 60px; */
 }
 
-.swiper-button-prev::before {
-}
-
 .swiper-button-next {
   right: 60px;
 }
@@ -163,7 +191,7 @@ body {
   position: absolute;
   width: 88px;
   height: 1px;
-  background: black;
+  background: white;
   top: 50%;
   left: -104px;
 }
@@ -173,7 +201,7 @@ body {
   position: absolute;
   width: 88px;
   height: 1px;
-  background: black;
+  background: white;
   top: 50%;
   right: -104px;
 }

@@ -95,8 +95,11 @@ export default function Home() {
       <div className="relative" data-scroll-section>
         {/*<!-------------------Mobile title------------------->*/}
         <div className="flex bg-white align-middle md:hidden">
-          <div className="playfair mb-8 py-6 pl-[10%] font-serif text-[2.4rem] text-black md:text-[4vw] ">
-            Our Distinction
+          <div className="flex items-center justify-center gap-2">
+            <div className="playfair my-4 pl-[10%] text-[2.4rem] md:text-[4vw]">
+              Our Distinction
+            </div>
+            <div className="h-1 w-64 bg-red-900"></div>
           </div>
           <div className="my-auto h-1 w-full bg-red-900"></div>
         </div>
@@ -123,7 +126,7 @@ export default function Home() {
                 industry experts, our end-to-end services ensure high client satisfaction around the
                 globe.
               </div>
-              <div className="mt-8 text-xl">
+              <div className="mt-8 text-[16px] font-bold">
                 Our core principle is to provide the best in products, prices, efficiency, and
                 customer service, and that's the I-Field advantage.
               </div>
@@ -139,7 +142,7 @@ export default function Home() {
 
       {/* <!------------------------------------------- Impact -------------------------------------> */}
       <div className="static min-h-[100vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
-        <div className="relative mx-auto min-h-[55vh] w-[100vw] bg-white md:w-[70%] md:bg-black">
+        <div className="relative mx-auto min-h-[55vh] w-[100vw] bg-white md:mt-16 md:w-[70%] md:bg-black">
           <div className="mb-2 flex items-center  py-[24px]">
             <div className="h-1 w-[20%] bg-red-900 "></div>
             <div className="playfair pl-[1%] text-[2.4rem] text-black md:text-[4vw] md:text-white">
@@ -150,7 +153,7 @@ export default function Home() {
           <div className="playfair  top-10 left-[40%] text-[2.4rem] text-white md:text-[4vw]">
             Our Impact
           </div> */}
-          <div className=" top-[35%] left-[25%] mx-auto my-auto w-[50%] text-xl text-black md:text-white">
+          <div className=" top-[35%] left-[25%] mx-auto my-auto w-[70%] text-lg text-black md:w-[50%] md:text-xl md:text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
             aspect of our clients' FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
@@ -235,7 +238,7 @@ export default function Home() {
             {/* <!-- Additional required wrapper --> */}
             {/* <!-- Slides --> */}
             <SwiperSlide className="swiper-slide w-full overflow-hidden">
-              <div className="relative h-full pb-[36px] ">
+              <div className="pb-[36px] ">
                 <div className="absolute  left-[12%] text-6xl text-gray-400 md:top-[8%]">01</div>
                 <div className="flex h-full flex-col xl:flex-row">
                   <div className="flex h-full grow-0 items-start">
@@ -280,7 +283,7 @@ export default function Home() {
                       width={500}
                       height={500}
                       className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
-                      src="/assets/projects/nairobi crowne plaza.png"
+                      src="/assets/projects/nairobi crowne plaza2.png"
                       alt=""
                     />
                     <Image
@@ -351,9 +354,13 @@ export default function Home() {
       </div>
       {/* <!-------------------------- Achievements ----------------------------> */}
       <div className="mt-4 mb-8 h-full w-full  bg-white" data-scroll-section>
+        <div className="flex items-center justify-center gap-2">
+          <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Achievements</div>
+          <div className="h-1 w-64 bg-red-900"></div>
+        </div>
         <div className="">
           <div className="mx-auto flex w-full flex-col items-center justify-around">
-            <div className="m-8 flex w-full flex-col justify-center gap-[36px] text-center md:flex-row md:gap-[12%]">
+            <div className="m-8 flex w-full flex-col justify-center gap-[4px] text-center md:flex-row md:gap-[12%]">
               <div className="playfair text-5xl ">
                 <CountUp duration={5} end={20} enableScrollSpy scrollSpyDelay={1000} />
                 <div className="montserrat mt-2 text-lg">Countries</div>
@@ -368,14 +375,18 @@ export default function Home() {
               </div>
               {/*TODO:: FIX */}
             </div>
-            <div className="m-8 flex  w-full  flex-col items-center justify-center gap-[36px] text-center md:mr-16 md:flex-row md:gap-[18%]">
+            <div className="right-0 top-40 md:absolute">
+              <Image src="assets/pattern2.png" height="500" width="500" alt="pattern" />
+            </div>
+            <div className="m-8 flex  w-full  flex-col items-center justify-center gap-[4px] text-center md:mr-16 md:flex-row md:gap-[18%]">
               <div className="playfair  text-5xl ">
                 <CountUp
                   duration={5}
                   end={20000}
                   enableScrollSpy
+                  scrollSpyOnce
                   seperator={','}
-                  scrollSpyDelay={1000}
+                  scrollSpyDelay={100}
                 />
                 m²
                 <div className="montserrat mt-2 text-lg">
@@ -388,7 +399,7 @@ export default function Home() {
                 <div className="montserrat mt-2 text-lg">Years</div>
               </div>
             </div>
-            <div className="m-8 flex w-full flex-col justify-center gap-[48px] text-center align-middle md:flex-row md:items-baseline md:gap-[2%] ">
+            <div className="m-8 flex w-[80%] flex-col justify-center gap-[48px] text-center align-middle md:flex-row md:items-baseline md:gap-[2%] ">
               <div className="flex w-full flex-col items-center justify-center text-center">
                 <Image src="/assets/aahoa.png" alt="aahoa member" width={150} height={150} />
                 <p className="mt-4">

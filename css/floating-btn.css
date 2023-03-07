@@ -8,12 +8,12 @@
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  box-shadow: 2px 2px 3px #99999986;
+  /* box-shadow: 2px 2px 4px #99999986; */
 }
 
 .my-float {
-  margin-top: 14px;
-  margin-left: 15px;
+  margin-top: 16px;
+  margin-left: 16px;
   color: white;
   fill: white;
 }

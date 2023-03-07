@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <>
-      <a href="#" download target="brochure.pdf" className="float z-[90]">
+      <a download href="static/Ifield Brochure 2023.pdf" className="float z-[90]">
         <span className="tool" data-tip="Download Brochure" tabIndex="1">
           <svg
             className="my-float"
@@ -24,7 +24,7 @@ export default function Footer() {
           <div className=" mx-auto mb-16 flex flex-col justify-around text-[14px] md:w-[70%] md:flex-row">
             <div className="mx-auto flex min-w-[300px] max-w-[75%] grow flex-col justify-around gap-4 p-4">
               <Image
-                src="/assets/logoblack.png"
+                src="/assets/logoblack.svg"
                 width="150"
                 height="300"
                 alt="logo"
@@ -36,7 +36,9 @@ export default function Footer() {
               </div>
               <div className="flex flex-row items-center gap-2">
                 <Image src="/assets/mail.png" width="30" height="30" alt="mail icon" />
-                <p>info@ifield.ae</p>
+                <a href="mailto:info@ifield.ae">
+                  <p className="text-red-800 underline">info@ifield.ae</p>
+                </a>
               </div>
               <div className="flex flex-row items-center gap-2">
                 <Image src="/assets/location.png" width="30" height="30" alt="location icon" />
@@ -55,11 +57,21 @@ export default function Footer() {
                 </button>
               </div>
               <div className="flex justify-around gap-2 text-center">
-                <Link href={'/'}>Home</Link>
-                <Link href={'/about'}>About Us</Link>
-                <Link href={'/process'}>Our Process</Link>
-                <Link href={'/projects'}>Our Projects</Link>
-                <Link href={'/contact'}>Contact Us</Link>
+                <Link className="hover:text-red-800" href={'/'}>
+                  Home
+                </Link>
+                <Link className="hover:text-red-800" href={'/about'}>
+                  About Us
+                </Link>
+                <Link className="hover:text-red-800" href={'/process'}>
+                  Our Process
+                </Link>
+                <Link className="hover:text-red-800" href={'/projects'}>
+                  Our Projects
+                </Link>
+                <Link className="hover:text-red-800" href={'/contact'}>
+                  Contact Us
+                </Link>
               </div>
               <div>
                 <Image src="/assets/pattern3.png" width="300" height="30" alt="pattern" />

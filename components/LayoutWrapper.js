@@ -1,10 +1,10 @@
 import Footer from './Footer'
 import Image from 'next/image'
-import logo from 'public/assets/logoblack.png'
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
+import imagesLoaded from 'imagesloaded'
 
 import {
   LocomotiveScrollProvider as RLSProvider,
@@ -29,8 +29,12 @@ const LayoutWrapper = ({ children }) => {
 
   const router = useRouter()
   const containerRef = useRef(null)
-
+  let scrollContainer = document.querySelector('[data-scroll-container]')
   useEffect(() => {
+    imagesLoaded(scrollContainer, { background: true }, function () {
+      scroll.update()
+    })
+
     const handleRouteChange = (url, { shallow }) => {
       SetMenuActive(false)
     }
@@ -71,7 +75,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <div className="cursor-pointer place-self-center text-white">
               <Link href={'/'}>
-                <Image width="100" alt="logo" src={logo} />
+                <Image width="100" height="100" alt="logo" src="/assets/logoblack.svg" />
               </Link>
             </div>
           </div>
