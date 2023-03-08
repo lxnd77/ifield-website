@@ -19,7 +19,7 @@ export default function Footer() {
         </span>
       </a>
       <footer>
-        <div className="h-[400px] w-full" data-scroll-section>
+        <div className="w-full md:h-[400px]" data-scroll-section>
           <hr className="m-8 mx-auto w-[80%] border-t-2 border-[#981C20]" />
           <div className=" mx-auto mb-16 flex flex-col justify-around text-[14px] md:w-[70%] md:flex-row">
             <div className="mx-auto flex min-w-[300px] max-w-[75%] grow flex-col justify-around gap-4 p-4">

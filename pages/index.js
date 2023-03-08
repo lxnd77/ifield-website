@@ -16,21 +16,12 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function Home() {
   const { scroll } = useLocomotiveScroll()
+
   return (
     <>
       <PageSEO title={siteMetadata.headerTitle} description={siteMetadata.description} />
       {/* ------------------------------------ HERO ----------------------------- */}
-      <div
-        className="relative h-auto w-full md:h-[90vh] "
-        // style={{
-        //   backgroundImage: 'url("/assets/Rectangle 45.png")',
-        //   backgroundRepeat: 'no-repeat',
-        //   backgroundSize: 'cover',
-        // }}
-        id="heroBG"
-        // onMouseMove={mouse_position}
-        data-scroll-section
-      >
+      <div className="relative h-auto w-full md:h-[90vh] " id="heroBG" data-scroll-section>
         <div className="bg-black">
           <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
             <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
@@ -92,7 +83,7 @@ export default function Home() {
 
       {/* <!------------------------------ The I-Field Advantage --------------------------------------> */}
 
-      <div className="relative" data-scroll-section>
+      <div className="relative " data-scroll-section>
         {/*<!-------------------Mobile title------------------->*/}
         <div className="flex bg-white align-middle md:hidden">
           <div className="flex items-center justify-center gap-2">
@@ -104,9 +95,9 @@ export default function Home() {
           <div className="my-auto h-1 w-full bg-red-900"></div>
         </div>
 
-        <div className="flex w-full flex-col bg-black md:w-[90vw]  md:flex-row md:pt-[10%] lg:pt-8">
+        <div className="flex w-full flex-col bg-black md:w-[90vw]  md:flex-row ">
           <Image
-            className="relative h-[100vh] w-[100vw] object-cover md:top-[12vh] md:w-[50vw]"
+            className="relative h-[100vh] w-[100vw] object-cover  md:w-[50vw]"
             src="/assets/7.png"
             alt="hotel lobby"
             width={500}
@@ -139,8 +130,6 @@ export default function Home() {
       </div>
 
       {/*<!---------------------------- Process ------------------------------------>*/}
-
-      {/* <!------------------------------------------- Impact -------------------------------------> */}
       <div className="static min-h-[100vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
         <div className="relative mx-auto min-h-[55vh] w-[100vw] bg-white md:mt-16 md:w-[70%] md:bg-black">
           <div className="mb-2 flex items-center  py-[24px]">
@@ -149,10 +138,6 @@ export default function Home() {
               Our Process
             </div>
           </div>
-          {/* <div className=" top-16 left-10 h-1 w-[35%] bg-red-900"></div>
-          <div className="playfair  top-10 left-[40%] text-[2.4rem] text-white md:text-[4vw]">
-            Our Impact
-          </div> */}
           <div className=" top-[35%] left-[25%] mx-auto my-auto w-[70%] text-lg text-black md:w-[50%] md:text-xl md:text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
             aspect of our clients' FF&E needs in-house. Every project is customized, in
@@ -162,10 +147,6 @@ export default function Home() {
             We completely handle the process from logistics and design, to sourcing and production,
             to shipping and installation. Our quality control is unmatched.
           </div>
-          {/* <div
-            className="relative mt-8 flex flex-row flex-wrap justify-center gap-[12px] pb-[36px]
-          md:left-[25%] md:w-[50vw] md:justify-start"
-          > */}
           <div className=" relative mx-[12px] mr-[26px] mt-8 grid grid-cols-2 gap-2 pb-[36px] md:left-[25%] md:mx-0 md:w-[50vw] lg:grid-cols-4">
             <div
               className="w-30 h-30 z-20 flex flex-col items-center  rounded-2xl p-2 shadow-xl transition
@@ -235,8 +216,6 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-[100%] pt-[64px] md:pb-[64px]">
           <Swiper className="swiper mx-16" navigation={true} modules={[Navigation]}>
-            {/* <!-- Additional required wrapper --> */}
-            {/* <!-- Slides --> */}
             <SwiperSlide className="swiper-slide w-full overflow-hidden">
               <div className="pb-[36px] ">
                 <div className="absolute  left-[12%] text-6xl text-gray-400 md:top-[8%]">01</div>
@@ -246,14 +225,14 @@ export default function Home() {
                       width={500}
                       height={500}
                       className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
-                      src="/assets/projects/hilton chad2.png"
+                      src="/assets/projects/lagos2.png"
                       alt=""
                     />
                     <Image
                       width={500}
                       height={500}
                       className=" ml-[-10%] w-[60vw]  min-w-[260px] max-w-[500px] object-contain"
-                      src="/assets/projects/hilton chad.png"
+                      src="/assets/projects/lagos3.png"
                       alt=""
                     />
                   </div>

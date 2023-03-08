@@ -29,11 +29,13 @@ const LayoutWrapper = ({ children }) => {
 
   const router = useRouter()
   const containerRef = useRef(null)
-  let scrollContainer = document.querySelector('[data-scroll-container]')
+  const { scroll } = useLocomotiveScroll()
   useEffect(() => {
-    imagesLoaded(scrollContainer, { background: true }, function () {
-      scroll.update()
-    })
+    if (scroll) {
+      imagesLoaded(containerRef.current, { background: true }, function () {
+        scroll.update()
+      })
+    }
 
     const handleRouteChange = (url, { shallow }) => {
       SetMenuActive(false)
@@ -51,7 +53,7 @@ const LayoutWrapper = ({ children }) => {
         }
       }
     })
-  }, [router, menuActive])
+  }, [router, menuActive, scroll])
 
   return (
     <div key={router.asPath}>
@@ -142,13 +144,7 @@ const LayoutWrapper = ({ children }) => {
           resetNativeScroll: true,
           // ... all available Locomotive Scroll instance options
         }}
-        watch={
-          [
-            //..all the dependencies you want to watch to update the scroll.
-            //  Basicaly, you would want to watch page/location changes
-            //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-          ]
-        }
+        watch={[router.asPath]}
         location={router.asPath}
         onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 0, disableLerp: true })}
         // onLocationChange={(scroll) => {
