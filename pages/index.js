@@ -28,7 +28,10 @@ export default function Home() {
               FF&E Manufacturing <br />
               Turnkey Solutions
             </h1>
-
+            <p className="montserrat pointer-events-none m-10 my-auto mt-5 text-left text-[1.2rem] leading-tight text-white md:w-[50%] lg:text-[1.5vw]">
+              Experience the epitome of luxury with Ifield - your ultimate FF&E turnkey contracting
+              partner for high-end hotels.
+            </p>
             <div className=" z-50 m-10 w-fit cursor-pointer">
               <button className="btn ">
                 <Link href={'/contact'}>Get in touch</Link>

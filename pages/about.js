@@ -205,7 +205,7 @@ export default function About() {
               className="h-80 w-80"
             />
             <h2 className="m-4">
-              Punya Bhargava <br /> Business Development Manager
+              Crystal Huang <br /> Senior Manager Exports
             </h2>
           </div>
           <div className="playfair flex flex-col text-center text-xl">
@@ -217,7 +217,7 @@ export default function About() {
               className="h-80 w-80"
             />
             <h2 className="m-4">
-              Punya Bhargava <br /> Business Development Manager
+              Tony Lee <br /> Exec. Manufacturing
             </h2>
           </div>
           <div className="playfair flex flex-col text-center text-xl">
@@ -229,7 +229,7 @@ export default function About() {
               className="h-80 w-80"
             />
             <h2 className="m-4">
-              Punya Bhargava <br /> Business Development Manager
+              Tiger Chen <br /> Exec. Design
             </h2>
           </div>
           <div className="playfair flex flex-col text-center text-xl">
@@ -241,7 +241,7 @@ export default function About() {
               className="h-80 w-80"
             />
             <h2 className="m-4">
-              Punya Bhargava <br /> Business Development Manager
+              Vicki Leung <br /> Exec. Procurement
             </h2>
           </div>
           <div className="playfair flex flex-col text-center text-xl">
