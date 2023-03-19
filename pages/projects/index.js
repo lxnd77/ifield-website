@@ -37,7 +37,7 @@ export default function Projects({ projects }) {
                     className="h-[256px] object-cover"
                     alt={project.title}
                   />
-                  <div className="playfair text-lg font-bold">{project.title}</div>
+                  <div className="playfair text-lg">{project.title}</div>
                   <div className="montserrat text-sm">{project.location}</div>
                 </div>
               </Link>
