@@ -187,7 +187,13 @@ export default function About() {
               </p>
             </div>
             <div className="order-first mx-auto flex flex-col justify-end p-8 md:order-last md:col-span-1 md:col-start-3">
-              <Image width={500} height={500} alt="" src="/assets/profile.png" className="" />
+              <Image
+                width={500}
+                height={500}
+                alt=""
+                src="/assets/staff/7.jpg"
+                className="h-80 w-80 rounded-full border-2 border-[#971C20] object-cover"
+              />
             </div>
           </div>
           <div>
@@ -200,9 +206,9 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/avataaars.png"
+              src="/assets/staff/4.jpg"
               alt=""
-              className="h-80 w-80"
+              className="h-80 w-80 rounded-full object-cover"
             />
             <h2 className="m-4">
               Crystal Huang <br /> Senior Manager Exports
@@ -212,9 +218,9 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/avataaars.png"
+              src="/assets/staff/1.jpg"
               alt=""
-              className="h-80 w-80"
+              className="h-80 w-80 rounded-full object-cover"
             />
             <h2 className="m-4">
               Tony Lee <br /> Exec. Manufacturing
@@ -224,9 +230,9 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/avataaars.png"
+              src="/assets/staff/3.jpg"
               alt=""
-              className="h-80 w-80"
+              className="h-80 w-80 rounded-full object-cover"
             />
             <h2 className="m-4">
               Tiger Chen <br /> Exec. Design
@@ -236,9 +242,9 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/avataaars.png"
+              src="/assets/staff/2.jpg"
               alt=""
-              className="h-80 w-80"
+              className="h-80 w-80 rounded-full object-cover"
             />
             <h2 className="m-4">
               Vicki Leung <br /> Exec. Procurement
@@ -248,21 +254,21 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/avataaars.png"
+              src="/assets/staff/6.jpg"
               alt=""
-              className="h-80 w-80"
+              className="h-80 w-80 rounded-full object-cover"
             />
             <h2 className="m-4">
-              Punya Bhargava <br /> Business Development Manager
+              David Xu <br /> Project Manager (Manufacturing)
             </h2>
           </div>
           <div className="playfair flex flex-col text-center text-xl">
             <Image
               width={500}
               height={500}
-              src="/assets/avataaars.png"
+              src="/assets/staff/5.jpg"
               alt=""
-              className="h-80 w-80"
+              className="h-80 w-80 rounded-full object-cover"
             />
             <h2 className="m-4">
               Punya Bhargava <br /> Business Development Manager
