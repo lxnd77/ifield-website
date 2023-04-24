@@ -115,6 +115,14 @@ body {
   content: 'USA';
 }
 
+.markeruae::after {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  content: 'UAE';
+}
+
 /* Timeline OVeride */
 .selected img {
   transform: scale(1.5);

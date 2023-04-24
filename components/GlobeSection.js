@@ -17,50 +17,50 @@ export default function GlobeSection() {
   const chinaAddr = {
     title: 'Corporate Location',
     line1: '5th Fl, Building A, Daxin Industrial Park',
-    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
+    line2: 'No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
     country: 'Peoples Republic of China',
-    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
-    email: ' info@ifield.com.cn',
+    phone: '+86-20-39232167 / 39232577 / 39232657 ',
+    email: 'info@ifield.com.cn',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
   const indiaAddr = {
     title: 'Corporate Location',
-    line1: '5th Fl, Building A, Daxin Industrial Park',
-    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
-    country: 'Peoples Republic of China',
-    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
-    email: ' info@ifield.ae',
+    line1: 'E-201, Vaishali Nagar,',
+    line2: 'Near Defence Public School, Jaipur, Rajasthan, ',
+    country: 'India',
+    phone: '+91-9887514715 ',
+    email: 'info@ifield.ae',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
   const spainAddr = {
     title: 'Corporate Location',
-    line1: '5th Fl, Building A, Daxin Industrial Park',
-    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
+    line1: 'C/Forners i Pastissers 1907760',
+    line2: 'Ciutadella de Menorca',
     country: 'Peoples Republic of China',
-    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
-    email: ' info@ifield.com.cn',
+    phone: '+34-971 38 04 95 / 676815728',
+    email: 'info@ifield.ae',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
   const nigeriaAddr = {
     title: 'Corporate Location',
-    line1: '5th Fl, Building A, Daxin Industrial Park',
-    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
-    country: 'Peoples Republic of China',
-    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
-    email: ' info@ifield.com.cn',
+    line1: 'Block 13, Plot 2,',
+    line2: 'Palace Road, VI, Lagos',
+    country: 'Nigeria',
+    phone: '+234-9037572893',
+    email: 'info@ifield.com.cn',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
   const uaeAddr = {
     title: 'Corporate Location',
-    line1: '5th Fl, Building A, Daxin Industrial Park',
-    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
-    country: 'Peoples Republic of China',
-    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
-    email: ' info@ifield.com.cn',
+    line1: 'Office 156, Floor1, European Business Centre Bldg,',
+    line2: 'Dubai Investment Park . Jabel Ali, Dubai',
+    country: 'United Arab Emirates',
+    phone: ' +971-04-3540 227 / +971-50-1382847',
+    email: ' info@ifield.ae',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
@@ -121,10 +121,11 @@ export default function GlobeSection() {
   const chinaOffice = { lat: 23.128994, lng: 113.25325, location: 'china' }
   const indiaOffice = { lat: 26.912434, lng: 75.78727, location: 'india' }
   const usaOffice = { lat: 31.968599, lng: -99.90181, location: 'usa' }
+  const uaeOffice = { lat: 25.2048, lng: 55.2708, location: 'uae' }
   const nigeriaOffice = { lat: 9.081999, lng: 8.675277, location: 'nigeria' }
   const spainOffice = { lat: 40.463667, lng: -3.74922, location: 'spain' }
 
-  const gData = [chinaOffice, indiaOffice, usaOffice, nigeriaOffice, spainOffice]
+  const gData = [chinaOffice, indiaOffice, uaeOffice, usaOffice, nigeriaOffice, spainOffice]
 
   function gHtmlElements(d) {
     const el = document.createElement('div')
@@ -137,24 +138,27 @@ export default function GlobeSection() {
     el.onclick = () => {
       switch (d.location) {
         case 'china':
-          console.log('china')
-          toggleModal()
           setModalData(chinaAddr)
+          toggleModal()
           break
         case 'india':
-          console.log('india')
+          setModalData(indiaAddr)
           toggleModal()
           break
         case 'usa':
-          console.log('usa')
+          setModalData(usaAddr)
+          toggleModal()
+          break
+        case 'uae':
+          setModalData(uaeAddr)
           toggleModal()
           break
         case 'nigeria':
-          console.log('nigeria')
+          setModalData(nigeriaAddr)
           toggleModal()
           break
         case 'spain':
-          console.log('spain')
+          setModalData(spainAddr)
           toggleModal()
           break
         default:
