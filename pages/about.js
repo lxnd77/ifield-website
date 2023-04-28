@@ -192,7 +192,7 @@ export default function About() {
                 height={500}
                 alt=""
                 src="/assets/staff/7.jpg"
-                className="h-80 w-80 rounded-full border-2 border-[#971C20] object-cover"
+                className="mx-auto h-80 w-80 rounded-full border-2 border-[#971C20] object-cover"
               />
             </div>
           </div>
@@ -201,14 +201,14 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 flex w-[70vw] flex-wrap justify-around" data-scroll-section>
+        <div className="mx-auto mt-16 flex w-[60vw] flex-wrap justify-around" data-scroll-section>
           <div className="playfair flex flex-col text-center text-xl">
             <Image
               width={500}
               height={500}
               src="/assets/staff/4.jpg"
               alt=""
-              className="h-80 w-80 rounded-full object-cover"
+              className="h-60 w-60 rounded-full border-2  border-[#971C20] object-cover"
             />
             <h2 className="m-4">
               Crystal Huang <br /> Senior Manager Exports
@@ -220,7 +220,7 @@ export default function About() {
               height={500}
               src="/assets/staff/1.jpg"
               alt=""
-              className="h-80 w-80 rounded-full object-cover"
+              className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
             <h2 className="m-4">
               Tony Lee <br /> Exec. Manufacturing
@@ -232,7 +232,7 @@ export default function About() {
               height={500}
               src="/assets/staff/3.jpg"
               alt=""
-              className="h-80 w-80 rounded-full object-cover"
+              className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
             <h2 className="m-4">
               Tiger Chen <br /> Exec. Design
@@ -244,7 +244,7 @@ export default function About() {
               height={500}
               src="/assets/staff/2.jpg"
               alt=""
-              className="h-80 w-80 rounded-full object-cover"
+              className="object- h-60 w-60 rounded-full border-2 border-[#971C20]"
             />
             <h2 className="m-4">
               Vicki Leung <br /> Exec. Procurement
@@ -256,10 +256,10 @@ export default function About() {
               height={500}
               src="/assets/staff/6.jpg"
               alt=""
-              className="h-80 w-80 rounded-full object-cover"
+              className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
             <h2 className="m-4">
-              David Xu <br /> Project Manager (Manufacturing)
+              David Xu <br /> Project Manager <br /> Manufacturing
             </h2>
           </div>
           <div className="playfair flex flex-col text-center text-xl">
@@ -268,10 +268,10 @@ export default function About() {
               height={500}
               src="/assets/staff/5.jpg"
               alt=""
-              className="h-80 w-80 rounded-full object-cover"
+              className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
             <h2 className="m-4">
-              Punya Bhargava <br /> Business Development Manager
+              Punya Bhargava <br /> Business Development <br /> Manager
             </h2>
           </div>
         </div>

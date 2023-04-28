@@ -1,7 +1,17 @@
 import Link from './Link'
 import Image from 'next/image'
+import { useState } from 'react'
+import sendNewsLetter from 'pages/api/sendNewsletter'
 
 export default function Footer() {
+  const submitNewsletter = async (event) => {
+    event.preventDefault()
+    const newsletterEmail = event.target.newsletterEmail.value
+    console.log(event.target.newsletterEmail.value)
+    sendNewsLetter(newsletterEmail)
+    //
+  }
+
   return (
     <>
       <a download href="static/Ifield Brochure 2023.pdf" className="float z-[90]">
@@ -50,12 +60,26 @@ export default function Footer() {
             </div>
             <div className="m-4 mx-auto flex w-[80%] flex-col justify-center gap-4">
               <h2>Subscribe to our newsletter to stay updated</h2>
-              <div className="flex flex-row">
-                <input className=" relative mx-0 mb-0 w-[80%] rounded" type="text"></input>
-                <button className="font-Inter rounded-[0px_4px_4px_0px] bg-[#981C20] px-8 text-center text-white ">
-                  Subscribe
-                </button>
-              </div>
+
+              <form onSubmit={submitNewsletter}>
+                <div className="flex flex-row">
+                  <input
+                    id="newsletterEmail"
+                    name="newsletterEmail"
+                    placeholder="Email"
+                    className=" relative mx-0 mb-0 w-[80%] rounded"
+                    type="text"
+                  ></input>
+                  <button
+                    type="submit"
+                    value="submit"
+                    className="font-Inter rounded-[0px_4px_4px_0px] bg-[#981C20] px-8 text-center text-white "
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+
               <div className="flex justify-around gap-2 text-center">
                 <Link className="hover:text-red-800" href={'/'}>
                   Home
