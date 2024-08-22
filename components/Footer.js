@@ -53,7 +53,7 @@ export default function Footer() {
               <div className="flex flex-row items-center gap-2">
                 <Image src="/assets/location.png" width="30" height="30" alt="location icon" />
                 <p>
-                  Office 156, Floor1, European Business Centre Bldg, Dubai Investment Park, Jabel
+                  Office 214, Floor 2, European Business Centre Bldg, Dubai Investment Park, Jabel
                   Ali, Dubai, United Arab Emirates, P.O. Box No. 451970
                 </p>
               </div>

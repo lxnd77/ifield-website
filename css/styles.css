@@ -83,20 +83,20 @@ body {
   content: 'India';
 }
 
-.markerspain::after {
+.markeruk::after {
   color: black;
   text-align: center;
   display: flex;
   justify-content: center;
-  content: 'Spain';
+  content: 'UK';
 }
 
-.markerchad::after {
+.markerbangladesh::after {
   color: black;
   text-align: center;
   display: flex;
   justify-content: center;
-  content: 'Chad';
+  content: 'Bangladesh';
 }
 
 .markernigeria::after {

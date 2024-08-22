@@ -146,17 +146,21 @@ const Contact = () => {
           </div>
           <p className="montserrat pt-2 ">
             E-201, Vaishali Nagar, Near Defence Public School, Jaipur, Rajasthan, India <br />
-            M: +91 9887514715
+            M: +91 9887514715 <br />
+            Email: hariram@ifield.co.in
+            <br />
           </p>
         </div>
         <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
-            <h2 className="playfair text-xl underline">Spain Office</h2>
+            <h2 className="playfair text-xl underline">UK Office</h2>
           </div>
           <p className="montserrat pt-2 ">
-            C/Forners i Pastissers 1907760 Ciutadella de Menorca <br />
-            Tel: +34 971380495 / 676815728
+            103 Vanbrugh Park, <br /> London, SE3 7AL
+            <br />
+            Tel: 0208 2692189 / 07740 308634 <br />
+            Email: david.bell@i-field.co.uk <br />
           </p>
         </div>
       </div>

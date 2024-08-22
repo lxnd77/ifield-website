@@ -133,6 +133,7 @@ const LayoutWrapper = ({ children }) => {
             <Link href={'/about'}>About Us</Link>
             <Link href={'/process'}>Our Process</Link>
             <Link href={'/projects'}>Our Projects</Link>
+            <Link href={'/csr'}>CSR</Link>
             <Link href={'/contact'}>Contact Us</Link>
           </div>
         </div>

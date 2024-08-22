@@ -15,7 +15,7 @@ export default function GlobeSection() {
   }, [])
 
   const chinaAddr = {
-    title: 'Corporate Location',
+    title: 'Head Office',
     line1: '5th Fl, Building A, Daxin Industrial Park',
     line2: 'No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
     country: 'Peoples Republic of China',
@@ -34,13 +34,13 @@ export default function GlobeSection() {
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
-  const spainAddr = {
+  const ukAddr = {
     title: 'Corporate Location',
-    line1: 'C/Forners i Pastissers 1907760',
-    line2: 'Ciutadella de Menorca',
-    country: 'Peoples Republic of China',
-    phone: '+34-971 38 04 95 / 676815728',
-    email: 'info@ifield.ae',
+    line1: '103 Vanbrugh Park',
+    line2: 'London, SE3 7AL',
+    country: 'UK',
+    phone: '0208 2692189 / 07740 308634',
+    email: 'david.bell@i-field.co.uk',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
@@ -56,7 +56,7 @@ export default function GlobeSection() {
   }
   const uaeAddr = {
     title: 'Corporate Location',
-    line1: 'Office 156, Floor1, European Business Centre Bldg,',
+    line1: 'Office 214, Floor1, European Business Centre Bldg,',
     line2: 'Dubai Investment Park . Jabel Ali, Dubai',
     country: 'United Arab Emirates',
     phone: ' +971-04-3540 227 / +971-50-1382847',
@@ -70,7 +70,17 @@ export default function GlobeSection() {
     line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
     country: 'Peoples Republic of China',
     phone: ' +86-20-39232167 / 39232577 / 39232657 ',
-    email: ' info@ifield.com.cn',
+    email: ' info@ifield.ae',
+    worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
+    worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
+  }
+  const bangladeshAddr = {
+    title: 'Corporate Location',
+    line1: 'Level-6, House no.925, Road no.-13A, Avenue-03',
+    line2: 'Mirpur DOHS, Pallabi, Dhaka',
+    country: 'Bangladesh',
+    phone: ' 01515 600059',
+    email: ' info@ifield.ae',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
@@ -123,9 +133,9 @@ export default function GlobeSection() {
   const usaOffice = { lat: 31.968599, lng: -99.90181, location: 'usa' }
   const uaeOffice = { lat: 25.2048, lng: 55.2708, location: 'uae' }
   const nigeriaOffice = { lat: 9.081999, lng: 8.675277, location: 'nigeria' }
-  const spainOffice = { lat: 40.463667, lng: -3.74922, location: 'spain' }
+  const ukOffice = { lat: 51.50853, lng: -0.12574, location: 'uk' }
 
-  const gData = [chinaOffice, indiaOffice, uaeOffice, usaOffice, nigeriaOffice, spainOffice]
+  const gData = [chinaOffice, indiaOffice, uaeOffice, usaOffice, nigeriaOffice, ukOffice]
 
   function gHtmlElements(d) {
     const el = document.createElement('div')
@@ -157,8 +167,8 @@ export default function GlobeSection() {
           setModalData(nigeriaAddr)
           toggleModal()
           break
-        case 'spain':
-          setModalData(spainAddr)
+        case 'uk':
+          setModalData(ukAddr)
           toggleModal()
           break
         default:
