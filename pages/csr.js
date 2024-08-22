@@ -80,14 +80,14 @@ export default function CSR() {
               width={500}
               height={500}
               alt=""
-              src="/assets/Arpan2.jpg"
+              src="/assets/Arpan2.JPG"
               className="my-auto mx-auto px-4 py-4"
             />
             <Image
               width={500}
               height={500}
               alt=""
-              src="/assets/Arpan1.png"
+              src="/assets/arpan1.png"
               className="my-auto mx-auto px-4 py-4"
             />
           </div>
