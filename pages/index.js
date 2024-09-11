@@ -52,7 +52,7 @@ export default function Home() {
             <div className="bg-black">
               <Image
                 className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7] "
-                src="/assets/hero/hero (1).png"
+                src="/assets/hero/hero (1).webp"
                 alt="marriot 1"
                 width={1080}
                 height={1620}
@@ -63,7 +63,7 @@ export default function Home() {
             <div className="bg-black">
               <Image
                 className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
-                src="/assets/hero/hero (2).png"
+                src="/assets/hero/hero (2).webp"
                 alt="crowne 1"
                 width={1080}
                 height={1620}
@@ -74,7 +74,7 @@ export default function Home() {
             <div className="bg-black">
               <Image
                 className=" relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
-                src="/assets/hero/hero (3).png"
+                src="/assets/hero/hero (3).webp"
                 alt="surat 1"
                 width={1080}
                 height={1620}
@@ -101,7 +101,7 @@ export default function Home() {
         <div className="flex w-full flex-col bg-black md:w-[90vw]  md:flex-row ">
           <Image
             className="relative h-[100vh] w-[100vw] object-cover  md:w-[50vw]"
-            src="/assets/7.png"
+            src="/assets/7.webp"
             alt="hotel lobby"
             width={500}
             height={1000}
@@ -228,14 +228,14 @@ export default function Home() {
                       width={500}
                       height={500}
                       className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
-                      src="/assets/projects/lagos2.png"
+                      src="/assets/projects/lagos2.webp"
                       alt=""
                     />
                     <Image
                       width={500}
                       height={500}
                       className=" ml-[-10%] w-[60vw]  min-w-[260px] max-w-[500px] object-contain"
-                      src="/assets/projects/lagos3.png"
+                      src="/assets/projects/lagos3.webp"
                       alt=""
                     />
                   </div>
@@ -265,14 +265,14 @@ export default function Home() {
                       width={500}
                       height={500}
                       className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
-                      src="/assets/projects/nairobi crowne plaza2.png"
+                      src="/assets/projects/nairobi crowne plaza2.webp"
                       alt=""
                     />
                     <Image
                       width={500}
                       height={500}
                       className=" ml-[-10%] w-[60vw]  min-w-[260px] max-w-[500px] object-contain"
-                      src="/assets/projects/nairobi crowne plaza3.png"
+                      src="/assets/projects/nairobi crowne plaza3.webp"
                       alt=""
                     />
                   </div>
@@ -302,14 +302,14 @@ export default function Home() {
                       width={500}
                       height={500}
                       className="z-[100] mt-[18%] w-[50vw] min-w-[230px] max-w-[400px] object-contain"
-                      src="/assets/projects/marriot gujarat2.png"
+                      src="/assets/projects/marriot gujarat2.webp"
                       alt=""
                     />
                     <Image
                       width={500}
                       height={500}
                       className=" ml-[-10%] w-[60vw]  min-w-[260px] max-w-[500px] object-contain"
-                      src="/assets/projects/marriot gujarat.png"
+                      src="/assets/projects/marriot gujarat.webp"
                       alt=""
                     />
                   </div>

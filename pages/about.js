@@ -122,7 +122,7 @@ export default function About() {
               width={600}
               height={600}
               alt="Marriot Lagos"
-              src="/assets/projects/lagos2.png"
+              src="/assets/projects/lagos2.webp"
               className=" hImg pointer-events-none top-[10%] m-8 mx-auto aspect-square overflow-hidden object-cover drop-shadow-xl md:absolute md:left-[10%] md:w-[60%]"
               id="ex1-layer1"
               ref={ex1Layer1}
@@ -131,7 +131,7 @@ export default function About() {
               width={600}
               height={600}
               alt="Marriot Gujarat"
-              src="/assets/projects/marriot gujarat3.png"
+              src="/assets/projects/marriot gujarat3.webp"
               className="hImg pointer-events-none m-8 mx-auto overflow-hidden object-cover drop-shadow-xl md:absolute md:right-[20%] md:top-[35%] md:h-[350px] md:w-[200px]"
               id="ex1-layer2"
               ref={ex1Layer2}
@@ -191,7 +191,7 @@ export default function About() {
                 width={500}
                 height={500}
                 alt=""
-                src="/assets/staff/7.jpg"
+                src="/assets/staff/7.webp"
                 className="mx-auto h-80 w-80 rounded-full border-2 border-[#971C20] object-cover"
               />
             </div>
@@ -206,7 +206,7 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/staff/4.jpg"
+              src="/assets/staff/4.webp"
               alt=""
               className="h-60 w-60 rounded-full border-2  border-[#971C20] object-cover"
             />
@@ -218,7 +218,7 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/staff/1.jpg"
+              src="/assets/staff/1.webp"
               alt=""
               className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
@@ -230,7 +230,7 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/staff/3.jpg"
+              src="/assets/staff/3.webp"
               alt=""
               className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
@@ -242,7 +242,7 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/staff/2.jpg"
+              src="/assets/staff/2.webp"
               alt=""
               className="object- h-60 w-60 rounded-full border-2 border-[#971C20]"
             />
@@ -254,7 +254,7 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/staff/6.jpg"
+              src="/assets/staff/6.webp"
               alt=""
               className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
@@ -266,7 +266,7 @@ export default function About() {
             <Image
               width={500}
               height={500}
-              src="/assets/staff/5.jpg"
+              src="/assets/staff/5.webp"
               alt=""
               className="h-60 w-60 rounded-full border-2 border-[#971C20] object-cover"
             />
@@ -302,7 +302,7 @@ export default function About() {
                 month="May"
                 text="I field is founded in Hong Kong Acquired brand verification, and
                       developed supply and execution systems."
-                pic="/assets/old1.png"
+                pic="/assets/old1.webp"
               />
             </SwiperSlide>
             <SwiperSlide className="">
@@ -310,7 +310,7 @@ export default function About() {
                 year="2011"
                 month="June"
                 text="Established a joint venture factory in Dongguan, China"
-                pic="/assets/old2.png"
+                pic="/assets/old2.webp"
               />
             </SwiperSlide>
             <SwiperSlide className="">
@@ -318,7 +318,7 @@ export default function About() {
                 year="2013"
                 month="October"
                 text="Daka Import & Export is established in Guangzhou"
-                pic="/assets/old3.png"
+                pic="/assets/old3.webp"
               />
             </SwiperSlide>
             <SwiperSlide className="">
@@ -326,7 +326,7 @@ export default function About() {
                 year="2019"
                 month="February"
                 text="I-Field USA is established in Houston, Houston, Texas"
-                pic="/assets/old4.png"
+                pic="/assets/old4.webp"
               />
             </SwiperSlide>
             <SwiperSlide className="">
@@ -335,7 +335,7 @@ export default function About() {
                 month="December"
                 text="I Field International Pvt. Ltd., India is established in Jaipur to meet the
               needs of our growing workforce."
-                pic="/assets/old5.png"
+                pic="/assets/old5.webp"
               />
             </SwiperSlide>
             <SwiperSlide className="">
@@ -344,7 +344,7 @@ export default function About() {
                 month="December"
                 text="I Field Furnishing Trading L.L.C is established in Dubai as a control hub for
               our work in the Middle East and East Africa"
-                pic="/assets/old6.png"
+                pic="/assets/old6.webp"
               />
             </SwiperSlide>
             <SwiperSlide className="">
@@ -353,7 +353,7 @@ export default function About() {
                 month="November"
                 text="I-Field Interiors is established in Lagos, Nigeria, to expand our work in the
               rest of Africa."
-                pic="/assets/7.png"
+                pic="/assets/7.webp"
               />
             </SwiperSlide>
           </Swiper>

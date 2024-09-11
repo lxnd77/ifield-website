@@ -19,7 +19,7 @@ export default function Process() {
       <div>
         <Image
           className="min-h-64 mt-4"
-          src="/assets/processHero100.png"
+          src="/assets/processHero100.webp"
           alt="heroImage"
           width={1920}
           height={200}

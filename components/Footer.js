@@ -93,6 +93,9 @@ export default function Footer() {
                 <Link className="hover:text-red-800" href={'/projects'}>
                   Our Projects
                 </Link>
+                <Link classname="hover:text-red-800" href={'/csr'}>
+                  CSR
+                </Link>
                 <Link className="hover:text-red-800" href={'/contact'}>
                   Contact Us
                 </Link>

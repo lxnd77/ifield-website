@@ -47,9 +47,13 @@ export default function Projects({ projects }) {
             <div>
               <h2 className="playfair text-bold mb-4 pt-2 text-2xl">United States of America</h2>
               <ul className="proj-list">
+                <li>AC Hotel by Marriot, Greenville, SC</li>
                 <li>LaQuinta, Houston, Texas</li>
+                <li>Lenox Hill, Spring, Texas</li>
                 <li>Hyatt Place, Houston, Texas</li>
                 <li>Hampton Inn, Houston, Texas</li>
+                <li>Westin Dulles, PA</li>
+                <li>Residence Inn, Lenox Park, CA</li>
               </ul>
             </div>
             <div>
@@ -74,7 +78,7 @@ export default function Projects({ projects }) {
                 <li>Sarovar Premiere, Somaliland</li>
                 <li>Golden Tulip Resort, Zanzibar</li>
                 <li>M120 Lagos, Nigeria</li>
-                <li>Kofo Abayomi, Lagos, Nigeria</li>
+                <li>Stratongate Kofo Abayomi, Lagos, Nigeria</li>
                 <li>Novotel, Lagos, Nigeria</li>
                 <li>Mgallery Accor, Lagos, Nigeria</li>
               </ul>
@@ -112,9 +116,10 @@ export default function Projects({ projects }) {
                 <li>Radisson, Rudrapur</li>
                 <li>Ramada Plaza, Jairpur</li>
                 <li>Renaissance, Lucknow</li>
-                <li>Courtyard by Marriott, Shillong</li>
                 <li>The Leaf Resort, Nepal</li>
+                <li>Courtyard by Marriott, Shillong</li>
                 <li>Courtyard by Marriott, Chittagong, Bangladesh</li>
+                <li>Taj Dhaka, Bangladesh</li>
               </ul>
             </div>
             <div>
