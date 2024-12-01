@@ -21,12 +21,12 @@ export default function Projects({ projects }) {
       <div data-scroll-section>
         <div className="container m-8 mx-auto h-full w-[90%]">
           <div className="align-items-center w-[50%] align-middle md:flex">
-            <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 md:text-[4vw]">
+            <h1 className="playfair my-auto text-[2.4rem] leading-normal  md:text-[4vw]">
               Our Projects
             </h1>
             <div className="my-auto h-1 w-[28%] bg-red-900"></div>
           </div>
-          <div className="flex flex-col gap-5 lg:flex-row">
+          <div className="mt-4 flex flex-col gap-5 lg:flex-row">
             {projects.map((project) => (
               <Link key={project.title} href={project.href}>
                 <div className="relative transition duration-700 ease-in-out hover:scale-105">
@@ -64,11 +64,12 @@ export default function Projects({ projects }) {
                 <li>Spring Hills 3 & 4, Bahrain</li>
                 <li>Fontana Gardens, Bahrain</li>
                 <li>Fontana Towers, Bahrain</li>
+                <li>Fontana Infinity, Bahrain</li>
                 <li>Juffair Towers, Bahrain</li>
                 <li>Al Yamam Village, Saudi Arabia</li>
-                <li>Narcissus Hotel & Resort, Riyadh</li>
+                <li>Narcissus Obhur Resort & Spa, Jeddah</li>
                 <li>Marbella Residency, Saudi Arabia</li>
-                <li>Narcissus Resort & Spa, Jeddah</li>
+                <li>Narcissus Al Hamra Hotel, Riyadh</li>
                 <li>Sequina Residency, Saudi Arabia</li>
                 <li>Marriott Ikeja, Lagos, Nigeria</li>
                 <li>Crowne Plaza, Nairobi</li>
@@ -92,6 +93,8 @@ export default function Projects({ projects }) {
                 <li>Chomugarh Palace, Jaipur</li>
                 <li>Courtyard by Marriott, Bhopal</li>
                 <li>Courtyard by Marriott, Bilaspur</li>
+                <li>Courtyard by Marriott, Chittagong, Bangladesh</li>
+                <li>Courtyard by Marriott, Shillong</li>
                 <li>Courtyard by Marriott, Surat</li>
                 <li>Days Inn, Neemrana</li>
                 <li>Fairfield by Marriott, Lucknow</li>
@@ -117,8 +120,6 @@ export default function Projects({ projects }) {
                 <li>Ramada Plaza, Jairpur</li>
                 <li>Renaissance, Lucknow</li>
                 <li>The Leaf Resort, Nepal</li>
-                <li>Courtyard by Marriott, Shillong</li>
-                <li>Courtyard by Marriott, Chittagong, Bangladesh</li>
                 <li>Taj Dhaka, Bangladesh</li>
               </ul>
             </div>

@@ -3,13 +3,14 @@ import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import TimelineSection from 'components/TimelineSection'
 import Image from 'next/image'
+import Link from 'next/link'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 export default function CSR() {
   return (
     <>
-      <PageSEO title={`About Us - ${siteMetadata.title}`} description={siteMetadata.description} />
+      <PageSEO title={`CSR - ${siteMetadata.title}`} description={siteMetadata.description} />
       <div className="container mx-auto w-[90vw] overflow-hidden">
         <div className="md:grid md:grid-cols-2" id="ex1" data-scroll-section>
           <div className="container mr-auto md:col-span-1 md:col-start-1">
@@ -72,7 +73,11 @@ export default function CSR() {
               /{' '}
               <a className="text-blue-700" href="tel:+919571168864">
                 +91 95711 68864
-              </a>
+              </a>{' '}
+              /{' '}
+              <Link className="text-blue-700" href="https://www.arpan-foundation.com">
+                arpan-foundation.com
+              </Link>
             </p>
           </div>
           <div classname="container mr-auto md:col-span-1 md:col-start-1">

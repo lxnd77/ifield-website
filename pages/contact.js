@@ -163,6 +163,20 @@ const Contact = () => {
             Email: david.bell@i-field.co.uk <br />
           </p>
         </div>
+        <div className="mx-auto w-[300px] p-2">
+          <div className="flex flex-row gap-2">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Bangladesh Office</h2>
+          </div>
+          <p className="montserrat pt-2 ">
+            Level-06, House-925, Avenue-03,
+            <br />
+            Road 13/A, Mirpur DOHS, Dhaka, Bangladesh
+            <br />
+            Tel: 01515 600059 <br />
+            <br />
+          </p>
+        </div>
       </div>
       <div className="m-16 mx-auto w-[85%]">
         <p>

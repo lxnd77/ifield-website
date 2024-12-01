@@ -134,8 +134,17 @@ export default function GlobeSection() {
   const uaeOffice = { lat: 25.2048, lng: 55.2708, location: 'uae' }
   const nigeriaOffice = { lat: 9.081999, lng: 8.675277, location: 'nigeria' }
   const ukOffice = { lat: 51.50853, lng: -0.12574, location: 'uk' }
+  const bangladeshOffice = { lat: 23.777176, lng: 90.399452, location: 'bangladesh' }
 
-  const gData = [chinaOffice, indiaOffice, uaeOffice, usaOffice, nigeriaOffice, ukOffice]
+  const gData = [
+    chinaOffice,
+    indiaOffice,
+    uaeOffice,
+    usaOffice,
+    nigeriaOffice,
+    ukOffice,
+    bangladeshOffice,
+  ]
 
   function gHtmlElements(d) {
     const el = document.createElement('div')
@@ -169,6 +178,10 @@ export default function GlobeSection() {
           break
         case 'uk':
           setModalData(ukAddr)
+          toggleModal()
+          break
+        case 'bangladesh':
+          setModalData(bangladeshAddr)
           toggleModal()
           break
         default:

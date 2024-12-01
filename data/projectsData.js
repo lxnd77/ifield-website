@@ -9,7 +9,7 @@ const projectsData = [
     href: '/projects/lagos',
   },
   {
-    title: 'Courtyard Marriot Gujarat, 104 Keys',
+    title: 'Courtyard Marriot, 104 Keys',
     location: 'Surat, India',
     description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
@@ -23,7 +23,7 @@ const projectsData = [
     description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/assets/projects/nairobi crowne plaza.png',
+    imgSrc: '/assets/projects/nairobi crowne plaza.webp',
     href: '/projects/crowne-plaza-nairobi',
   },
 ]

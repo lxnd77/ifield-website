@@ -6,6 +6,7 @@ import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import Link from 'next/link'
 
 export async function getStaticPaths() {
   const projects = getFiles('projects')
@@ -37,8 +38,10 @@ export default function Project({ project }) {
         title={`${project.frontMatter.title} - ${siteMetadata.title}`}
         description={siteMetadata.description}
       />
-      <h1 className="playfair text-5xl"> Projects</h1>
-      <h2 className="playfair mt-6 text-4xl"> {project.frontMatter.title}</h2>
+      <Link href={'/projects'}>
+        <h1 className="playfair text-5xl text-red-800"> {'<- Projects'} </h1>
+      </Link>
+      <h2 className="playfair mt-6 mb-6 text-4xl"> {project.frontMatter.title}</h2>
       <div>
         <div className="projectContent ">
           <MDXLayout layout={Layout} />
