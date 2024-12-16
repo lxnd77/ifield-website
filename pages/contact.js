@@ -125,7 +125,7 @@ const Contact = () => {
             <h2 className="playfair text-xl underline">UAE Office</h2>
           </div>
           <p className="montserrat pt-2 ">
-            Office 156, Floor1, European Business Centre Bldg, Dubai Investment Park, Jabel Ali,
+            Office 214, Floor 2, European Business Centre Bldg, Dubai Investment Park, Jabel Ali,
             Dubai, United Arab Emirates, P.O. Box No. 451970 <br /> Tel: +971 043540227 | +971
             501382847 | +86 13828402777
           </p>
