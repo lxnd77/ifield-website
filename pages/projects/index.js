@@ -48,12 +48,12 @@ export default function Projects({ projects }) {
               <h2 className="playfair text-bold mb-4 pt-2 text-2xl">United States of America</h2>
               <ul className="proj-list">
                 <li>AC Hotel by Marriot, Greenville, SC</li>
-                <li>LaQuinta, Houston, Texas</li>
-                <li>Lenox Hill, Spring, Texas</li>
-                <li>Hyatt Place, Houston, Texas</li>
-                <li>Hampton Inn, Houston, Texas</li>
-                <li>Westin Dulles, PA</li>
+                <li>Hyatt Place, Houston, TX</li>
+                <li>Hampton Inn, Houston, TX</li>
+                <li>LaQuinta, Houston, TX</li>
+                <li>Lenox Hill, Spring, TX</li>
                 <li>Residence Inn, Lenox Park, CA</li>
+                <li>Westin, Dulles, PA</li>
               </ul>
             </div>
             <div>
@@ -66,11 +66,11 @@ export default function Projects({ projects }) {
                 <li>Fontana Towers, Bahrain</li>
                 <li>Fontana Infinity, Bahrain</li>
                 <li>Juffair Towers, Bahrain</li>
-                <li>Al Yamam Village, Saudi Arabia</li>
+                <li>Al Yamam Village, Riyadh</li>
                 <li>Narcissus Obhur Resort & Spa, Jeddah</li>
-                <li>Marbella Residency, Saudi Arabia</li>
+                <li>Marbella Residency, Riyadh</li>
                 <li>Narcissus Al Hamra Hotel, Riyadh</li>
-                <li>Sequina Residency, Saudi Arabia</li>
+                {/* <li>Sequina Residency, Saudi Arabia</li> */}
                 <li>Marriott Ikeja, Lagos, Nigeria</li>
                 <li>Crowne Plaza, Nairobi</li>
                 <li>Samovar Premier, Zambia</li>
@@ -78,7 +78,7 @@ export default function Projects({ projects }) {
                 <li>Hilton, N'Djamena, Chad</li>
                 <li>Sarovar Premiere, Somaliland</li>
                 <li>Golden Tulip Resort, Zanzibar</li>
-                <li>M120 Lagos, Nigeria</li>
+                <li>M120, Lagos, Nigeria</li>
                 <li>Stratongate Kofo Abayomi, Lagos, Nigeria</li>
                 <li>Novotel, Lagos, Nigeria</li>
                 <li>Mgallery Accor, Lagos, Nigeria</li>
@@ -105,22 +105,22 @@ export default function Projects({ projects }) {
                 <li>IBIS, Mumbai Airport</li>
                 <li>IBIS, ORR, Bangalore</li>
                 <li>Lords Inn, Jodhpur</li>
-                <li>Le Meridian, Indian</li>
+                <li>Le Meridian, Hyderabad</li>
                 <li>Marriott, Surat</li>
                 <li>Marriott, Jaipur</li>
                 <li>Novotel, Kolkata</li>
                 <li>Novotel, ORR, Bangalore</li>
                 <li>Park Inn, Badrinath</li>
                 <li>Park Plaza, Jodhpur</li>
-                <li>Park Plaza, Mussourie</li>
+                <li>Park Plaza, Mussoorie</li>
                 <li>Park Plaza, Zirakpur</li>
                 <li>Park Prime, Jaipur</li>
                 <li>Pullman, Delhi Aerocity</li>
                 <li>Radisson, Rudrapur</li>
-                <li>Ramada Plaza, Jairpur</li>
+                <li>Ramada Plaza, Jaipur</li>
                 <li>Renaissance, Lucknow</li>
                 <li>The Leaf Resort, Nepal</li>
-                <li>Taj Dhaka, Bangladesh</li>
+                <li>Taj, Dhaka, Bangladesh</li>
               </ul>
             </div>
             <div>
@@ -146,7 +146,7 @@ export default function Projects({ projects }) {
                 <li>Renaissance, ChengDu</li>
                 <li>Ruiwan Hotel, Tianjin</li>
                 <li>Shangri-La, Xian</li>
-                <li>Sheraton Dalian</li>
+                <li>Sheraton, Dalian</li>
                 <li>Sheraton Resort, Shenzhen</li>
                 <li>Sheraton, Suzhou</li>
                 <li>Sheraton, Shenzhen</li>
@@ -155,7 +155,7 @@ export default function Projects({ projects }) {
                 <li>The Plaza, Jiuzhai</li>
                 <li>The Westin, Beijing</li>
                 <li>Wanda Vista, Kunming</li>
-                <li>Regal Palace Resort Hotel</li>
+                <li>Regal Palace Resort Hotel, Guangzhou</li>
               </ul>
             </div>
           </div>

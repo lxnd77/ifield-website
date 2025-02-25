@@ -14,7 +14,7 @@ export default function Footer() {
 
   return (
     <>
-      <a download href="static/Ifield Brochure 2024.pdf" className="float z-[90]">
+      <a download href="static/Ifield Brochure 2025.pdf" className="float z-[90]">
         <span className="tool" data-tip="Download Brochure" tabIndex="1">
           <svg
             className="my-float"
