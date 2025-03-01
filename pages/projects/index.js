@@ -26,15 +26,15 @@ export default function Projects({ projects }) {
             </h1>
             <div className="my-auto h-1 w-[28%] bg-red-900"></div>
           </div>
-          <div className="mt-4 flex flex-col gap-5 lg:flex-row">
+          <div className="mt-4 flex flex-col flex-wrap justify-center gap-5 lg:flex-row">
             {projects.map((project) => (
               <Link key={project.title} href={project.href}>
                 <div className="relative transition duration-700 ease-in-out hover:scale-105">
                   <Image
                     src={project.imgSrc}
-                    width={501}
+                    width={301}
                     height={300}
-                    className="h-[256px] object-cover"
+                    className="h-[256px] object-cover "
                     alt={project.title}
                   />
                   <div className="playfair text-lg">{project.title}</div>
@@ -66,22 +66,23 @@ export default function Projects({ projects }) {
                 <li>Fontana Towers, Bahrain</li>
                 <li>Fontana Infinity, Bahrain</li>
                 <li>Juffair Towers, Bahrain</li>
-                <li>Al Yamam Village, Riyadh</li>
+                <li>Fraser Suites, Bahrain</li>
                 <li>Narcissus Obhur Resort & Spa, Jeddah</li>
+                <li>Al Yamam Village, Riyadh</li>
+                <li>ARAMAK Compound, Riyadh</li>
+                <li>Four Points by Sheraton, Riyadh</li>
                 <li>Marbella Residency, Riyadh</li>
                 <li>Narcissus Al Hamra Hotel, Riyadh</li>
                 {/* <li>Sequina Residency, Saudi Arabia</li> */}
-                <li>Marriott Ikeja, Lagos, Nigeria</li>
-                <li>Crowne Plaza, Nairobi</li>
-                <li>Samovar Premier, Zambia</li>
-                <li>Marriott Addis Ababa, Ethiopia</li>
                 <li>Hilton, N'Djamena, Chad</li>
-                <li>Sarovar Premiere, Somaliland</li>
-                <li>Golden Tulip Resort, Zanzibar</li>
+                <li>Marriott Ikeja, Lagos, Nigeria</li>
+                <li>Crowne Plaza, Nairobi, Kenya</li>
                 <li>M120, Lagos, Nigeria</li>
                 <li>Stratongate Kofo Abayomi, Lagos, Nigeria</li>
                 <li>Novotel, Lagos, Nigeria</li>
-                <li>Mgallery Accor, Lagos, Nigeria</li>
+                <li>Sarovar Premiere, Somaliland</li>
+                <li>Sarovar Premier, Zambia</li>
+                <li>Golden Tulip Resort, Zanzibar</li>
               </ul>
             </div>
             <div>

@@ -56,8 +56,8 @@ export default function GlobeSection() {
   }
   const uaeAddr = {
     title: 'Corporate Location',
-    line1: 'Office 214, Floor1, European Business Centre Bldg,',
-    line2: 'Dubai Investment Park . Jabel Ali, Dubai',
+    line1: 'Office 214, European Business Centre,',
+    line2: 'Dubai Investment Park 1, Dubai',
     country: 'United Arab Emirates',
     phone: ' +971-04-3540 227 / +971-50-1382847',
     email: ' info@ifield.ae',
@@ -66,18 +66,18 @@ export default function GlobeSection() {
   }
   const usaAddr = {
     title: 'Corporate Location',
-    line1: '5th Fl, Building A, Daxin Industrial Park',
-    line2: ' No.3 Kaifa Dong RD, Xishan Village, Luopu, Panyu District, Guangzhou',
-    country: 'Peoples Republic of China',
-    phone: ' +86-20-39232167 / 39232577 / 39232657 ',
+    line1: '12614 Hempstead Road',
+    line2: ' Houston Texas 77092',
+    country: 'USA',
+    phone: ' +1-713-785-8408 ',
     email: ' info@ifield.ae',
     worktime1: 'Monday - Friday: 9:00 AM - 6:00 PM',
     worktime2: 'Saturday - Sunday: 9:00 AM - 12:00 PM',
   }
   const bangladeshAddr = {
     title: 'Corporate Location',
-    line1: 'Level-6, House no.925, Road no.-13A, Avenue-03',
-    line2: 'Mirpur DOHS, Pallabi, Dhaka',
+    line1: 'House 601, Flat 6/A, Avenue 06, Road 09,',
+    line2: 'Mirpur DOHS, Dhaka',
     country: 'Bangladesh',
     phone: ' 01515 600059',
     email: ' info@ifield.ae',

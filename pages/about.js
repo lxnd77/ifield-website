@@ -86,7 +86,7 @@ export default function About() {
                 the largest FF&E solutions companies in Asia, with reach in over 20 countries. Our
                 clients are the owners and developers for high-end hospitality facilities around the
                 world, and we consistently deliver custom projects of impeccable quality. We are
-                nearing 100 successfully completed contracts.
+                nearing <span className="font-bold">100 successfully completed contracts</span>.
               </div>
             </div>
             <div className="py-8 ">
@@ -95,7 +95,8 @@ export default function About() {
               </h2>
               <div className="text-l">
                 We are iField, relentless in our commitment to providing FF&E of unmatched quality
-                to globally acclaimed luxury hotels. Our clients are assured of immaculate attention
+                to globally acclaimed luxury hotels. Our clients are assured of{' '}
+                <span className="font-bold">immaculate attention </span>
                 to detail in services that are streamlined, sustainable, and cost efficient. We are
                 driven by excellence at every level, from CEO to floor worker, and from client
                 relations to handing over the key.
@@ -145,9 +146,12 @@ export default function About() {
             process, which fuses the handwork of skilled craftspeople with state of the art
             technology, handling mid to high volume production to satisfy each unique client and
             their culture. We are well-versed in maintaining brand standards for various reputed
-            operators. No two I-Field projects are the same, except for their quality. Our
-            comprehensive end-to-end service process ensures that projects are completed on time, at
-            great prices, so your operations can begin the moment you turn the key.
+            operators.{' '}
+            <span className=" font-bold">
+              No two I-Field projects are the same, except for their quality.{' '}
+            </span>
+            Our comprehensive end-to-end service process ensures that projects are completed on
+            time, at great prices, so your operations can begin the moment you turn the key.
           </p>
           <Image
             width={500}
@@ -325,7 +329,7 @@ export default function About() {
               <TimelineSection
                 year="2019"
                 month="February"
-                text="I-Field USA is established in Houston, Houston, Texas"
+                text="I-Field USA is established in Houston, Texas"
                 pic="/assets/old4.webp"
               />
             </SwiperSlide>

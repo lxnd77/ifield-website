@@ -29,9 +29,9 @@ export default function Footer() {
         </span>
       </a>
       <footer>
-        <div className="w-full md:h-[400px]" data-scroll-section>
+        <div className="w-full md:h-[500px]" data-scroll-section>
           <hr className="m-8 mx-auto w-[80%] border-t-2 border-[#981C20]" />
-          <div className=" mx-auto mb-16 flex flex-col justify-around text-[14px] md:w-[70%] md:flex-row">
+          <div className=" mx-auto flex flex-col justify-around text-[14px] md:w-[90%] md:flex-row">
             <div className="mx-auto flex min-w-[300px] max-w-[75%] grow flex-col justify-around gap-4 p-4">
               <Image
                 src="/assets/logoblack.svg"
@@ -53,34 +53,22 @@ export default function Footer() {
               <div className="flex flex-row items-center gap-2">
                 <Image src="/assets/location.png" width="30" height="30" alt="location icon" />
                 <p>
-                  Office 214, Floor 2, European Business Centre Bldg, Dubai Investment Park, Jabel
-                  Ali, Dubai, United Arab Emirates, P.O. Box No. 451970
+                  Office 214, European Business Centre, Dubai Investment Park 1, Dubai, United Arab
+                  Emirates, P.O. Box No. 451970
                 </p>
               </div>
             </div>
-            <div className="m-4 mx-auto flex w-[80%] flex-col justify-center gap-4">
-              <h2>Subscribe to our newsletter to stay updated</h2>
-
-              <form onSubmit={submitNewsletter}>
-                <div className="flex flex-row">
-                  <input
-                    id="newsletterEmail"
-                    name="newsletterEmail"
-                    placeholder="Email"
-                    className=" relative mx-0 mb-0 w-[80%] rounded"
-                    type="text"
-                  ></input>
-                  <button
-                    type="submit"
-                    value="submit"
-                    className="font-Inter rounded-[0px_4px_4px_0px] bg-[#981C20] px-8 text-center text-white "
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-
-              <div className="flex justify-around gap-2 text-center">
+            <div className="m-4 mx-auto flex w-[80%] flex-col justify-between gap-8">
+              <div>
+                <Image
+                  src="/assets/pattern3.png"
+                  className="md:float-right"
+                  width="300"
+                  height="30"
+                  alt="pattern"
+                />
+              </div>
+              <div className="flex flex-col justify-around gap-2 md:text-right">
                 <Link className="hover:text-red-800" href={'/'}>
                   Home
                 </Link>
@@ -93,17 +81,19 @@ export default function Footer() {
                 <Link className="hover:text-red-800" href={'/projects'}>
                   Projects
                 </Link>
-                <Link classname="hover:text-red-800" href={'/csr'}>
+                <Link className="hover:text-red-800" href={'/csr'}>
                   CSR
                 </Link>
                 <Link className="hover:text-red-800" href={'/contact'}>
                   Contact
                 </Link>
               </div>
-              <div>
-                <Image src="/assets/pattern3.png" width="300" height="30" alt="pattern" />
-              </div>
             </div>
+          </div>
+          <div>
+            <p className="mb-2 mt-4 text-center font-bold">
+              CHINA | HONGKONG | INDIA | BANGLADESH | UAE | NIGERIA | UK | USA
+            </p>
           </div>
         </div>
       </footer>

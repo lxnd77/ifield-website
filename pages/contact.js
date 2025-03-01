@@ -169,9 +169,9 @@ const Contact = () => {
             <h2 className="playfair text-xl underline">Bangladesh Office</h2>
           </div>
           <p className="montserrat pt-2 ">
-            Level-06, House-925, Avenue-03,
+            House 601, Flat 6/A, Avenue 06, Road 09,
             <br />
-            Road 13/A, Mirpur DOHS, Dhaka, Bangladesh
+            Mirpur DOHS, Dhaka, Bangladesh
             <br />
             Tel: 01515 600059 <br />
             <br />

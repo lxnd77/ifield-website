@@ -27,7 +27,7 @@ export default function Process() {
       </div>
 
       {/* ---------- Assessment ------------ */}
-      <div className="my-[10vw] mt-8 flex flex-row items-center ">
+      <div className="mt-8 flex flex-row items-center ">
         <div className="absolute left-[2.5%] z-10 w-12 translate-x-[-50%] bg-white lg:left-[50%] xl:w-[100px]">
           <Image
             src="/assets/single-pattern/1.svg"
@@ -54,7 +54,7 @@ export default function Process() {
             <div className="absolute left-[2%] z-0 h-[92%] w-1 bg-gray-800 lg:left-[50%] lg:h-[80%] lg:translate-x-[-50%]"></div>
             {/* ======================= End of Mid Line ================== */}
             <div data-scroll data-scroll-speed="1">
-              <h2 className="montserrat text-bold my-4 text-4xl">Assessment</h2>
+              <h2 className="playfair text-bold my-4 text-4xl">Assessment</h2>
               <p>
                 We assess the site and business to ensure clarity on scope and budgeting. We provide
                 cost engineering services to ensure the best use of your budget.
@@ -77,7 +77,7 @@ export default function Process() {
       </div>
 
       {/* ---------- Design ------------ */}
-      <div className="my-[20vw] flex flex-row items-center">
+      <div className="mt-8 flex flex-row items-center">
         <div className="absolute left-[2.5%] w-12 translate-x-[-50%] bg-white lg:left-[50%] xl:w-[100px]">
           <Image src="/assets/single-pattern/2.svg" alt="pattern" width={100} height={100} />
         </div>
@@ -93,7 +93,7 @@ export default function Process() {
               data-scroll-speed="2"
             />
             <div data-scroll data-scroll-speed="1">
-              <h2 className="montserrat text-bold my-4 text-4xl">Design</h2>
+              <h2 className="playfair text-bold my-4 text-4xl">Design</h2>
               <p>
                 Our in-house experts provide AUTOCAD illustrations ensuring precision and
                 consistency.
@@ -114,7 +114,7 @@ export default function Process() {
         </div>
       </div>
       {/* -----------Procurement--------- */}
-      <div className="my-[20vw] flex flex-row items-center">
+      <div className="mt-8 flex flex-row items-center">
         <div className="absolute left-[2.5%] w-12 translate-x-[-50%] bg-white lg:left-[50%] xl:w-[100px]">
           <Image src="/assets/single-pattern/3.svg" alt="pattern" width={100} height={100} />
         </div>
@@ -130,7 +130,7 @@ export default function Process() {
               data-scroll-speed="2"
             />
             <div data-scroll data-scroll-speed="1">
-              <h2 className="montserrat text-bold my-4 text-4xl">Procurement</h2>
+              <h2 className="playfair text-bold my-4 text-4xl">Procurement</h2>
               <p>
                 We work with you to identify and source the ideal materials for your purposes, and
                 provide samples to make sure you are fully satisfied.
@@ -151,14 +151,14 @@ export default function Process() {
         </div>
       </div>
       {/* ---------Production------------  */}
-      <div className="my-[20vw] flex flex-row items-center">
+      <div className="mt-8 flex flex-row items-center justify-center">
         <div className="absolute left-[2.5%] w-12 translate-x-[-50%] bg-white lg:left-[50%] xl:w-[100px]">
           <Image src="/assets/single-pattern/4.svg" alt="pattern" width={100} height={100} />
         </div>
         <div className="ml-16 flex w-full flex-col justify-between gap-4 lg:ml-0 lg:flex-row lg:items-center">
-          <div className="lg:m-4 lg:w-[400px] lg:text-right ">
+          <div className=" lg:w-[400px] lg:text-right ">
             <Image
-              className="my-8"
+              className=""
               src="/assets/process/Asset 5.svg"
               alt="assetmentImage"
               width={400}
@@ -167,7 +167,7 @@ export default function Process() {
               data-scroll-speed="2"
             />
             <div data-scroll data-scroll-speed="1">
-              <h2 className="montserrat text-bold my-4 text-4xl">Production</h2>
+              <h2 className="playfair text-bold my-4 text-4xl">Production</h2>
               <p>
                 We source raw materials of the highest quality, and are equipped for the custom
                 manufacture and engineering of all FF&E items in our own facilities.
@@ -185,12 +185,12 @@ export default function Process() {
               <li className="mb-2"> Furniture</li>
               <li className="mb-2"> Doors</li>
 
-              <li className="mb-2 mt-8"> Upholstery</li>
+              <li className="mb-2 mt-4"> Upholstery</li>
               <li className="mb-2"> Drapery</li>
               <li className="mb-2"> Flooring</li>
               <li className="mb-2"> Carpets</li>
 
-              <li className="mb-2 mt-8"> Woodwork</li>
+              <li className="mb-2 mt-4"> Woodwork</li>
               <li className="mb-2"> Metalwork</li>
               <li className="mb-2"> Glasswork</li>
               <li className="mb-2">Stonework</li>
@@ -199,7 +199,7 @@ export default function Process() {
         </div>
       </div>
       {/* ---------------Logistics------------ */}
-      <div className="my-[20vw] flex flex-row items-center">
+      <div className="mt-8 flex flex-row items-center">
         <div className="absolute left-[2.5%] w-12 translate-x-[-50%] bg-white lg:left-[50%] xl:w-[100px]">
           <Image src="/assets/single-pattern/5.svg" alt="pattern" width={100} height={100} />
         </div>
@@ -215,7 +215,7 @@ export default function Process() {
               data-scroll-speed="2"
             />
             <div data-scroll data-scroll-speed="1">
-              <h2 className="montserrat text-bold my-4 text-4xl">Logistics</h2>
+              <h2 className="playfair text-bold my-4 text-4xl">Logistics</h2>
               <p>
                 We navigate international regulations and provide logistical support to ensure
                 seamless transportation.
@@ -238,7 +238,7 @@ export default function Process() {
         </div>
       </div>
       {/* -------------- Delivery & Installation--------- */}
-      <div className="z-10 mt-[20vw] mb-[10vw] flex flex-row items-center">
+      <div className="z-10 mt-8 mb-[10vw] flex flex-row items-center">
         <div className="absolute left-[2.5%] w-12 translate-x-[-50%] bg-white lg:invisible lg:left-[50%] xl:w-[100px]">
           <Image src="/assets/single-pattern/6.svg" alt="pattern" width={100} height={100} />
         </div>
@@ -254,7 +254,7 @@ export default function Process() {
               data-scroll-speed="2"
             />
             <div data-scroll data-scroll-speed="1">
-              <h2 className="montserrat text-bold my-4 text-4xl">Delivery & Installation</h2>
+              <h2 className="playfair text-bold my-4 text-4xl">Delivery & Installation</h2>
               <p>
                 Our streamlined process delivers your goods on time, in perfect condition, ready for
                 installation.
