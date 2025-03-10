@@ -91,13 +91,13 @@ body {
   content: 'UK';
 }
 
-.markerbangladesh::after {
+/* .markerbangladesh::after {
   color: black;
   text-align: center;
   display: flex;
   justify-content: center;
   content: 'Bangladesh';
-}
+} */
 
 .markernigeria::after {
   color: black;

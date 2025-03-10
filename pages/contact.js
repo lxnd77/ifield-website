@@ -163,7 +163,7 @@ const Contact = () => {
             Email: david.bell@i-field.co.uk <br />
           </p>
         </div>
-        <div className="mx-auto w-[300px] p-2">
+        {/* <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
             <h2 className="playfair text-xl underline">Bangladesh Office</h2>
@@ -176,7 +176,7 @@ const Contact = () => {
             Tel: 01515 600059 <br />
             <br />
           </p>
-        </div>
+        </div> */}
       </div>
       <div className="m-16 mx-auto w-[85%]">
         <p>

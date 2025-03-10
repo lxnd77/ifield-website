@@ -143,7 +143,7 @@ export default function GlobeSection() {
     usaOffice,
     nigeriaOffice,
     ukOffice,
-    bangladeshOffice,
+    // bangladeshOffice,
   ]
 
   function gHtmlElements(d) {
@@ -180,10 +180,10 @@ export default function GlobeSection() {
           setModalData(ukAddr)
           toggleModal()
           break
-        case 'bangladesh':
-          setModalData(bangladeshAddr)
-          toggleModal()
-          break
+        // case 'bangladesh':
+        //   setModalData(bangladeshAddr)
+        //   toggleModal()
+        //   break
         default:
           break
       }
