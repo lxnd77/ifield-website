@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="w-full md:h-[500px]" data-scroll-section>
           <hr className="m-8 mx-auto w-[80%] border-t-2 border-[#981C20]" />
           <div className=" mx-auto flex flex-col justify-around text-[14px] md:w-[90%] md:flex-row">
-            <div className="mx-auto flex min-w-[300px] max-w-[75%] grow flex-col justify-around gap-4 p-4">
+            <div className="mx-auto flex min-w-[300px] max-w-[80%] grow flex-col justify-around gap-4 ">
               <Image
                 src="/assets/logoblack.svg"
                 width="150"
@@ -42,7 +42,7 @@ export default function Footer() {
               />
               <div className="flex flex-row items-center gap-2">
                 <Image src="/assets/phone.png" width="30" height="30" alt="phone icon" />
-                <p> +971 043540227 | +971 501382847 | +86 13828402777 </p>
+                <p> +971 04 354 0227 | +971 50 860 7058 </p>
               </div>
               <div className="flex flex-row items-center gap-2">
                 <Image src="/assets/mail.png" width="30" height="30" alt="mail icon" />
@@ -68,7 +68,7 @@ export default function Footer() {
                   alt="pattern"
                 />
               </div>
-              <div className="flex flex-col justify-around gap-2 md:text-right">
+              <div className="flex flex-row justify-around gap-2 md:flex-col md:text-right">
                 <Link className="hover:text-red-800" href={'/'}>
                   Home
                 </Link>
@@ -91,8 +91,8 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <p className="mb-2 mt-4 text-center font-bold">
-              CHINA | HONGKONG | INDIA | BANGLADESH | UAE | NIGERIA | UK | USA
+            <p className="mx-2 mb-2 mt-4 text-center text-sm font-bold">
+              <span>CHINA | HONGKONG | INDIA | BANGLADESH | UAE | NIGERIA | UK | USA</span>
             </p>
           </div>
         </div>
