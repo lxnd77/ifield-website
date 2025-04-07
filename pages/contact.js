@@ -145,7 +145,8 @@ const Contact = () => {
             <h2 className="playfair text-xl underline">India Office</h2>
           </div>
           <p className="montserrat pt-2 ">
-            E-201, Vaishali Nagar, Near Defence Public School, Jaipur, Rajasthan, India <br />
+            G-201, Second Floor, Plot No. 81, Patel Colony, Sardar Patel Marg, <br />
+            C-Scheme, Jaipur, Rajasthan, India <br />
             M: +91 9887514715 <br />
             Email: hariram@ifield.co.in
             <br />

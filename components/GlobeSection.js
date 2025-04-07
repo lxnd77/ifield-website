@@ -26,8 +26,8 @@ export default function GlobeSection() {
   }
   const indiaAddr = {
     title: 'Corporate Location',
-    line1: 'E-201, Vaishali Nagar,',
-    line2: 'Near Defence Public School, Jaipur, Rajasthan, ',
+    line1: 'G-201, Second Floor, Plot No. 81, Patel Colony, Sardar Patel Marg',
+    line2: 'C-Scheme, Jaipur, Rajasthan',
     country: 'India',
     phone: '+91-9887514715 ',
     email: 'info@ifield.ae',
