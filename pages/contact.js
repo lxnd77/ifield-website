@@ -145,7 +145,7 @@ const Contact = () => {
             <h2 className="playfair text-xl underline">India Office</h2>
           </div>
           <p className="montserrat pt-2 ">
-            G-201, Second Floor, Plot No. 81, Patel Colony, Sardar Patel Marg, <br />
+            Office No. 201, Second Floor, Plot No. 81, Patel Colony, Sardar Patel Marg, <br />
             C-Scheme, Jaipur, Rajasthan, India <br />
             M: +91 9887514715 <br />
             Email: hariram@ifield.co.in
