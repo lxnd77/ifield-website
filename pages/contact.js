@@ -99,7 +99,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <div className="container mx-auto flex flex-col flex-wrap  items-start justify-between lg:h-[400px] lg:gap-4 ">
+      <div className="flex-flex-grow row container mx-auto flex flex-wrap  justify-start lg:gap-4 ">
         <div className="mx-auto w-[300px] p-2">
           <div className="flex flex-row gap-2">
             <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
@@ -162,6 +162,18 @@ const Contact = () => {
             <br />
             Tel: 0208 2692189 / 07740 308634 <br />
             Email: david.bell@i-field.co.uk <br />
+          </p>
+        </div>
+        <div className="mx-auto w-[300px] p-2">
+          <div className="flex flex-row gap-2">
+            <div className="my-auto h-4 w-4 rounded-full bg-red-700"></div>
+            <h2 className="playfair text-xl underline">Somaliland Office</h2>
+          </div>
+          <p className="montserrat pt-2 ">
+            Airport Road, Masala <br /> Next to police Station, Hargeisa
+            <br />
+            Tel: 063 9000009 <br />
+            Email: info@ifield.ae <br />
           </p>
         </div>
         {/* <div className="mx-auto w-[300px] p-2">

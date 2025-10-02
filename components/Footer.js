@@ -32,13 +32,13 @@ export default function Footer() {
         <div className="w-full md:h-[500px]" data-scroll-section>
           <hr className="m-8 mx-auto w-[80%] border-t-2 border-[#981C20]" />
           <div className=" mx-auto flex flex-col justify-around text-[14px] md:w-[90%] md:flex-row">
-            <div className="mx-auto flex min-w-[300px] max-w-[80%] grow flex-col justify-around gap-4 ">
+            <div className="m-4 mx-auto flex min-w-[300px] max-w-[80%] grow flex-col gap-4">
               <Image
                 src="/assets/logoblack.svg"
                 width="150"
                 height="300"
                 alt="logo"
-                className="mb-4"
+                className="mb-16"
               />
               <div className="flex flex-row items-center gap-2">
                 <Image src="/assets/phone.png" width="30" height="30" alt="phone icon" />
@@ -92,7 +92,9 @@ export default function Footer() {
           </div>
           <div>
             <p className="mx-2 mb-2 mt-4 text-center text-sm font-bold">
-              <span>CHINA | HONGKONG | INDIA | BANGLADESH | UAE | NIGERIA | UK | USA</span>
+              <span>
+                CHINA | HONGKONG | INDIA | BANGLADESH | UAE | SOMALILAND | NIGERIA | UK | USA
+              </span>
             </p>
           </div>
         </div>

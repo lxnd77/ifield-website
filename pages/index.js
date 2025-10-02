@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <PageSEO title={siteMetadata.headerTitle} description={siteMetadata.description} />
       {/* ------------------------------------ HERO ----------------------------- */}
-      <div className="relative h-auto w-full md:h-[90vh] " id="heroBG" data-scroll-section>
+      <div className="relative w-full md:min-h-[100vh] " id="heroBG" data-scroll-section>
         <div className="bg-black">
           <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
             <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
@@ -51,7 +51,7 @@ export default function Home() {
           <SwiperSlide>
             <div className="bg-black">
               <Image
-                className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7] "
+                className="relative z-[0] h-[100vh] w-full object-cover opacity-[0.7] "
                 src="/assets/hero/hero (1).webp"
                 alt="marriot 1"
                 width={1080}
@@ -62,7 +62,7 @@ export default function Home() {
           <SwiperSlide>
             <div className="bg-black">
               <Image
-                className="relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
+                className="relative z-[0] h-[100vh] w-full object-cover opacity-[0.7]"
                 src="/assets/hero/hero (2).webp"
                 alt="crowne 1"
                 width={1080}
@@ -73,7 +73,7 @@ export default function Home() {
           <SwiperSlide>
             <div className="bg-black">
               <Image
-                className=" relative z-[0] h-[90vh] w-full object-cover opacity-[0.7]"
+                className=" relative z-[0] h-[100vh] w-full object-cover opacity-[0.7]"
                 src="/assets/hero/hero (3).webp"
                 alt="surat 1"
                 width={1080}
@@ -113,7 +113,7 @@ export default function Home() {
               </div>
               <div className="my-auto h-1 w-[28%] bg-red-900"></div>
             </div>
-            <div className=" bg-black text-[16px]">
+            <div className=" max-w-[600px] bg-black text-[16px]">
               <div>
                 We are a team of industry experts offering deluxe turnkey solutions for FF&E
                 manufacture, supply, and installation. Established and operated by hotel owners and
@@ -133,7 +133,7 @@ export default function Home() {
       </div>
 
       {/*<!---------------------------- Process ------------------------------------>*/}
-      <div className="static min-h-[100vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
+      <div className="static min-h-[90vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
         <div className="relative mx-auto min-h-[55vh] w-[100vw] bg-white md:mt-16 md:w-[70%] md:bg-black">
           <div className="mb-2 flex items-center  py-[24px]">
             <div className="h-1 w-[20%] bg-red-900 "></div>
@@ -141,15 +141,25 @@ export default function Home() {
               Our Process
             </div>
           </div>
-          <div className=" top-[35%] left-[25%] mx-auto my-auto w-[70%] text-lg text-black md:w-[50%] md:text-xl md:text-white">
+          <div className=" top-[35%] left-[25%] mx-auto my-auto w-[70%] max-w-[600px] text-lg text-black md:w-[50%] md:text-xl md:text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
             aspect of our clients' FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
-          <div className="-left-[20%] top-[30%] z-10 mx-auto hidden min-h-[80%] w-[40%] items-center bg-yellow-400 px-10 pt-20 pb-20 text-left text-xl md:absolute md:flex">
+          <div className="top-[80%] right-[10%] z-20 hidden w-[80%] max-w-[800px] items-center bg-green-800 pt-5 pb-5 md:absolute md:flex">
+            <Image
+              width={600}
+              height={800}
+              className="m-auto"
+              src="/assets/projects/marriot gujarat3.webp"
+              alt="Marriot Gujarat"
+            />
+          </div>
+          <div className="-left-[20%] top-[30%] z-10 mx-auto hidden min-h-[80%] w-[40%] max-w-[600px] items-center bg-yellow-400 px-10 pt-20 pb-20 text-left text-xl md:absolute md:flex">
             We completely handle the process from logistics and design, to sourcing and production,
             to shipping and installation. Our quality control is unmatched.
           </div>
+
           <div className=" relative mx-[12px] mr-[26px] mt-8 grid grid-cols-2 gap-2 pb-[36px] md:left-[25%] md:mx-0 md:w-[50vw] lg:grid-cols-4">
             <div
               className="w-30 h-30 z-20 flex flex-col items-center  rounded-2xl p-2 shadow-xl transition
@@ -160,7 +170,7 @@ export default function Home() {
                 height={65}
                 className="m-auto md:invert md:filter"
                 src="/assets/fiedl.png"
-                alt="ok"
+                alt="Field Experts Icon"
               />
               <div className="m-4 w-[100px] text-center text-sm  text-black md:text-white">
                 Field <br />
@@ -173,7 +183,7 @@ export default function Home() {
                 height={65}
                 className="m-auto filter md:invert"
                 src="/assets/turnkey.png"
-                alt="ok"
+                alt="Turnkey Solutions Icon"
               />
               <div className="m-4 w-[100px] text-center text-sm text-black md:text-white">
                 Turnkey Solutions
@@ -185,7 +195,7 @@ export default function Home() {
                 height={65}
                 className="m-auto filter md:invert"
                 src="/assets/global.png"
-                alt="ok"
+                alt="Global Coverage Icon"
               />
               <div className="m-4 w-[100px] text-center text-sm text-black md:text-white">
                 Global Coverage
@@ -197,7 +207,7 @@ export default function Home() {
                 height={65}
                 className="m-auto filter md:invert"
                 src="/assets/quality.png"
-                alt="ok"
+                alt="Unmatched Quality Icon"
               />
               <div className="m-4 w-[100px] text-center text-sm text-black md:text-white">
                 Unmatched Quality
