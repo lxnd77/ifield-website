@@ -23,8 +23,8 @@ export default function Home() {
       {/* ------------------------------------ HERO ----------------------------- */}
       <div className="relative w-full md:min-h-[100vh] " id="heroBG" data-scroll-section>
         <div className="bg-black">
-          <div className=" absolute  top-[30%] z-50 md:top-[25vh]">
-            <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.6rem] leading-tight text-white md:text-[5vw]">
+          <div className=" absolute top-[20%] z-50 md:top-[25vh]">
+            <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[3rem] leading-tight text-white md:text-[5vw]">
               FF&E Manufacturing <br />
               Turnkey Solutions
             </h1>
@@ -146,10 +146,10 @@ export default function Home() {
             aspect of our clients' FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
-          <div className="top-[80%] right-[10%] z-20 hidden w-[80%] max-w-[800px] items-center bg-green-800 pt-5 pb-5 md:absolute md:flex">
+          <div className="top-[75%] right-[10%] z-20 mx-auto hidden w-[80%] max-w-[800px] items-center justify-center border-4 border-red-800 md:absolute lg:flex">
             <Image
-              width={600}
-              height={800}
+              width={800}
+              height={400}
               className="m-auto"
               src="/assets/projects/marriot gujarat3.webp"
               alt="Marriot Gujarat"
@@ -426,171 +426,174 @@ export default function Home() {
           <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Clients</div>
           <div className="h-1 w-64 bg-red-900"></div>
         </div>
-        <div className="mx-auto flex h-full w-[90%] flex-wrap justify-evenly gap-4" id="clients">
+        <div
+          className="mx-auto flex h-full w-[80%] grow flex-wrap justify-evenly md:gap-x-32 md:gap-y-8"
+          id="clients"
+        >
           <Image
             src="/assets/clients/1.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/3.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/2.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/4.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/5.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/6.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/7.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/8.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/9.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/10.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/11.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/12.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/13.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/14.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/15.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/16.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/17.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/18.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/19.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/20.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/21.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/22.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/23.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
           ></Image>
           <Image
             src="/assets/clients/24.png"
-            className="aspect-auto w-36"
+            className="aspect-auto w-60"
             height={36}
             width={36}
             alt="client"
