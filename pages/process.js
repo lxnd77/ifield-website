@@ -170,7 +170,7 @@ export default function Process() {
               <h2 className="playfair text-bold my-4 text-4xl">Production</h2>
               <p>
                 We source raw materials of the highest quality, and are equipped for the custom
-                manufacture and engineering of all FF&E items in our own facilities.
+                manufacture and engineering of all Fitout & FF&E items in our own facilities.
               </p>
               <p>
                 From light fixtures and ceiling work, to drapery, furniture, metal and glass work,
@@ -222,7 +222,7 @@ export default function Process() {
               </p>
               <p>
                 We have over 20 years of experience with managing the intricacies of transporting
-                FF&E items internationally, and your experience will be hassle-free.
+                Fitout & FF&E items internationally, and your experience will be hassle-free.
               </p>
             </div>
           </div>

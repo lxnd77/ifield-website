@@ -14,7 +14,7 @@ export default function CSR() {
       <div className="container mx-auto w-[90vw] overflow-hidden">
         <div className="md:grid md:grid-cols-2" id="ex1" data-scroll-section>
           <div className="container mr-auto md:col-span-1 md:col-start-1">
-            <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 md:text-[4vw]">
+            <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 ">
               Corporate Social Responsibility (CSR)
             </h1>
             <br />
@@ -37,9 +37,7 @@ export default function CSR() {
             />
           </div>
           <div className="md: container col-start-1 mr-auto md:col-span-2">
-            <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 md:text-[4vw]">
-              Mission and Vision
-            </h1>
+            <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 ">Mission and Vision</h1>
             <br />
             <p className="text-xl">
               Our mission is to foster social equity and sustainable development. We envision being
@@ -52,9 +50,7 @@ export default function CSR() {
             <br />
           </div>
           <div className="container mr-auto md:col-span-1 md:col-start-1">
-            <h1 className="playfair text-[2.4rem] leading-normal md:mt-4 md:text-[4vw]">
-              Our CSR Activities
-            </h1>
+            <h1 className="playfair text-[3rem] leading-normal md:mt-4 ">Our CSR Activities</h1>
             <br />
             <p className="text-xl md:col-span-1 md:col-start-1">
               We collaborate with grassroots efforts in Ajmer, enhancing local development projects

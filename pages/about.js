@@ -83,10 +83,11 @@ export default function About() {
               <div className="container text-justify text-sm md:col-span-2 md:col-start-2 md:px-4">
                 When we first started out as hotel contractors, I-Field was based in Hong Kong with
                 a representative office in Guangzhou, China. Since then, we've grown to be one of
-                the largest FF&E solutions companies in Asia, with reach in over 20 countries. Our
-                clients are the owners and developers for high-end hospitality facilities around the
-                world, and we consistently deliver custom projects of impeccable quality. We are
-                nearing <span className="font-bold">100 successfully completed contracts</span>.
+                the largest Fitout & FF&E solutions companies in Asia, with reach in over 20
+                countries. Our clients are the owners and developers for high-end hospitality
+                facilities around the world, and we consistently deliver custom projects of
+                impeccable quality. We are nearing{' '}
+                <span className="font-bold">100 successfully completed contracts</span>.
               </div>
             </div>
             <div className="py-8 ">
@@ -94,8 +95,8 @@ export default function About() {
                 Our Vision
               </h2>
               <div className="text-l">
-                We are iField, relentless in our commitment to providing FF&E of unmatched quality
-                to globally acclaimed luxury hotels. Our clients are assured of{' '}
+                We are iField, relentless in our commitment to providing Fitout & FF&E of unmatched
+                quality to globally acclaimed luxury hotels. Our clients are assured of{' '}
                 <span className="font-bold">immaculate attention </span>
                 to detail in services that are streamlined, sustainable, and cost efficient. We are
                 driven by excellence at every level, from CEO to floor worker, and from client
@@ -109,10 +110,10 @@ export default function About() {
               </div>
               <div>
                 <p className="mt-4 pl-8 text-justify italic">
-                  Our founder and CEO, Abhay, is an anchor in the FF&E industry, and personally
-                  attends to every client and project for the best outcomes. Each level of our
-                  operations is optimized to provide our clients with guaranteed quality in services
-                  and products.
+                  Our founder and CEO, Abhay, is an anchor in the Fitout & FF&E industry, and
+                  personally attends to every client and project for the best outcomes. Each level
+                  of our operations is optimized to provide our clients with guaranteed quality in
+                  services and products.
                 </p>
               </div>
             </div>

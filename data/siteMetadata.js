@@ -1,9 +1,9 @@
 const siteMetadata = {
-  title: 'Ifield',
-  author: 'Ifield Limited',
-  headerTitle: 'Ifield - FF&E Manufacturing Turnkey Solutions',
+  title: 'I-Field',
+  author: 'I-Field Limited',
+  headerTitle: 'I-Field - Fitout, FF&E & Manufacturing Turnkey Solutions',
   description:
-    'I-Field stands out in the FF&E industry over years of international experience. We have pioneered our seamless end-to-end process so that our operations are all handled in-house by our team of experts who specialize in details.',
+    'I-Field stands out in the Fitout & FF&E industry over years of international experience. We have pioneered our seamless end-to-end process so that our operations are all handled in-house by our team of experts who specialize in details.',
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://ifield.ae',

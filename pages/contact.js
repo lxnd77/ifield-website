@@ -53,7 +53,7 @@ const Contact = () => {
         <div className="h-1 w-[10%] bg-red-900 "></div>
         <div className="playfair pl-[1%] text-[2.4rem] text-black md:text-[4vw]">
           Get in touch <br />
-          to get your FF&E project to life!
+          to get your Fitout & FF&E project to life!
         </div>
       </div>
       <div className="flex flex-row flex-wrap">

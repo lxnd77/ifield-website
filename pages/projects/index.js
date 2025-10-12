@@ -48,10 +48,13 @@ export default function Projects({ projects }) {
               <h2 className="playfair text-bold mb-4 pt-2 text-2xl">United States of America</h2>
               <ul className="proj-list">
                 <li>AC Hotel by Marriot, Greenville, SC</li>
+                <li>Fidelis Grand Central, Conroe, TX</li>
                 <li>Hyatt Place, Houston, TX</li>
                 <li>Hampton Inn, Houston, TX</li>
+                <li>JW Marriott, Greenville, SC</li>
                 <li>LaQuinta, Houston, TX</li>
                 <li>Lenox Hill, Spring, TX</li>
+                <li>Marriott, Charleston, SC</li>
                 <li>Residence Inn, Lenox Park, CA</li>
                 <li>Westin, Dulles, PA</li>
               </ul>
@@ -76,13 +79,18 @@ export default function Projects({ projects }) {
                 {/* <li>Sequina Residency, Saudi Arabia</li> */}
                 <li>Hilton, N'Djamena, Chad</li>
                 <li>Marriott Ikeja, Lagos, Nigeria</li>
+                <li>Courtyard by Marriot, Nairobi, Kenya</li>
                 <li>Crowne Plaza, Nairobi, Kenya</li>
                 <li>M120, Lagos, Nigeria</li>
+                <li>Radisson Blu, Benin State, Nigeria</li>
                 <li>Stratongate Kofo Abayomi, Lagos, Nigeria</li>
                 <li>Novotel, Lagos, Nigeria</li>
-                <li>Sarovar Premiere, Somaliland</li>
-                <li>Sarovar Premier, Zambia</li>
-                <li>Golden Tulip Resort, Zanzibar</li>
+                <li>Data Center, Berbera, Somaliland</li>
+                <li>SOLTELCO Tower, Hargeisa, Somaliland</li>
+                <li>SOMGAS, Berbera, Somaliland</li>
+                <li>Sarovar Premiere, Hargeisa, Somaliland</li>
+                <li>Sarovar Premier, Lusaka, Zambia</li>
+                <li>Golden Tulip Resort, Zanzibar, Tanzania</li>
               </ul>
             </div>
             <div>
@@ -121,6 +129,7 @@ export default function Projects({ projects }) {
                 <li>Ramada Plaza, Jaipur</li>
                 <li>Renaissance, Lucknow</li>
                 <li>The Leaf Resort, Nepal</li>
+                <li>Courtyard by Marriot, Chittagong, Bangladesh</li>
                 <li>Taj, Dhaka, Bangladesh</li>
               </ul>
             </div>

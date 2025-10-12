@@ -24,13 +24,12 @@ export default function Home() {
       <div className="relative w-full md:min-h-[100vh] " id="heroBG" data-scroll-section>
         <div className="bg-black">
           <div className=" absolute top-[20%] z-50 md:top-[25vh]">
-            <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[3rem] leading-tight text-white md:text-[5vw]">
-              FF&E Manufacturing <br />
-              Turnkey Solutions
+            <h1 className="playfair pointer-events-none m-10 my-auto text-left text-[2.5rem] leading-tight text-white md:text-[4vw]">
+              FF&E and Fitout, <br /> Manufacturing & Turnkey Solutions
             </h1>
             <p className="montserrat pointer-events-none m-10 my-auto mt-5 text-left text-[1.2rem] leading-tight text-white md:w-[50%] lg:text-[1.5vw]">
-              Experience the epitome of luxury with Ifield - your ultimate FF&E turnkey contracting
-              partner for high-end hotels.
+              Experience the epitome of luxury with Ifield - your ultimate FF&E & Fitout turnkey
+              contracting partner for high-end hotels.
             </p>
             <div className=" z-50 m-10 w-fit cursor-pointer">
               <button className="btn ">
@@ -115,10 +114,10 @@ export default function Home() {
             </div>
             <div className=" max-w-[600px] bg-black text-[16px]">
               <div>
-                We are a team of industry experts offering deluxe turnkey solutions for FF&E
-                manufacture, supply, and installation. Established and operated by hotel owners and
-                industry experts, our end-to-end services ensure high client satisfaction around the
-                globe.
+                We are a team of industry experts offering deluxe turnkey solutions for Fitout &
+                FF&E, manufacture, supply, and installation. Established and operated by hotel
+                owners and industry experts, our end-to-end services ensure high client satisfaction
+                around the globe.
               </div>
               <div className="mt-8 text-[16px] font-bold">
                 Our core principle is to provide the best in products, prices, efficiency, and
@@ -133,7 +132,7 @@ export default function Home() {
       </div>
 
       {/*<!---------------------------- Process ------------------------------------>*/}
-      <div className="static min-h-[90vh] w-[100%] overflow-hidden bg-white" data-scroll-section>
+      <div className="static w-[100%] overflow-hidden bg-white md:min-h-[90vh]" data-scroll-section>
         <div className="relative mx-auto min-h-[55vh] w-[100vw] bg-white md:mt-16 md:w-[70%] md:bg-black">
           <div className="mb-2 flex items-center  py-[24px]">
             <div className="h-1 w-[20%] bg-red-900 "></div>
@@ -143,10 +142,10 @@ export default function Home() {
           </div>
           <div className=" top-[35%] left-[25%] mx-auto my-auto w-[70%] max-w-[600px] text-lg text-black md:w-[50%] md:text-xl md:text-white">
             I-Field is equipped with expert teams and world-class infrastructure to handle every
-            aspect of our clients' FF&E needs in-house. Every project is customized, in
+            aspect of our clients' fitout & FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
-          <div className="top-[75%] right-[10%] z-20 mx-auto hidden w-[80%] max-w-[800px] items-center justify-center border-4 border-red-800 md:absolute lg:flex">
+          {/* <div className="top-[75%] right-[10%] z-20 mx-auto hidden w-[80%] max-w-[800px] items-center justify-center border-4 border-red-800 md:absolute lg:flex">
             <Image
               width={800}
               height={400}
@@ -154,7 +153,7 @@ export default function Home() {
               src="/assets/projects/marriot gujarat3.webp"
               alt="Marriot Gujarat"
             />
-          </div>
+          </div> */}
           <div className="-left-[20%] top-[30%] z-10 mx-auto hidden min-h-[80%] w-[40%] max-w-[600px] items-center bg-yellow-400 px-10 pt-20 pb-20 text-left text-xl md:absolute md:flex">
             We completely handle the process from logistics and design, to sourcing and production,
             to shipping and installation. Our quality control is unmatched.
