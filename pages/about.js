@@ -191,7 +191,7 @@ export default function About() {
                 company's investments in expanding to hotels across the world.
               </p>
             </div>
-            <div className="order-first mx-auto flex flex-col justify-end p-8 md:order-last md:col-span-1 md:col-start-3">
+            <div className="playfair order-first mx-auto flex flex-col justify-end p-8 text-center text-2xl md:order-last md:col-span-1 md:col-start-3">
               <Image
                 width={500}
                 height={500}
@@ -199,6 +199,9 @@ export default function About() {
                 src="/assets/staff/7.webp"
                 className="mx-auto h-80 w-80 rounded-full border-2 border-[#971C20] object-cover"
               />
+              <h2 className="mt-4">
+                Abhay Bhargava <br /> Managing Director
+              </h2>
             </div>
           </div>
           <div>
@@ -206,7 +209,10 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 flex w-[60vw] flex-wrap justify-around" data-scroll-section>
+        <div
+          className="mx-auto flex w-[60vw] flex-wrap justify-around md:mt-16"
+          data-scroll-section
+        >
           <div className="playfair flex flex-col text-center text-xl">
             <Image
               width={500}

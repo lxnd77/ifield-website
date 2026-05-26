@@ -137,7 +137,7 @@ export default function Home() {
           <div className="mb-2 flex items-center  py-[24px]">
             <div className="h-1 w-[20%] bg-red-900 "></div>
             <div className="playfair pl-[1%] text-[2.4rem] text-black md:text-[4vw] md:text-white">
-              Our Process
+              Why I-Field?
             </div>
           </div>
           <div className=" top-[35%] left-[25%] mx-auto my-auto w-[70%] max-w-[600px] text-lg text-black md:w-[50%] md:text-xl md:text-white">
@@ -145,6 +145,7 @@ export default function Home() {
             aspect of our clients' fitout & FF&E needs in-house. Every project is customized, in
             collaboration with luxury designers.
           </div>
+
           {/* <div className="top-[75%] right-[10%] z-20 mx-auto hidden w-[80%] max-w-[800px] items-center justify-center border-4 border-red-800 md:absolute lg:flex">
             <Image
               width={800}
@@ -353,15 +354,15 @@ export default function Home() {
           <div className="mx-auto flex w-full flex-col items-center justify-around">
             <div className="m-8 flex w-full flex-col justify-center gap-[4px] text-center md:flex-row md:gap-[12%]">
               <div className="playfair text-5xl ">
-                <CountUp duration={5} end={20} enableScrollSpy scrollSpyDelay={1000} />
+                <CountUp duration={5} end={23} enableScrollSpy scrollSpyDelay={1000} />
                 <div className="montserrat mt-2 text-lg">Countries</div>
               </div>
               <div className="playfair text-5xl ">
-                <CountUp duration={5} end={60} enableScrollSpy scrollSpyDelay={1000} />+
+                <CountUp duration={5} end={70} enableScrollSpy scrollSpyDelay={1000} />+
                 <div className="montserrat mt-2 text-lg">Projects Completed</div>
               </div>
               <div className="playfair text-5xl ">
-                <CountUp duration={5} end={390} enableScrollSpy scrollSpyDelay={1000} />
+                <CountUp duration={5} end={400} enableScrollSpy scrollSpyDelay={1000} />
                 <div className="montserrat mt-2 text-lg">Global staff</div>
               </div>
               {/*TODO:: FIX */}
