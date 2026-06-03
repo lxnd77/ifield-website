@@ -215,6 +215,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="mt-8 mb-8 flex items-center justify-center gap-2">
+          <div className="playfair pl-[10%] text-[2.4rem] md:text-[4vw]">Our Process</div>
+          <div className="h-1 w-64 bg-red-900"></div>
+        </div>
+        <div>
+          <Image
+            width={1200}
+            height={1200}
+            className="m-auto"
+            src="/assets/processpic.png"
+            alt="Ifield Process"
+          />
+        </div>
       </div>
 
       {/* <!--------------------------------------- Projects-------------------------------------------- --> */}
